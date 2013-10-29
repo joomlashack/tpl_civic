@@ -22,3 +22,8 @@ $responsive = ' responsive';
 if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
+
+$fullBreadcrumb = false;
+if ($this->countModules('grid-top') || $this->countModules('grid-top2')){
+	$fullBreadcrumb = true;
+}
