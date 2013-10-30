@@ -395,7 +395,6 @@ div.bs-docs-example blockquote{
 	}
 	> h2{
 		color : @linkColor;
-		font-size: 20px;
 	}
 }
 
@@ -709,6 +708,9 @@ dl.article-info{
 			background-color: transparent;
 		}
 	}
+	dt + dd{
+		padding-left: 0;
+	}
 }
 
 .article-info.muted{
@@ -835,7 +837,7 @@ dl.article-info{
 					}
 					[class^="icon-"],
 					[class*=" icon-"] {
-						color: @dropdownLinkColor;
+						color: @textColor;
 					}
 					&:hover,
 					&:focus {
@@ -850,7 +852,7 @@ dl.article-info{
 						}
 						[class^="icon-"],
 						[class*=" icon-"] {
-							color: @dropdownLinkColorHover;
+							color: @textColor;
 						}
 					}
 				}
@@ -873,33 +875,12 @@ dl.article-info{
 				}
 			}
 			.sub-menu {
-				left: 100%;
-				position: absolute;
-				top: 0;
-				visibility: hidden;
-				margin-top: -1px;
-				&:before {
-				    border-bottom: 7px solid transparent;
-				    border-left: none;
-				    border-right: 7px solid @dropdownBackground;
-				    border-top: 7px solid transparent;
-				    left: -7px;
-				    top: 10px;
-				    position: absolute;
-				    content: "";
-				    display: inline-block;
-				}
-				&:after {
-				    border-top: 6px solid transparent;
-				    border-left: none;
-				    border-right: 7px solid @dropdownBackground;
-				    border-bottom: 6px solid transparent;
-				    left: 10px;
-				    top: 11px;
-				    left: -6px;
-				    position: absolute;
-				    content: "";
-				    display: inline-block;
+				background-color: transparent;
+				li {
+					> a{
+						color: @white;
+						background-color: @grayDarker;
+					}
 				}
 			}
 		}
@@ -992,10 +973,10 @@ dl.article-info{
 						}
 					}
 				}
-				.dropdown-menu{
-					li.active > a{
-						color : @dropdownLinkColorActive;
-					}
+			}
+			.dropdown-menu{
+				li.active > a:hover{
+					color : @dropdownLinkColorActive;
 				}
 			}
 		}
@@ -1521,6 +1502,19 @@ dl.article-info{
 .dropdown-menu{
 	border-radius: 0;
 	border: 0;
+	box-shadow: none;
+	li {
+		> a{
+			border-top: 1px solid @textColor;
+			padding-bottom: 8px;
+			padding-top: 8px;
+		}
+		&:first-child{
+			> a{
+				border-top: 0;
+			}
+		}
+	}
 }
 
 .page-header{
