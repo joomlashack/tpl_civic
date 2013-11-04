@@ -337,16 +337,16 @@ div.bs-docs-example blockquote{
 		text-decoration: underline;
 	}
 	h1,h2,h3,h4,h5,h6{
-		color : @white !important;
+		// color : @white !important;
 		text-shadow: none;
 	}
-	.nav {
-		li {
-			> a{
-				color : @white;
-			}
-		}
-	}
+	// .nav {
+	// 	li {
+	// 		> a{
+	// 			color : @white;
+	// 		}
+	// 	}
+	// }
 }
 
 .hero-unit{
@@ -823,13 +823,15 @@ dl.article-info{
 
 		.dropdown-menu,
 		.dropdown {
+			background-color: transparent;
 			&:before, &:after{
 				display: none;
 			}
 			border: 0;
 			li {
+				padding-bottom: 1px;
 				> a {
-					color: @dropdownLinkColor;
+					background-color: @dropdownBackground;
 					.caret {
 						border-bottom: 4px solid transparent;
 						border-left: 4px solid @altBlack;
@@ -841,7 +843,7 @@ dl.article-info{
 					}
 					&:hover,
 					&:focus {
-						background-color: transparent;
+						background-color: @dropdownBackground;
 						background-image: none;
 						color: @dropdownLinkColorHover;
 						filter:none;
@@ -863,9 +865,7 @@ dl.article-info{
 						color: @dropdownLinkColorActive;
 						filter:none;
 						.caret {
-							border-bottom: 4px solid transparent;
 							border-left: 4px solid @dropdownLinkColorActive;
-							border-top: 4px solid transparent;
 						}
 						[class^="icon-"],
 						[class*=" icon-"] {
@@ -876,10 +876,23 @@ dl.article-info{
 			}
 			.sub-menu {
 				background-color: transparent;
+				margin-top: 0;
+				padding-bottom: 0;
+				padding-top: 0;
 				li {
 					> a{
 						color: @white;
 						background-color: @grayDarker;
+
+						[class^="icon-"],
+						[class*=" icon-"] {
+							color: @white;
+						}
+
+						&:hover,
+						&:focus {
+							background-color: @gray - #111;
+						}
 					}
 				}
 			}
@@ -1505,14 +1518,8 @@ dl.article-info{
 	box-shadow: none;
 	li {
 		> a{
-			border-top: 1px solid @textColor;
 			padding-bottom: 8px;
 			padding-top: 8px;
-		}
-		&:first-child{
-			> a{
-				border-top: 0;
-			}
 		}
 	}
 }
