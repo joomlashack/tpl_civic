@@ -112,10 +112,6 @@ defined('_JEXEC') or die('Restricted access');
             </aside>
         </div>
 
-        <?php if ($this->countModules('bottom-menu')) : ?>
-        <!-- bottom-menu -->
-        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
-        <?php endif; ?>
 
     </div>
 
@@ -123,10 +119,10 @@ defined('_JEXEC') or die('Restricted access');
         <div id="grid-bottom" >
             <div class="grid-bottom">
                 <div class="<?php echo $containerClass ?>">
-                        <!-- grid-bottom -->
-                            <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
-                        </div>
+                    <!-- grid-bottom -->
+                    <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
                 </div>
+            </div>
         </div>
     <?php endif; ?>
 
@@ -153,14 +149,18 @@ defined('_JEXEC') or die('Restricted access');
 
     <!-- footer -->
     <div class="wrapper-footer">
-	    <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
-	    	 <div class="<?php echo $containerClass ?> footer-content">
-	    		<?php if ($this->countModules('footer')) : ?>
-					<w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
-			 	<?php endif; ?>
-				<w:footer />
-			</div>
-	    </footer>
+        <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
+            <?php if ($this->countModules('bottom-menu')) : ?>
+                <!-- bottom-menu -->
+                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-inverse" name="bottom-menu" />
+            <?php endif; ?>
+             <div class="<?php echo $containerClass ?> footer-content">
+                <?php if ($this->countModules('footer')) : ?>
+                    <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
+                <?php endif; ?>
+                <w:footer />
+            </div>
+        </footer>
     </div>
 
 </body>

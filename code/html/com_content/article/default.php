@@ -17,7 +17,9 @@ $template = $app->getTemplate(true);
 	$this->wrightElementsStructure = Array(
 		'image',
 		'icons',
-		'title',
+		'div.title-article',
+			'title',
+		'/div',
 		'article-info',
 		'content'
 
