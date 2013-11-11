@@ -48,7 +48,7 @@ function checkImage($img, $default) {
         return $img;
 }
 
-$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""), "templates\js_civic\images\default-bg-grid-bottom-3.jpg");
+$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
 $imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
 
 if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $imgGridBottom3Bg);

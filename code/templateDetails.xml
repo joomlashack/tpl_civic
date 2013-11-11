@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>0.1_beta1</version>
+	<version>0.1_beta1.1</version>
     <description>TPL_JS_CIVIC_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -114,6 +114,7 @@
 					<option value="0">JNO</option>
 				</field>
 				<field name="imgGridBottom3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG_DESC" />
+				<field name="imgGridTop3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_TOP_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP_3_IMAGE_BG_DESC" />
 			</fieldset>
 		</fields>
 	</config>
