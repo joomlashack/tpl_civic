@@ -31,6 +31,18 @@ blockquote{
 			content : none;
 		}
 	}
+	h1,h2,h3,h4,h5,h6{
+		font-family: @sansFontFamily;
+		font-weight: bold;
+	}
+	h2{
+		font-size: (@baseFontSize * 4) + 3;
+		line-height:(@baseFontSize * 4) + 3;
+		small{
+			font-size: @baseFontSize + 5;
+			margin-top: 40px;
+		}
+	}
 	&:after{
 		border-right: 42px solid transparent;
 		border-top: 45px solid @color_one;
@@ -411,6 +423,11 @@ div.bs-docs-example blockquote{
 	}
 }
 .blog, .blog-featured{
+	> .page-header{
+		h2{
+			font-size: @baseFontSize + 6;
+		}
+	}
 	.items-leading {
 		[class^="leading-"]{
 			> h2{
@@ -528,9 +545,6 @@ div.bs-docs-example blockquote{
 			}
 		}
 	}
-	p.readmore{
-		float: none;
-	}
 	.article-separator{
 		border-bottom: 1px solid @color_four;
 		display: block;
@@ -625,9 +639,6 @@ div.bs-docs-example blockquote{
 				display: none;
 			}
 		}
-	}
-	.readmore{
-		float: none;
 	}
 }
 .wrapp-breadcrumb{
@@ -743,8 +754,8 @@ div.bs-docs-example blockquote{
 }
 .addBgImgGridBottom3{
 	.grid-bottom3{
-		background-image: none;
-		overflow: hidden;
+		-webkit-background-size: cover;
+		background-size: cover;
 		position: relative;
 		.grid-bottom3-filter{
 			background-image: url(../../images/athens/grid-bottom3-filter.png);
@@ -761,18 +772,8 @@ div.bs-docs-example blockquote{
 		}
 	}
 }
-.bg-img-grid-porition(){
-	display: block;
-	height: 100%;
-	left: 0;
-	max-width: none;
-	position: absolute;
-	top: 0;
-	z-index: 1;
-}
 
 .grid-top3{
-	overflow: hidden;
 	position: relative;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -829,6 +830,7 @@ div.bs-docs-example blockquote{
 }
 
 p.readmore{
+	float: none;
 	margin-top: 15px;
 	text-transform: uppercase;
 	a{

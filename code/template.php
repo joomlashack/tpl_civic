@@ -64,23 +64,26 @@ defined('_JEXEC') or die('Restricted access');
                 <w:module type="<?php echo $gridMode; ?>" name="grid-top3" chrome="wrightflexgrid" />
             </div>
         </div>
+
     <?php endif; ?>
 
-    <?php if (!$this->countModules('grid-top') || !$this->countModules('grid-top2') || !$this->countModules('grid-top3')) : ?>
-        <div class="wrapp-breadcrumb">
-            <div class="<?php echo $containerClass; ?>">
-                <div class="<?php echo $gridMode; ?>">
-                    <div class="span12">
-                        <?php if ($this->countModules('breadcrumbs')) : ?>
-                            <!-- breadcrumbs -->
-                            <div id="breadcrumbs">
-                                <w:module type="single" name="breadcrumbs" chrome="none" />
-                            </div>
-                        <?php endif; ?>
+    <?php if (!$this->countModules('grid-top') || !$this->countModules('grid-top2')) : ?>
+        <?php if (!$this->countModules('grid-top3')) : ?>
+            <div class="wrapp-breadcrumb sdsd">
+                <div class="<?php echo $containerClass; ?>">
+                    <div class="<?php echo $gridMode; ?>">
+                        <div class="span12">
+                            <?php if ($this->countModules('breadcrumbs')) : ?>
+                                <!-- breadcrumbs -->
+                                <div id="breadcrumbs">
+                                    <w:module type="single" name="breadcrumbs" chrome="none" />
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>
     <?php endif; ?>
 
     <div class="<?php echo $containerClass ?> wrapp-content">
@@ -147,14 +150,13 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
 
     <?php if ($this->countModules('grid-bottom3')) : ?>
-        <div class="grid-bottom3">
+        <div class="grid-bottom3" <?php if ($addBgImgGridBottom3) :?> data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>" <?php endif; ?>>
             <div class="<?php echo $containerClass ?>">
                 <!-- grid-bottom3 -->
                 <div id="grid-bottom3" >
                     <w:module type="<?php echo $gridMode; ?>" name="grid-bottom3" chrome="wrightflexgrid" />
                 </div>
                 <?php if ($addBgImgGridBottom3) : ?>
-                    <img src="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>" alt="" class="bg-img-grid-bottom3">
                     <div class="grid-bottom3-filter"></div>
                 <?php endif; ?>
             </div>
