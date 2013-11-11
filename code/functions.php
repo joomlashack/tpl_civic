@@ -27,3 +27,32 @@ $fullBreadcrumb = false;
 if ($this->countModules('grid-top') || $this->countModules('grid-top2')){
 	$fullBreadcrumb = true;
 }
+$enableGridBottom3Bg = $this->params->get('enableGridBottom3Bg','0');
+$addBgImgGridBottom3 = ($enableGridBottom3Bg == '1' ? ' addBgImgGridBottom3' : '' );
+
+function checkImage($img, $default) {
+        if ($img == "") {
+                $img = $default;
+        }
+        elseif ($img != "-1") {
+                $img = "images/" . $img;
+        }
+
+        if ($img != "-1") {
+                $img = JPATH_BASE . '/' . $img;
+                if (!file_exists($img)) {
+                        $img = "-1";
+                }
+        }
+
+        return $img;
+}
+
+$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""), "templates\js_civic\images\default-bg-grid-bottom-3.jpg");
+$imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
+
+if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $imgGridBottom3Bg);
+if ($imgGridTop3Bg != "-1") $imgGridTop3Bg = str_replace(JPATH_BASE, '', $imgGridTop3Bg);
+
+
+

@@ -46,6 +46,7 @@
 		<position>featured</position>
 		<position>grid-top</position>
 		<position>grid-top2</position>
+		<position>grid-top3</position>
 		<position>above-content</position>
 		<position>breadcrumbs</position>
 		<position>sidebar1</position>
@@ -112,7 +113,7 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="imgGridBottomBg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG_DESC" />
+				<field name="imgGridBottom3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG_DESC" />
 			</fieldset>
 		</fields>
 	</config>

@@ -21,11 +21,12 @@ defined('_JEXEC') or die('Restricted access');
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Cousine:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body class="<?php echo $responsive ?>">
+<body class="<?php echo $responsive . $addBgImgGridBottom3 ?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
-    	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
+
 
     <?php if ($this->countModules('featured')) : ?>
         <!-- featured -->
@@ -56,7 +57,16 @@ defined('_JEXEC') or die('Restricted access');
         </div>
     <?php endif; ?>
 
-    <?php if (!$this->countModules('grid-top') || !$this->countModules('grid-top2')) : ?>
+    <?php if ($this->countModules('grid-top3')) : ?>
+        <!-- grid-top3 -->
+        <div class="grid-top3" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop3Bg ?>">
+            <div id="grid-top3" class="<?php echo $containerClass; ?>">
+                <w:module type="<?php echo $gridMode; ?>" name="grid-top3" chrome="wrightflexgrid" />
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <?php if (!$this->countModules('grid-top') || !$this->countModules('grid-top2') || !$this->countModules('grid-top3')) : ?>
         <div class="wrapp-breadcrumb">
             <div class="<?php echo $containerClass; ?>">
                 <div class="<?php echo $gridMode; ?>">
@@ -97,8 +107,8 @@ defined('_JEXEC') or die('Restricted access');
                     <?php endif; ?>
                 <?php endif; ?>
 
-            	<!-- component -->
-            	<w:content />
+                <!-- component -->
+                <w:content />
                 <?php if ($this->countModules('below-content')) : ?>
                 <!-- below-content -->
                 <div id="below-content">
@@ -108,7 +118,7 @@ defined('_JEXEC') or die('Restricted access');
             </section>
             <!-- sidebar2 -->
             <aside id="sidebar2">
-            	<w:module name="sidebar2" chrome="xhtml" />
+                <w:module name="sidebar2" chrome="xhtml" />
             </aside>
         </div>
 
@@ -139,10 +149,14 @@ defined('_JEXEC') or die('Restricted access');
     <?php if ($this->countModules('grid-bottom3')) : ?>
         <div class="grid-bottom3">
             <div class="<?php echo $containerClass ?>">
-                    <!-- grid-bottom3 -->
-                    <div id="grid-bottom3" >
-                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom3" chrome="wrightflexgrid" />
-                    </div>
+                <!-- grid-bottom3 -->
+                <div id="grid-bottom3" >
+                    <w:module type="<?php echo $gridMode; ?>" name="grid-bottom3" chrome="wrightflexgrid" />
+                </div>
+                <?php if ($addBgImgGridBottom3) : ?>
+                    <img src="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>" alt="" class="bg-img-grid-bottom3">
+                    <div class="grid-bottom3-filter"></div>
+                <?php endif; ?>
             </div>
         </div>
     <?php endif; ?>
@@ -162,6 +176,9 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         </footer>
     </div>
+
+
+    <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_civic/js/civic.js'></script>
 
 </body>
 </html>

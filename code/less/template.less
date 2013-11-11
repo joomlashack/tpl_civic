@@ -436,7 +436,10 @@ div.bs-docs-example blockquote{
 	}
 }
 .lead{
-	font-size: @baseFontSize * 2;
+	font-size: (@baseFontSize * 2) + 2;
+	a{
+		text-decoration: underline;
+	}
 }
 .list-striped li:nth-child(odd), .list-striped dd:nth-child(odd), .row-striped .row:nth-child(odd), .row-striped .row-fluid:nth-child(odd){
 	color: @textColor;
@@ -706,18 +709,11 @@ div.bs-docs-example blockquote{
 
 .grid-bottom3{
 	background-image: url(../../images/athens/grid-bottom3-background.jpg);
-	padding-bottom: 95px;
-	padding-top: 95px;
-
-	a:link{
-		color:#5ECDE8;
-	}
-}
-
-#grid-bottom3{
 	color : @white;
 	font-size: @baseFontSize + 2;
 	margin-bottom: 0;
+	padding-bottom: 95px;
+	padding-top: 95px;
 
 	.module, .moduletext, .moduletable{
 		margin-bottom: 0;
@@ -728,8 +724,52 @@ div.bs-docs-example blockquote{
 			margin-bottom: 23px;
 		}
 	}
+
+	a:link{
+		color:#5ECDE8;
+	}
+}
+.addBgImgGridBottom3{
+	.grid-bottom3{
+		background-image: none;
+		overflow: hidden;
+		position: relative;
+		.grid-bottom3-filter{
+			background-image: url(../../images/athens/grid-bottom3-filter.png);
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 2;
+		}
+		#grid-bottom3{
+			position: relative;
+			z-index: 3;
+		}
+	}
+}
+.bg-img-grid-porition(){
+	display: block;
+	height: 100%;
+	left: 0;
+	max-width: none;
+	position: absolute;
+	top: 0;
+	z-index: 1;
 }
 
+.grid-top3{
+	overflow: hidden;
+	position: relative;
+	-webkit-background-size: cover;
+	background-size: cover;
+	#grid-top3{
+		position: relative;
+		z-index: 3;
+	}
+
+}
 
 #footer{
 	background-color: @altBlack;
@@ -971,11 +1011,12 @@ dl.article-info{
 		margin-bottom: 0;
 		line-height: inherit;
 		> a {
-			// Markos
 			font-family: @altFontFamily;
 			font-size: 1.1em;
 			text-transform: uppercase;
-			// end Markos
+			&.item-desc{
+				color : @itemDescColor;
+			}
 		}
 
 		.dropdown-menu,
