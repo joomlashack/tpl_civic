@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Cousine:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body class="<?php echo $responsive . $addBgImgGridBottom3 ?>">
+<body class="<?php echo $responsive . $addBgImgGridBottom3 . $classSeparatorGridBottom2?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
@@ -129,26 +129,36 @@ defined('_JEXEC') or die('Restricted access');
     </div>
 
     <?php if ($this->countModules('grid-bottom')) : ?>
-
         <!-- grid-bottom -->
-        <div id="grid-bottom" >
+        <div id="grid-bottom" class="<?php echo $bgColorGridBottom; ?> bg-color-grid-bottom-modules">
             <div class="grid-bottom">
-                <div class="<?php echo $containerClass ?>">
-                    <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
-                </div>
+                <?php if ($enableFluidContainerGridBottom == '0') : ?>
+                    <div class="<?php echo $containerClass ; ?>">
+                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
+                    </div>
+                <?php else : ?>
+                    <div class="container-fluid container-no-padding">
+                        <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
-
     <?php endif; ?>
 
 
     <?php if ($this->countModules('grid-bottom2')) : ?>
-        <!-- grid-bottom2 -->
-        <div id="grid-bottom2">
+       <!-- grid-bottom2 -->
+        <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2; ?> bg-color-grid-bottom-modules">
             <div class="grid-bottom2">
-                <div class="<?php echo $containerClass ?>">
-                    <w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
-                </div>
+                <?php if ($enableFluidContainerGridBottom2 == '0') : ?>
+                    <div class="<?php echo $containerClass ; ?>">
+                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+                    </div>
+                <?php else : ?>
+                    <div class="container-fluid container-no-padding">
+                        <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     <?php endif; ?>

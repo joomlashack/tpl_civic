@@ -55,7 +55,12 @@ if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $
 if ($imgGridTop3Bg != "-1") $imgGridTop3Bg = str_replace(JPATH_BASE, '', $imgGridTop3Bg);
 
 
-$enableBackgroundColorGridBottom = $this->params->get('enableBackgroundColorGridBottom','0');
-$enableBackgroundColorGridBottom2 = $this->params->get('enableBackgroundColorGridBottom2','0');
+$enableFluidContainerGridBottom = $this->params->get('enableFluidContainerGridBottom','0');
+$enableFluidContainerGridBottom2 = $this->params->get('enableFluidContainerGridBottom2','0');
+$bgColorGridBottom = $this->params->get('bgColorGridBottom','transparent');
+$bgColorGridBottom2 = $this->params->get('bgColorGridBottom2','transparent');
+$separateGridBottom2 = $this->params->get('separateGridBottom2','1');
+
+$classSeparatorGridBottom2 = ($separateGridBottom2 == '0') ? ' noSeparateGridBottom2' : '' ;
 
 
