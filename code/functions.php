@@ -55,4 +55,7 @@ if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $
 if ($imgGridTop3Bg != "-1") $imgGridTop3Bg = str_replace(JPATH_BASE, '', $imgGridTop3Bg);
 
 
+$enableBackgroundColorGridBottom = $this->params->get('enableBackgroundColorGridBottom','0');
+$enableBackgroundColorGridBottom2 = $this->params->get('enableBackgroundColorGridBottom2','0');
+
 

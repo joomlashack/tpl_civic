@@ -115,6 +115,14 @@
 				</field>
 				<field name="imgGridBottom3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG_DESC" />
 				<field name="imgGridTop3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_TOP_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP_3_IMAGE_BG_DESC" />
+				<field name="enableBackgroundColorGridBottom" type="radio" default="0" label="TPL_JS_CIVIC_BG_COLOR_GRID_BOTTOM" description="TPL_JS_CIVIC_BG_COLOR_GRID_BOTTOM_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="enableBackgroundColorGridBottom2" type="radio" default="0" label="TPL_JS_CIVIC_BG_COLOR_GRID_BOTTOM_2" description="TPL_JS_CIVIC_BG_COLOR_GRID_BOTTOM_2_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>
