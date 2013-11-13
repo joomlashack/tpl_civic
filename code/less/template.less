@@ -362,7 +362,6 @@ div.bs-docs-example blockquote{
 }
 
 .hero-unit{
-	background-image: url(../../images/athens/hero-unit-background.jpg);
 	border-radius: 0;
 	font-size: 16px;
 	text-align: center;
@@ -539,6 +538,13 @@ div.bs-docs-example blockquote{
 		color : @black;
 		font-weight: 700;
 		text-decoration: underline;
+	}
+	&.relative{
+		padding: 0;
+		.wrightmodule-content{
+			background-color: fade(@color_two, 95%);
+			padding: 1.4em;
+		}
 	}
 }
 .module_ms4, .moduletext_ms4, .moduletable_ms4{
@@ -843,9 +849,7 @@ div.bs-docs-example blockquote{
 	}
 }
 
-
 .grid-bottom3{
-	background-image: url(../../images/athens/grid-bottom3-background.jpg);
 	color : @white;
 	font-size: @baseFontSize + 2;
 	margin-bottom: 0;
@@ -872,7 +876,6 @@ div.bs-docs-example blockquote{
 		background-size: cover;
 		position: relative;
 		.grid-bottom3-filter{
-			background-image: url(../../images/athens/grid-bottom3-filter.png);
 			height: 100%;
 			left: 0;
 			position: absolute;
@@ -1990,4 +1993,19 @@ div.cat_children > div, div.cat-children > div, div.categories-list > div{
 .img-polaroid{
 	background-color: @bodyBackground;
 	box-shadow: none;
+}
+.relative{
+	position: relative;
+	.wrightmodule-content{
+		bottom: 0;
+		left: -50%;
+		position: absolute;
+		width: 200%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+	.wrightmodule-imgfeatured{
+		overflow: hidden;
+	}
 }

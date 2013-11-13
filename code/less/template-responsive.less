@@ -1,7 +1,39 @@
+@media (min-width:1080px) {
+	.relative{
+		.wrightmodule-content{
+			left: 10%;
+			width: 80%;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.relative{
+		.wrightmodule-content{
+			left: -50%;
+			width: 200%;
+		}
+	}
+}
+
 @media (max-width:767px) {
 	.row-no-margin{
 		[class*="span"]{
 			width: 100% !important;
+		}
+	}
+	.grid-bottom,
+	.grid-bottom2{
+		.row-no-margin{
+			[class^="module"]{
+				margin-bottom: 0;
+			}
+		}
+	}
+	.relative{
+		.wrightmodule-content{
+			left: 5%;
+			width: 90%;
 		}
 	}
 }

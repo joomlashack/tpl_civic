@@ -138,7 +138,9 @@ defined('_JEXEC') or die('Restricted access');
                     </div>
                 <?php else : ?>
                     <div class="container-fluid container-no-padding">
-                        <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
+                        <div class="row-no-margin">
+                            <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>
@@ -156,7 +158,9 @@ defined('_JEXEC') or die('Restricted access');
                     </div>
                 <?php else : ?>
                     <div class="container-fluid container-no-padding">
-                        <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
+                        <div class="row-no-margin">
+                            <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid"/>
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>
