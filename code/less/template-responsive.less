@@ -16,6 +16,134 @@
 	}
 }
 
+@media (max-width: 979px){
+	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+		padding: 0;
+	}
+	.header{
+		padding-top: 0;
+		background-color: fade(@altBlack, 90%);
+		.navbar{
+			margin-bottom: 0;
+		}
+		.navbar-inner{
+			background-color: transparent;
+		}
+		.nav-collapse.in.collapse{
+			background-color: @navbarInverseBackground;
+		}
+	}
+	#logo{
+		a{
+			display: block;
+			max-width: 75%;
+			padding-top: 6px;
+		}
+	}
+	.nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a{
+		border-radius: 0;
+	}
+	.navbar-inverse {
+		.nav,
+		.navbar-inner,
+		.nav .navbar-inner,
+		.navbar .nav,
+		.navbar .nav .navbar-inner {
+			> li {
+				&:focus,
+				&:hover{
+					> a {
+						&:before{
+							border-top: 0;
+						}
+						&:after{
+							border-bottom: 0;
+						}
+					}
+				}
+				> a{
+					border-top: 1px solid @grayLighter;
+				}
+				&.active{
+					> a{
+						&:before{
+							border-top: 0;
+						}
+						&:after{
+							border-bottom: 0;
+						}
+					}
+				}
+			}
+			li {
+				.dropdown-menu{
+					li {
+						> a{
+							color: @linkColor;
+						}
+					}
+				}
+			}
+		}
+	}
+	.nav,
+	.navbar-inner,
+	.nav .navbar-inner,
+	.navbar .nav,
+	.navbar .nav .navbar-inner {
+		> li {
+			&:focus,
+			&:hover{
+				> a {
+					&:before{
+						border-top: 0;
+					}
+					&:after{
+						border-bottom: 0;
+					}
+				}
+			}
+			> a{
+				border-top: 1px solid @grayLighter;
+				font-size: @baseFontSize + 6;
+				font-weight: 400;
+			}
+			&:first-child{
+				> a{
+					border-top: 0;
+				}
+			}
+			&.active{
+				> a{
+					&:before{
+						border-top: 0;
+					}
+					&:after{
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+		li {
+			.dropdown-menu{
+				li {
+					> a{
+						color: @linkColor;
+						font-size: @baseFontSize + 6;
+						padding-bottom: 15px;
+						padding-top: 15px;
+					}
+				}
+			}
+		}
+	}
+	.nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a{
+		font-weight: 400;
+	}
+	.nav-collapse .dropdown-menu li+li a{
+		margin-bottom: 0;
+	}
+}
 @media (max-width:767px) {
 	.row-no-margin{
 		[class*="span"]{
@@ -34,6 +162,48 @@
 		.wrightmodule-content{
 			left: 5%;
 			width: 90%;
+		}
+	}
+	.header{
+		margin-left: -20px;
+		margin-right: -20px;
+		
+		#logo{
+			height: 59px;
+			padding-left: 20px;
+			img{
+				height: 43px;
+				margin-top: 3px;
+			}
+		}
+		.navbar-inner{
+			border: 1px solid @navbarBackground;
+			min-height: 0;
+			position: relative;
+			.btn-navbar{
+				bottom: 100%;
+				position: absolute;
+				right: 0;
+			}
+		}
+		&.navbar-inverse .navbar-inner{
+			border: 1px solid @navbarInverseBackground;
+		}
+	}
+	#grid-top,
+	#grid-top2,
+	#grid-bottom,
+	#grid-bottom2,
+	.grid-top3{
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	#grid-top,
+	#grid-top2,
+	#grid-top3{
+		&.container{
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 }
