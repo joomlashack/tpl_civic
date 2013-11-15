@@ -69,7 +69,7 @@ defined('_JEXEC') or die('Restricted access');
 
     <?php if (!$this->countModules('grid-top') || !$this->countModules('grid-top2')) : ?>
         <?php if (!$this->countModules('grid-top3')) : ?>
-            <div class="wrapp-breadcrumb sdsd">
+            <div class="wrapp-breadcrumb">
                 <div class="<?php echo $containerClass; ?>">
                     <div class="<?php echo $gridMode; ?>">
                         <div class="span12">
@@ -146,7 +146,6 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         </div>
     <?php endif; ?>
-
 
     <?php if ($this->countModules('grid-bottom2')) : ?>
        <!-- grid-bottom2 -->
