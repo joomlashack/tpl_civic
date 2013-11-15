@@ -35,7 +35,7 @@ defined('_JEXEC') or die('Restricted access');
         </div>
     <?php endif; ?>
 
-    <header id="header" class="alt-black navbar-inverse">
+    <header id="header" class="navbar-inverse">
         <div class="<?php echo $containerClass; ?>">
             <div class="<?php echo $gridMode; ?>">
                 <w:logo name="menu" />

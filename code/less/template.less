@@ -132,6 +132,7 @@ div.bs-docs-example blockquote{
 }
 .header{
 	padding-top: 20px;
+	background-color: @navbarInverseBackground;
 }
 #header{
 	margin-bottom: 0;
@@ -262,6 +263,7 @@ div.bs-docs-example blockquote{
 }
 .btn-primary{
 	border-color: @btnPrimaryBackground;
+	background-color: @btnPrimaryBackground;
 	&:hover,
 	&:focus {
 		background-color: @btnPrimaryBackgroundHover;
@@ -872,6 +874,7 @@ div.bs-docs-example blockquote{
 }
 
 .grid-bottom3{
+	background-image: url(../../images/athens/grid-bottom3-background.jpg);
 	color : @white;
 	font-size: @baseFontSize + 2;
 	margin-bottom: 0;
@@ -898,6 +901,7 @@ div.bs-docs-example blockquote{
 		background-size: cover;
 		position: relative;
 		.grid-bottom3-filter{
+			background-image: url(../../images/athens/grid-bottom3-filter.png);
 			height: 100%;
 			left: 0;
 			position: absolute;
@@ -1273,10 +1277,14 @@ dl.article-info{
 		}
 	}
 }
-			
+
 .dropdown-menu .sub-menu:before,
 .dropdown-menu .sub-menu:after{
-	display: none !important;	
+	display: none !important;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a{
+	background-image: none;
+	filter:none;
 }
 
 // Inverse navbar position menu
