@@ -1191,7 +1191,7 @@ dl.article-info{
 			line-height: 1.1em;
 			text-transform: uppercase;
 			&.item-desc{
-				color : @itemDescColor;
+				color : @color_three;
 			}
 		}
 
@@ -1304,6 +1304,9 @@ dl.article-info{
 					}
 					&:after{
 						border-bottom: 1px solid @navbarInverseLinkColor;
+					}
+					&.item-desc{
+						color : @itemDescColor;
 					}
 				}
 			}
@@ -1689,7 +1692,7 @@ dl.article-info{
 				&:hover,
 				&:focus {
 					color: @dropdownLinkColorHover;
-					background-color: @dropdownLinkBackgroundHover;
+					background-color: @grayLighter - #111;
 					[class^="icon-"],
 					[class*=" icon-"] {
 						color: @dropdownLinkColorHover;
