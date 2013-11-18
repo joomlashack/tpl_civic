@@ -133,6 +133,9 @@ div.bs-docs-example blockquote{
 .header{
 	padding-top: 20px;
 	background-color: @navbarInverseBackground;
+	.navbar-inner{
+		background-color: transparent;
+	}
 }
 #header{
 	margin-bottom: 0;
@@ -1305,9 +1308,6 @@ dl.article-info{
 					&:after{
 						border-bottom: 1px solid @navbarInverseLinkColor;
 					}
-					&.item-desc{
-						color : @itemDescColor;
-					}
 				}
 			}
 			&.active{
@@ -1342,6 +1342,9 @@ dl.article-info{
 					[class*=" icon-"] {
 						color: @navbarInverseLinkColorHover;
 					}
+				}
+				&.item-desc{
+					color : @itemDescColor;
 				}
 			}
 			&.active {
@@ -2044,3 +2047,5 @@ div.cat_children > div, div.cat-children > div, div.categories-list > div{
 		overflow: hidden;
 	}
 }
+
+div.intro{padding: 0;}
