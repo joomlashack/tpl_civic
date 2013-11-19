@@ -603,6 +603,16 @@ div.bs-docs-example blockquote{
 		color : @color_two;
 	}
 }
+
+.module_ms6, .moduletext_ms6, .moduletable_ms6{
+	> h3{
+		border-bottom: 1px solid @color_two;
+		color : #A6A2A4;
+		font-size: @baseFontSize + 6;
+		padding-bottom: 5px;
+	}
+}
+
 .grid-bottom,
 .grid-bottom2{
 	[class^="module"]{
@@ -720,11 +730,11 @@ div.bs-docs-example blockquote{
 }
 [class*="newsflash"]{
 	list-style: none;
+
 	[class*="newsflash-title"]{
 		.page-header{
 			border-bottom: 0;
 			font-family: @altFontFamily;
-			font-size: 20px;
 			margin: 0;
 			text-transform: none;
 			color : @textColor;
@@ -733,6 +743,15 @@ div.bs-docs-example blockquote{
 			}
 		}
 	}
+
+	h2{
+		font-size: (@baseFontSize + 1) * 2;
+	}
+
+	h3{
+		font-size: @baseFontSize + 6;
+	}
+
 	.article-separator{
 		border-bottom: 1px solid @color_four;
 		display: block;
@@ -740,9 +759,29 @@ div.bs-docs-example blockquote{
 		margin-top: 10px;
 	}
 }
-.newsflash-vert {
+[class*="newsflash-vert"]{
 	margin-left: 0;
 }
+[class*="newsflash-horiz"]{
+    list-style: none outside none;
+    margin-left: 0;
+    .clearfix();
+    li{
+	    display: block;
+	    float: left;
+	    margin-left: 1%;
+	    width: 22%;
+	    -webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	    		box-sizing: border-box;
+	    &:first-child, &:nth-child(5),&:nth-child(9),&:nth-child(13),&:nth-child(17),&:nth-child(21) {margin-left: 0;}
+    }
+	.article-separator{
+		border-bottom: 0;
+		margin: 0;
+	}
+}
+
 [class*="category-module"]{
 	&.list-striped{
 		border-top: 0;
@@ -1279,6 +1318,11 @@ dl.article-info{
 			}
 		}
 	}
+	&.nav-stacket.nav-tabs{
+		> li {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .dropdown-menu .sub-menu:before,
@@ -1381,6 +1425,9 @@ dl.article-info{
 }
 
 .nav-list>.active>a, .nav-list>.active>a:hover, .nav-list>.active>a:focus{
+	color : @white;
+}
+.module .nav.nav-stacked li.active>a, .module .nav.nav-pills li.active>a, .module .nav.nav-list li.active>a{
 	color : @white;
 }
 
@@ -1771,12 +1818,6 @@ dl.article-info{
 				}
 			}
 			.sub-menu {
-				// box-shadow: none;
-				// left: 0;
-				// margin-top: 0;
-				// margin: 0 10px;
-				// position: relative;
-				// visibility: visible;
 				&:before,
 				&:after {
 					display: none;
@@ -1787,10 +1828,6 @@ dl.article-info{
     	&.nav-pills {
 	      	li {
 	      		> a {
-	      			-webkit-text-shadow: none;
-	      			-moz-text-shadow: none;
-	      			-ms-text-shadow: none;
-	      			-o-text-shadow: none;
 	      			text-shadow: none;
 	      		}
 	      		.dropdown,
