@@ -375,6 +375,14 @@ div.bs-docs-example blockquote{
 	}
 }
 
+input.btn{
+	font-size: @baseFontSize;
+	padding: @paddingSmall;
+	&:after{
+		display: none;
+	}
+}
+
 .well{
 	border-color: @color_three;
 	border-radius: 0;
@@ -386,6 +394,10 @@ div.bs-docs-example blockquote{
 	}
 	> *:last-child{
 		margin-bottom: 0;
+	}
+
+	> .btn-toolbar:first-child{
+		margin-top: 0;
 	}
 }
 
@@ -1014,7 +1026,14 @@ div.bs-docs-example blockquote{
 		}
 	}
 }
-
+#sidebar1, #sidebar2{
+	.input-prepend{
+		.add-on{
+			line-height: 30px;
+			height: 30px;
+		}
+	}
+}
 p.readmore{
 	float: none;
 	margin-top: 15px;
@@ -1234,6 +1253,9 @@ dl.article-info{
 			text-transform: uppercase;
 			&.item-desc{
 				color : @color_three;
+			}
+			.caret{
+				margin-top: 5px;
 			}
 		}
 
