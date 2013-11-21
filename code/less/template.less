@@ -584,6 +584,13 @@ input.btn{
 		.wrightmodule-content{
 			background-color: fade(@color_two, 95%);
 			padding: 1.4em;
+
+			h4.wrightmodule-subtitle{
+				font-size: @baseFontSize +2;
+			}
+			.wrightmodule-subtitle{
+				color: @color_one;
+			}
 		}
 	}
 }
@@ -913,6 +920,7 @@ input.btn{
 			}
 		}
 	}
+	>.active{color: @textColor;}
 }
 
 [class^="weblinks"], [class*=" weblinks"]{
@@ -1115,6 +1123,9 @@ p.readmore{
 	}
 	p.counter{
 		line-height: 32px;
+		&.pull-right{
+			margin-left: 10px;
+		}
 	}
 }
 .pagination ul > li:last-child > a, .pagination ul > li:last-child > span,
