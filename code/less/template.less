@@ -788,6 +788,26 @@ input.btn{
     li{
 	    &:nth-child(5),&:nth-child(9),&:nth-child(13),&:nth-child(17),&:nth-child(21){margin-left: 0;}
     }
+}
+
+[class*="newsflash-2columns"]{
+	margin-top: 70px;
+	li{
+		margin-bottom: 50px;
+	    &:nth-child(3),&:nth-child(5),&:nth-child(7),&:nth-child(9),&:nth-child(11){
+	    	margin-left: 0;
+	    }
+	}
+	.img-intro-left, .img-fulltext-left{
+		margin: 0;
+	}
+	[class*="newsflash-title"]{
+		margin-top: 25px;
+	}
+}
+
+[class*="newsflash-horiz"],
+[class*="newsflash-2columns"]{
 	.article-separator{
 		border-bottom: 0;
 		margin: 0;
