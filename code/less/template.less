@@ -122,7 +122,6 @@ blockquote{
 	.border-radius(0);
 }
 
-
 div.bs-docs-example blockquote{
 	margin-bottom: 53px;
 	margin-top: 10px;
@@ -130,9 +129,37 @@ div.bs-docs-example blockquote{
 .alt-black{
 	background-color: @altBlack;
 }
+.fix_rgba_ie_v_8(){
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	content: '';
+	display: block;
+	background-color: @color_one;
+}
+.is_internet.v_8{
+	.navbar-inverse{
+		.navbar-inner{
+			background-color: transparent;
+			-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5111111,endColorstr=#E5111111)";
+		}
+	}
+	.header{
+		background-color: transparent;
+		-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5111111,endColorstr=#E5111111)";
+		.navbar-inner{
+			-ms-filter: none;
+			filter: none;
+		}
+	}
+}
+
 .header{
 	padding-top: 20px;
 	background-color: @navbarInverseBackground;
+
 	.navbar-inner{
 		background-color: transparent;
 	}
@@ -1477,6 +1504,28 @@ dl.article-info{
 	color : @white;
 }
 
+.is_internet.v_9,
+.is_internet.v_10{
+	.nav,
+	.navbar-inner,
+	.nav .navbar-inner,
+	.navbar .nav,
+	.navbar .nav .navbar-inner {
+		> li {
+			> a {
+				.caret{
+					margin-top: 7px;
+				}
+			}
+			ul li > a{
+				.caret{
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+}
+
 // Special styles in menus (tabs, pills)
 
 .nav.nav-tabs,
@@ -2132,3 +2181,44 @@ div.cat_children > div, div.cat-children > div, div.categories-list > div{
 }
 
 div.intro{padding: 0;}
+
+// LifeStream
+body{
+	div.lifestream {
+		ul.stream {
+			background-color: transparent;
+			background-image: none;
+			border-radius: 0;
+			border: 0;
+			li{
+				background-color: transparent;
+				background-image: none;
+				border-radius: 0;
+				border: 0;
+				color: #202020;
+				font-size: @baseFontSize + 6;
+			}
+			.list_twitter{
+				.icon{
+					height: 41px;
+					position: relative;
+					width: 41px;
+					&:before{
+						color: #8ED1F6;
+						content: '\f099';
+						font-family: FontAwesome;
+						font-size: 41px;
+						height: 41px;
+						line-height: 41px;
+						position: absolute;
+						top: 0;
+						width: 41px;
+					}
+					img{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
