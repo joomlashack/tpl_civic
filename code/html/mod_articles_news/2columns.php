@@ -34,7 +34,7 @@ defined('_JEXEC') or die;
 			<?php endif; ?>
 
 		</div>
-		<?php if ($cont % 2 !=  0): ?>
+		<?php if ($cont % 2 !=  0 || $cont == $n - 1): ?>
 			</div>
 		<?php endif; ?>
 		<?php
