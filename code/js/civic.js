@@ -8,6 +8,10 @@ jQuery(function() {
 			'background-image' : 'url(' + el.attr('data-bg-grid-top')+ ')'
 		});
 	}
-	CivciBgRezise(jQuery('.grid-bottom3'));
-	CivciBgRezise(jQuery('.grid-top3'));
+	CivciBgRezise(jQuery('#grid-top'));
+	CivciBgRezise(jQuery('#grid-top2'));
+	CivciBgRezise(jQuery('#grid-top3'));
+	CivciBgRezise(jQuery('#grid-bottom'));
+	CivciBgRezise(jQuery('#grid-bottom2'));
+	CivciBgRezise(jQuery('#grid-bottom3'));
 });

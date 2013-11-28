@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_civic</name>
-	<creationDate>November 2013</creationDate>
+	<creationDate>December 2013</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>0.1_beta1.6</version>
+	<version>0.1_RC_0.1</version>
     <description>TPL_JS_CIVIC_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -109,41 +109,88 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_CIVIC">
-				<field name="enableGridBottom3Bg" type="radio" default="0" label="TPL_JS_CIVIC_GRID_BOTTOM_3_BG" description="TPL_JS_CIVIC_GRID_BOTTOM_3_BG_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="imgGridBottom3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG_DESC" />
-				<field name="imgGridTop3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_TOP_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP_3_IMAGE_BG_DESC" />
 				<field name="enableFluidContainerGridBottom" type="radio" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
+
 				<field name="enableFluidContainerGridBottom2" type="radio" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_2" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_2_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="bgColorGridBottom" type="list" default="transparent" label="TPL_JS_CIVIC_GRID_BOTTOM_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM_BG_COLOR_DESC">
-					<option value="transparent">TPL_JS_CIVIC_TRANSPARENT</option>
-					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
-					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
-					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
-					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
-					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
-				</field>
-				<field name="bgColorGridBottom2" type="list" default="transparent" label="TPL_JS_CIVIC_GRID_BOTTOM_2_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM_2_BG_COLOR_DESC">
-					<option value="transparent">TPL_JS_CIVIC_TRANSPARENT</option>
-					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
-					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
-					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
-					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
-					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
-				</field>
+
+
 				<field name="separateGridBottom2" type="radio" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_2" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_2_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
 			</fieldset>
+
+			<fieldset name="TPL_CIVIC_BACKGROUND_IMAGE_GRIDS_POSITIONS">
+				<field name="imgGridTopBg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_TOP_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
+
+				<field name="imgGridTop2Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_TOP_2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
+
+				<field name="imgGridTop3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_TOP_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
+
+				<field name="imgGridBottomBg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
+
+				<field name="imgGridBottom2Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
+
+				<field name="imgGridBottom3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
+			</fieldset>
+
+			<fieldset name="TPL_CIVIC_BACKGROUND_COLOR_GRIDS_POSITIONS">
+				<field name="bgColorGridTop" type="list" default="transparent" label="TPL_JS_CIVIC_GRID_TOP_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
+					<option value="transparent">TPL_JS_CIVIC_TRANSPARENT</option>
+					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+				</field>
+				<field name="bgColorGridTop2" type="list" default="transparent" label="TPL_JS_CIVIC_GRID_TOP_2_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
+					<option value="transparent">TPL_JS_CIVIC_TRANSPARENT</option>
+					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+				</field>
+				<field name="bgColorGridTop3" type="list" default="transparent" label="TPL_JS_CIVIC_GRID_TOP_3_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
+					<option value="transparent">TPL_JS_CIVIC_TRANSPARENT</option>
+					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+				</field>
+				<field name="bgColorGridBottom" type="list" default="transparent" label="TPL_JS_CIVIC_GRID_BOTTOM_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
+					<option value="transparent">TPL_JS_CIVIC_TRANSPARENT</option>
+					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+				</field>
+				<field name="bgColorGridBottom2" type="list" default="transparent" label="TPL_JS_CIVIC_GRID_BOTTOM_2_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
+					<option value="transparent">TPL_JS_CIVIC_TRANSPARENT</option>
+					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+				</field>
+				<field name="bgColorGridBottom3" type="list" default="transparent" label="TPL_JS_CIVIC_GRID_BOTTOM_3_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
+					<option value="transparent">TPL_JS_CIVIC_TRANSPARENT</option>
+					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+				</field>
+			</fieldset>
+
 		</fields>
 	</config>
 </extension>

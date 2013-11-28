@@ -27,8 +27,8 @@ $fullBreadcrumb = false;
 if ($this->countModules('grid-top') || $this->countModules('grid-top2')){
 	$fullBreadcrumb = true;
 }
-$enableGridBottom3Bg = $this->params->get('enableGridBottom3Bg','0');
-$addBgImgGridBottom3 = ($enableGridBottom3Bg == '1' ? ' addBgImgGridBottom3' : '' );
+
+// Parameters Civic
 
 function checkImage($img, $default) {
         if ($img == "") {
@@ -48,19 +48,30 @@ function checkImage($img, $default) {
         return $img;
 }
 
-$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
-
-if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $imgGridBottom3Bg);
-if ($imgGridTop3Bg != "-1") $imgGridTop3Bg = str_replace(JPATH_BASE, '', $imgGridTop3Bg);
-
 
 $enableFluidContainerGridBottom = $this->params->get('enableFluidContainerGridBottom','0');
 $enableFluidContainerGridBottom2 = $this->params->get('enableFluidContainerGridBottom2','0');
-$bgColorGridBottom = $this->params->get('bgColorGridBottom','transparent');
-$bgColorGridBottom2 = $this->params->get('bgColorGridBottom2','transparent');
 $separateGridBottom2 = $this->params->get('separateGridBottom2','1');
-
 $classSeparatorGridBottom2 = ($separateGridBottom2 == '0') ? ' noSeparateGridBottom2' : '' ;
 
+$bgColorGridTop = $this->params->get('bgColorGridTop','transparent');
+$bgColorGridTop2 = $this->params->get('bgColorGridTop2','transparent');
+$bgColorGridTop3 = $this->params->get('bgColorGridTop3','transparent');
+$bgColorGridBottom = $this->params->get('bgColorGridBottom','transparent');
+$bgColorGridBottom2 = $this->params->get('bgColorGridBottom2','transparent');
+$bgColorGridBottom3 = $this->params->get('bgColorGridBottom3','transparent');
+
+$imgGridTopBg = checkImage($this->params->get("imgGridTopBg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
+$imgGridTop2Bg = checkImage($this->params->get("imgGridTop2Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
+$imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
+$imgGridBottomBg = checkImage($this->params->get("imgGridBottomBg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
+$imgGridBottom2Bg = checkImage($this->params->get("imgGridBottom2Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
+$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
+
+if ($imgGridTopBg != "-1") $imgGridTopBg = str_replace(JPATH_BASE, '', $imgGridTopBg);
+if ($imgGridTop2Bg != "-1") $imgGridTop2Bg = str_replace(JPATH_BASE, '', $imgGridTop2Bg);
+if ($imgGridTop3Bg != "-1") $imgGridTop3Bg = str_replace(JPATH_BASE, '', $imgGridTop3Bg);
+if ($imgGridBottomBg != "-1") $imgGridBottomBg = str_replace(JPATH_BASE, '', $imgGridBottomBg);
+if ($imgGridBottom2Bg != "-1") $imgGridBottom2Bg = str_replace(JPATH_BASE, '', $imgGridBottom2Bg);
+if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $imgGridBottom3Bg);
 

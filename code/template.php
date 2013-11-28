@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Cousine:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body class="<?php echo $responsive . $addBgImgGridBottom3 . $classSeparatorGridBottom2?>">
+<body class="<?php echo $responsive . $classSeparatorGridBottom2?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
@@ -45,22 +45,26 @@ defined('_JEXEC') or die('Restricted access');
 
     <?php if ($this->countModules('grid-top')) : ?>
         <!-- grid-top -->
-        <div id="grid-top" class="<?php echo $containerClass; ?>">
-            <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+        <div id="grid-top" class="<?php echo $bgColorGridTop; ?> bg-color-grid-bottom-modules" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTopBg ?>">
+            <div class="grid-top <?php echo $containerClass; ?>">
+                <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+            </div>
         </div>
     <?php endif; ?>
 
     <?php if ($this->countModules('grid-top2')) : ?>
         <!-- grid-top2 -->
-        <div id="grid-top2" class="<?php echo $containerClass; ?>">
-            <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+        <div id="grid-top2" class="<?php echo $bgColorGridTop2; ?> bg-color-grid-bottom-modules" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop2Bg ?>">
+            <div class="grid-top2 <?php echo $containerClass; ?>">
+                <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+            </div>
         </div>
     <?php endif; ?>
 
     <?php if ($this->countModules('grid-top3')) : ?>
         <!-- grid-top3 -->
-        <div class="grid-top3" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop3Bg ?>">
-            <div id="grid-top3" class="<?php echo $containerClass; ?>">
+        <div id="grid-top3" class="<?php echo $bgColorGridTop3; ?> bg-color-grid-bottom-modules" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop3Bg ?>">
+            <div class="grid-top3 <?php echo $containerClass; ?>">
                 <w:module type="<?php echo $gridMode; ?>" name="grid-top3" chrome="wrightflexgrid" />
             </div>
         </div>
@@ -130,7 +134,7 @@ defined('_JEXEC') or die('Restricted access');
 
     <?php if ($this->countModules('grid-bottom')) : ?>
         <!-- grid-bottom -->
-        <div id="grid-bottom" class="<?php echo $bgColorGridBottom; ?> bg-color-grid-bottom-modules">
+        <div id="grid-bottom" class="<?php echo $bgColorGridBottom; ?> bg-color-grid-bottom-modules" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottomBg ?>">
             <div class="grid-bottom">
                 <?php if ($enableFluidContainerGridBottom == '0') : ?>
                     <div class="<?php echo $containerClass ; ?>">
@@ -149,7 +153,7 @@ defined('_JEXEC') or die('Restricted access');
 
     <?php if ($this->countModules('grid-bottom2')) : ?>
        <!-- grid-bottom2 -->
-        <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2; ?> bg-color-grid-bottom-modules">
+        <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2; ?> bg-color-grid-bottom-modules" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom2Bg ?>">
             <div class="grid-bottom2">
                 <?php if ($enableFluidContainerGridBottom2 == '0') : ?>
                     <div class="<?php echo $containerClass ; ?>">
@@ -167,15 +171,13 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
 
     <?php if ($this->countModules('grid-bottom3')) : ?>
-        <div class="grid-bottom3" <?php if ($addBgImgGridBottom3) :?> data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>" <?php endif; ?>>
+        <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3; ?> bg-color-grid-bottom-modules" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>">
             <div class="<?php echo $containerClass ?>">
                 <!-- grid-bottom3 -->
-                <div id="grid-bottom3" >
+                <div class="grid-bottom3">
                     <w:module type="<?php echo $gridMode; ?>" name="grid-bottom3" chrome="wrightflexgrid" />
                 </div>
-                <?php if ($addBgImgGridBottom3) : ?>
-                    <div class="grid-bottom3-filter"></div>
-                <?php endif; ?>
+
             </div>
         </div>
     <?php endif; ?>
