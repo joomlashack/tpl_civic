@@ -54,12 +54,12 @@ $enableFluidContainerGridBottom2 = $this->params->get('enableFluidContainerGridB
 $separateGridBottom2 = $this->params->get('separateGridBottom2','1');
 $classSeparatorGridBottom2 = ($separateGridBottom2 == '0') ? ' noSeparateGridBottom2' : '' ;
 
-$bgColorGridTop = $this->params->get('bgColorGridTop','transparent');
-$bgColorGridTop2 = $this->params->get('bgColorGridTop2','transparent');
-$bgColorGridTop3 = $this->params->get('bgColorGridTop3','transparent');
-$bgColorGridBottom = $this->params->get('bgColorGridBottom','transparent');
-$bgColorGridBottom2 = $this->params->get('bgColorGridBottom2','transparent');
-$bgColorGridBottom3 = $this->params->get('bgColorGridBottom3','transparent');
+$bgColorGridTop = $this->params->get('bgColorGridTop','tone_color');
+$bgColorGridTop2 = $this->params->get('bgColorGridTop2','tone_color');
+$bgColorGridTop3 = $this->params->get('bgColorGridTop3','tone_color');
+$bgColorGridBottom = $this->params->get('bgColorGridBottom','tone_color');
+$bgColorGridBottom2 = $this->params->get('bgColorGridBottom2','tone_color');
+$bgColorGridBottom3 = $this->params->get('bgColorGridBottom3','tone_color');
 
 $imgGridTopBg = checkImage($this->params->get("imgGridTopBg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
 $imgGridTop2Bg = checkImage($this->params->get("imgGridTop2Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
