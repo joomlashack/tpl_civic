@@ -211,6 +211,7 @@ div.bs-docs-example blockquote{
 
 .hero-unit{
 	border-radius: 0;
+	color: @textColor;
 	font-size: 16px;
 	text-align: center;
 	h1,h2,h3,h4,h5,h6{
@@ -585,6 +586,7 @@ div.bs-docs-example blockquote{
 }
 .wrapp-breadcrumb{
 	background-color: @white;
+	color: @textColor;
 	.breadcrumb{
 		background-color: @white;
 	}
@@ -1307,6 +1309,7 @@ dl.article-info{
 	}
 	+ .current {
 		background-color: @white;
+		color: @textColor;
 		padding: 10px;
 		-webkit-box-sizing: border-box;
 		   -moz-box-sizing: border-box;
@@ -2172,10 +2175,16 @@ input.btn{
 	}
 
 	a,
-	p.readmore a
+	p.readmore a,
+	[class*="category-module"].list-striped li:nth-child(odd) a,
+	[class*="category-module"].list-striped li:hover a,
+	[class*="category-module"].list-striped dd:nth-child(odd) a,
+	[class*="category-module"].list-striped dd:hover a
 	{
 		color: @color_two;
 	}
+
+
 	[class*="newsflash"]{
 		[class*="newsflash-title"]{
 			color: #ccc;
@@ -2220,7 +2229,11 @@ input.btn{
 	[class*="newsflash"] [class*="newsflash-title"] .page-header{
 		color: #ccc;
 	}
-	a{
+	a,
+	[class*="category-module"].list-striped li:nth-child(odd) a,
+	[class*="category-module"].list-striped li:hover a,
+	[class*="category-module"].list-striped dd:nth-child(odd) a,
+	[class*="category-module"].list-striped dd:hover a{
 		color : @color_four;
 	}
 	p.readmore a{
@@ -2240,16 +2253,21 @@ input.btn{
 }
 .color_five{
 	background-color: @color_five;
+	color: @textColor;
 	.module, .moduletext, .moduletable{
 		color: @textColor;
 	}
+}
+.white{
+	background-color: @white;
 }
 .color_one,
 .color_two,
 .color_three,
 .color_four,
 .color_five,
-.tone_inverse_color{
+.tone_inverse_color,
+.white{
 	.bg-color-grid-bottom-modules();
 
 	.module_ms3, .moduletext_ms3, .moduletable_ms3{
@@ -2261,5 +2279,69 @@ input.btn{
 		.btn-inverse{
 			color: @white;
 		}
+	}
+}
+
+.tone_light{
+	background-color: @bodyBackground;
+}
+
+.tone_dark{
+	background-color: @grayDarker;
+	color: @grayLighter;
+
+	.article-info.muted{
+		color: @grayLight;
+	}
+
+	.wrapp-breadcrumb{
+		background-color: @grayDark;
+		color: @grayLighter;
+		.breadcrumb{
+			background-color: @grayDark;
+		}
+	}
+	.breadcrumb>li .divider{
+		color: @grayLight;
+	}
+	.well{
+		background-color: @grayDark;
+	}
+	.table{
+		td{
+			color: @grayLighter;
+		}
+		&.table-striped tbody>tr:nth-child(odd){
+			>td,
+			>th{
+				background-color: @grayDark;
+			}
+		}
+		&.table-hover tbody tr:hover{
+			>td,
+			>th{
+				background-color: @tableBackgroundHover;
+				color: @textColor;
+			}
+		}
+	}
+	p.img_caption{background-color: @grayDark;}
+
+	legend{
+		color: @grayLighter;
+		border-bottom-color: @grayLight;
+	}
+	.panel h3.pane-toggler-down a, .panel p.pane-toggler-down a{
+		color: @grayLighter;
+	}
+	.tone_inverse_color{
+		background-color: @bodyBackground;
+		color: @textColor;
+		.module_ms2, .moduletext_ms2, .moduletable_ms2{
+			color: @textColor;
+		}
+	}
+	.white{
+		color: @textColor;
 	}
 }

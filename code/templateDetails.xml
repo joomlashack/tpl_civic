@@ -124,6 +124,10 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
+				<field name="toneTemplate" type="list" default="tone_light" label="TPL_JS_CIVIC_TONE_TEMPLATE" description="TPL_JS_CIVIC_TONE_TEMPLATE_DESC">
+					<option value="tone_light">TPL_JS_CIVIC_TONE_LIGHT</option>
+					<option value="tone_dark">TPL_JS_CIVIC_TONE_DARK</option>
+				</field>
 			</fieldset>
 
 			<fieldset name="TPL_CIVIC_BACKGROUND_IMAGE_GRIDS_POSITIONS">
@@ -149,6 +153,7 @@
 					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
 					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
 					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+					<option value="white">TPL_JS_CIVIC_WHITE</option>
 				</field>
 				<field name="bgColorGridTop2" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_TOP_2_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
 					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
@@ -158,6 +163,7 @@
 					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
 					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
 					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+					<option value="white">TPL_JS_CIVIC_WHITE</option>
 				</field>
 				<field name="bgColorGridTop3" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_TOP_3_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
 					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
@@ -167,6 +173,7 @@
 					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
 					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
 					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+					<option value="white">TPL_JS_CIVIC_WHITE</option>
 				</field>
 				<field name="bgColorGridBottom" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
 					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
@@ -176,6 +183,7 @@
 					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
 					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
 					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+					<option value="white">TPL_JS_CIVIC_WHITE</option>
 				</field>
 				<field name="bgColorGridBottom2" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM_2_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
 					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
@@ -185,6 +193,7 @@
 					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
 					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
 					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+					<option value="white">TPL_JS_CIVIC_WHITE</option>
 				</field>
 				<field name="bgColorGridBottom3" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM_3_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
 					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
@@ -194,6 +203,7 @@
 					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
 					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
 					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+					<option value="white">TPL_JS_CIVIC_WHITE</option>
 				</field>
 			</fieldset>
 

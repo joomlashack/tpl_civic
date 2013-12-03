@@ -75,3 +75,6 @@ if ($imgGridBottomBg != "-1") $imgGridBottomBg = str_replace(JPATH_BASE, '', $im
 if ($imgGridBottom2Bg != "-1") $imgGridBottom2Bg = str_replace(JPATH_BASE, '', $imgGridBottom2Bg);
 if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $imgGridBottom3Bg);
 
+$toneTemplate = $this->params->get('toneTemplate','tone_light');
+$toneTemplate =  " " . $toneTemplate;
+

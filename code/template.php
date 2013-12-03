@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Cousine:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body class="<?php echo $responsive . $classSeparatorGridBottom2?>">
+<body class="<?php echo $responsive . $classSeparatorGridBottom2 . $toneTemplate?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
