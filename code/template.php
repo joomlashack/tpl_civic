@@ -37,7 +37,7 @@ defined('_JEXEC') or die('Restricted access');
 
     <header id="header" class="navbar-inverse">
         <div class="<?php echo $containerClass; ?>">
-            <div class="<?php echo $gridMode; ?>">
+            <div class="<?php echo $gridMode; if ($this->countModules('featured')){echo ' dropup';} ?>">
                 <w:logo name="menu" />
             </div>
         </div>

@@ -172,8 +172,18 @@ div.bs-docs-example blockquote{
 	}
 
 	+ #grid-top,
-	+ #grid-top2{
+	+ #grid-top2,
+	+ #grid-top3{
 		margin-top: 70px;
+		&.tone_inverse_color,
+		&.color_one,
+		&.color_two,
+		&.color_three,
+		&.color_four,
+		&.color_five,
+		{
+			margin-top: 0;
+		}
 	}
 }
 #featured{
@@ -2343,5 +2353,14 @@ input.btn{
 	}
 	.white{
 		color: @textColor;
+	}
+}
+
+#header{
+	.dropup{
+		.nav li.dropdown .dropdown-menu li .sub-menu, .navbar-inner li.dropdown .dropdown-menu li .sub-menu, .nav .navbar-inner li.dropdown .dropdown-menu li .sub-menu, .navbar .nav li.dropdown .dropdown-menu li .sub-menu, .navbar .nav .navbar-inner li.dropdown .dropdown-menu li .sub-menu{
+			top: auto;
+			bottom: 0;
+		}
 	}
 }
