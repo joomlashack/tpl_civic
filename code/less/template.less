@@ -202,7 +202,7 @@ div.bs-docs-example blockquote{
 }
 
 .well{
-	border-color: @color_three;
+	border:0;
 	border-radius: 0;
 	box-shadow: none;
 	color : @grayLight;
@@ -444,6 +444,15 @@ div.bs-docs-example blockquote{
 .noSeparateGridBottom2{
 	#grid-bottom{
 		margin-bottom: 0 !important;
+		+ .color_one,
+		+ .color_two,
+		+ .color_three,
+		+ .color_four,
+		+ .color_five,
+		+ .tone_inverse_color,
+		+ .white{
+			margin-top: 0;
+		}
 	}
 }
 [class*="newsflash"]{
@@ -528,17 +537,23 @@ div.bs-docs-example blockquote{
 			}
 		}
 		li , dd{
-			padding-bottom: 20px;
-			padding-top: 20px;
+			padding-bottom: 10px;
+			padding-top: 10px;
 			border-bottom-color: @color_four;
 			&:hover{
 				background-color: transparent;
 			}
+
+			&:first-child{
+				padding-top: 0;
+			}
+
 			> span[class*="mod-articles-"]{
 				display: inline-block;
 				margin-bottom: 20px;
 				margin-right: 3px;
 			}
+
 		}
 	}
 	&.row-striped {
@@ -890,6 +905,18 @@ dl.article-info{
 		}
 	}
 }
+
+.is_chrome,
+.is_internet.v_8{
+	.navbar .nav{
+		> li {
+			> a{
+				padding: 3px 0 1px;
+			}
+		}
+	}
+}
+
 .navbar-form input, .navbar-form select, .navbar-form .btn{
 	margin-bottom: 5px;
 }
@@ -2137,6 +2164,8 @@ input.btn{
 	background-color: @toneInverseColor;
 	color: @white;
 	a,
+	[class*="category-module"].list-striped li:nth-child(odd) a,
+	[class*="category-module"].list-striped dd:nth-child(odd) a,
 	p.readmore a{
 		color:#5ECDE8;
 	}
@@ -2290,6 +2319,15 @@ input.btn{
 			color: @white;
 		}
 	}
+	+ .color_one,
+	+ .color_two,
+	+ .color_three,
+	+ .color_four,
+	+ .color_five,
+	+ .tone_inverse_color,
+	+ .white{
+		margin-top: -80px;
+	}
 }
 
 .tone_light{
@@ -2356,11 +2394,40 @@ input.btn{
 	}
 }
 
+#grid-bottom3{
+	&.color_one,
+	&.color_two,
+	&.color_three,
+	&.color_four,
+	&.color_five,
+	&.tone_inverse_color,
+	&.white{
+		margin-bottom: 0 !important;
+	}
+}
+
 #header{
 	.dropup{
 		.nav li.dropdown .dropdown-menu li .sub-menu, .navbar-inner li.dropdown .dropdown-menu li .sub-menu, .nav .navbar-inner li.dropdown .dropdown-menu li .sub-menu, .navbar .nav li.dropdown .dropdown-menu li .sub-menu, .navbar .nav .navbar-inner li.dropdown .dropdown-menu li .sub-menu{
 			top: auto;
 			bottom: 0;
 		}
+	}
+}
+
+.contact-form .form-actions{
+	background-color: transparent;
+	border: 0;
+}
+
+button[name="Search"]{
+	.icon-search.icon-white{
+		display: none;
+	}
+}
+
+#logo {
+	a.image{
+		display: block;
 	}
 }
