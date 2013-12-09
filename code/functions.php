@@ -63,10 +63,10 @@ $bgColorGridBottom3 = $this->params->get('bgColorGridBottom3','tone_color');
 
 $imgGridTopBg = checkImage($this->params->get("imgGridTopBg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
 $imgGridTop2Bg = checkImage($this->params->get("imgGridTop2Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
-$imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
+$imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", "templates/js_civic/images/default-bg-grid-top-3.jpg"), "templates/js_civic/images/default-bg-grid-top-3.jpg");
 $imgGridBottomBg = checkImage($this->params->get("imgGridBottomBg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
 $imgGridBottom2Bg = checkImage($this->params->get("imgGridBottom2Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
+$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", "templates/js_civic/images/default-bg-grid-bottom-3.jpg"), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
 
 if ($imgGridTopBg != "-1") $imgGridTopBg = str_replace(JPATH_BASE, '', $imgGridTopBg);
 if ($imgGridTop2Bg != "-1") $imgGridTop2Bg = str_replace(JPATH_BASE, '', $imgGridTop2Bg);
