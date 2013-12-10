@@ -33,23 +33,23 @@ defined('_JEXEC') or die('Restricted access');
     <div id="featured">
 
         <div class="wrapper">
-            <div class="screen" id="screen-1" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/slider/videos/bird.mp4">
+            <div class="screen" id="screen-1" data-video="quicklaunchers.shackdev.joomlashack.local/civic/bird.mp4">
                 <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/bird.jpg" class="big-image" />
                 <h1 class="video-title">#1 Bird</h1>
             </div>
-            <div class="screen" id="screen-2" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/slider/videos/satellite.mp4">
+            <div class="screen" id="screen-2" data-video="quicklaunchers.shackdev.joomlashack.local/civic/satellite.mp4">
                 <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/satellite.jpg" class="big-image" />
                 <h1 class="video-title">#2 Satellite</h1>
             </div>
-            <div class="screen" id="screen-3" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/slider/videos/camera.mp4">
+            <div class="screen" id="screen-3" data-video="quicklaunchers.shackdev.joomlashack.local/civic/camera.mp4">
                 <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/camera.jpg" class="big-image" />
                 <h1 class="video-title">#3 Camera</h1>
             </div>
-            <div class="screen" id="screen-4" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/slider/videos/spider.mp4">
+            <div class="screen" id="screen-4" data-video="quicklaunchers.shackdev.joomlashack.local/civic/spider.mp4">
                 <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/spider.jpg" class="big-image" />
                 <h1 class="video-title">#4 Spider</h1>
             </div>
-            <div class="screen" id="screen-5" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/slider/videos/dandelion.mp4">
+            <div class="screen" id="screen-5" data-video="quicklaunchers.shackdev.joomlashack.local/civic/dandelion.mp4">
                 <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/dandelion.jpg" class="big-image" />
                 <h1 class="video-title">#5 Dandelion</h1>
             </div>
