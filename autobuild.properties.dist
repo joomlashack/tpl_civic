@@ -1,1 +1,2 @@
 www.dir=/var/www/civic
+node.skip=false
