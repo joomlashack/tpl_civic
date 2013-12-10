@@ -75,6 +75,26 @@ if ($imgGridBottomBg != "-1") $imgGridBottomBg = str_replace(JPATH_BASE, '', $im
 if ($imgGridBottom2Bg != "-1") $imgGridBottom2Bg = str_replace(JPATH_BASE, '', $imgGridBottom2Bg);
 if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $imgGridBottom3Bg);
 
-$toneTemplate = $this->params->get('toneTemplate','tone_light');
-$toneTemplate =  " " . $toneTemplate;
+// $toneTemplate = $this->params->get('toneTemplate','tone_light');
+// $toneTemplate =  " " . $toneTemplate;
 
+
+// templateTone parameter (Light = '-Light' - Dark = '-Dark')
+$user = JFactory::getUser();
+if (!is_null(JRequest::getVar('templateTone', NULL)))
+{
+    $Tone = JRequest::getVar('templateTone');
+    if ($Tone == '-Light' || $Tone == '-Dark') {
+        $user->setParam('templateTone', JRequest::getVar('templateTone'));
+        $user->save(true);
+    }
+}
+
+$Tone = ($user->getParam('templateTone',''));
+if ($Tone == '') {
+    $Tone =  $this->params->get('Tone','' );
+}
+elseif ($Tone == '-Light')
+{
+    $Tone = '';
+}

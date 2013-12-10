@@ -124,9 +124,10 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="toneTemplate" type="list" default="tone_light" label="TPL_JS_CIVIC_TONE_TEMPLATE" description="TPL_JS_CIVIC_TONE_TEMPLATE_DESC">
-					<option value="tone_light">TPL_JS_CIVIC_TONE_LIGHT</option>
-					<option value="tone_dark">TPL_JS_CIVIC_TONE_DARK</option>
+
+				<field name="Tone" type="list" default="" label="TPL_JS_CIVIC_TONE_TEMPLATE" description="TPL_JS_CIVIC_TONE_TEMPLATE_DESC">
+					<option value="">TPL_JS_CIVIC_TONE_LIGHT</option>
+					<option value="-Dark">TPL_JS_CIVIC_TONE_DARK</option>
 				</field>
 			</fieldset>
 
