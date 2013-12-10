@@ -79,16 +79,21 @@
 				.dropdown-menu{
 					li {
 						> a{
-							color: @linkColor;
+							color: @linkColor !important;
 						}
 						.sub-menu{
 							li a{
-								color: @white;
+								color: @white !important;
 							}
 						}
 					}
 				}
 			}
+		}
+	}
+	.navbar-inverse .nav-collapse .nav>li>a{
+		&.item-desc{
+			color : @color_three;
 		}
 	}
 	.nav,
