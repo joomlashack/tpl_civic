@@ -20,196 +20,199 @@ defined('_JEXEC') or die('Restricted access');
     <w:head />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Cousine:400,700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="<?php echo JURI::root(true) ?>/templates/js_civic/css/bigvideo.css">
 </head>
 <body class="<?php echo $responsive . $classSeparatorGridBottom2 . ' Tone' . $Tone?>">
-    <?php if ($this->countModules('toolbar')) : ?>
-        <!-- toolbar -->
-        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
-    <?php endif; ?>
-
-
-    <!-- featured -->
-    <div id="featured">
-
-        <div class="wrapper">
-            <div class="screen" id="screen-1" data-video="http://quicklaunchers.shackdev.joomlashack.local/civic/bird.mp4">
-                <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/bird.jpg" class="big-image" />
-                <h1 class="video-title">#1 Bird</h1>
-            </div>
-            <div class="screen" id="screen-2" data-video="http://quicklaunchers.shackdev.joomlashack.local/civic/satellite.mp4">
-                <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/satellite.jpg" class="big-image" />
-                <h1 class="video-title">#2 Satellite</h1>
-            </div>
-            <div class="screen" id="screen-3" data-video="http://quicklaunchers.shackdev.joomlashack.local/civic/camera.mp4">
-                <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/camera.jpg" class="big-image" />
-                <h1 class="video-title">#3 Camera</h1>
-            </div>
-            <div class="screen" id="screen-4" data-video="http://quicklaunchers.shackdev.joomlashack.local/civic/spider.mp4">
-                <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/spider.jpg" class="big-image" />
-                <h1 class="video-title">#4 Spider</h1>
-            </div>
-            <div class="screen" id="screen-5" data-video="http://quicklaunchers.shackdev.joomlashack.local/civic/dandelion.mp4">
-                <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/dandelion.jpg" class="big-image" />
-                <h1 class="video-title">#5 Dandelion</h1>
-            </div>
-        </div>
-
-        <nav id="next-btn">
-            <a href="#" class="next-icon"></a>
-        </nav>
-
-        <?php if ($this->countModules('featured')) : ?>
-            <w:module type="none" name="featured" chrome="xhtml" />
+        <?php if ($this->countModules('toolbar')) : ?>
+            <!-- toolbar -->
+            <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
         <?php endif; ?>
-    </div>
 
-    <header id="header" class="navbar-inverse">
-        <div class="<?php echo $containerClass; ?>">
-            <div class="<?php echo $gridMode; if ($this->countModules('featured')){echo ' dropup';} ?>">
-                <w:logo name="menu" />
+
+        <!-- featured -->
+        <div id="featured">
+
+            <div class="wrapper">
+                <div class="screen" id="screen-1" data-video="http://quicklaunchers.shackdev.joomlashack.local/civic/bird.mp4">
+                    <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/bird.jpg" class="big-image" />
+                    <h1 class="video-title">#1 Bird</h1>
+                </div>
+                <div class="screen" id="screen-2" data-video="http://quicklaunchers.shackdev.joomlashack.local/civic/satellite.mp4">
+                    <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/satellite.jpg" class="big-image" />
+                    <h1 class="video-title">#2 Satellite</h1>
+                </div>
+                <div class="screen" id="screen-3" data-video="http://quicklaunchers.shackdev.joomlashack.local/civic/camera.mp4">
+                    <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/camera.jpg" class="big-image" />
+                    <h1 class="video-title">#3 Camera</h1>
+                </div>
+                <div class="screen" id="screen-4" data-video="http://quicklaunchers.shackdev.joomlashack.local/civic/spider.mp4">
+                    <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/spider.jpg" class="big-image" />
+                    <h1 class="video-title">#4 Spider</h1>
+                </div>
+                <div class="screen" id="screen-5" data-video="http://quicklaunchers.shackdev.joomlashack.local/civic/dandelion.mp4">
+                    <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/dandelion.jpg" class="big-image" />
+                    <h1 class="video-title">#5 Dandelion</h1>
+                </div>
             </div>
-        </div>
-    </header>
 
-    <?php if ($this->countModules('grid-top')) : ?>
-        <!-- grid-top -->
-        <div id="grid-top" class="<?php echo $bgColorGridTop; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTopBg ?>">
-            <div class="grid-top <?php echo $containerClass; ?>">
-                <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+            <nav id="next-btn">
+                <a href="#" class="next-icon"></a>
+            </nav>
+
+            <?php if ($this->countModules('featured')) : ?>
+                <div class="featured-inner">
+                    <w:module type="none" name="featured" chrome="xhtml" />
+                </div>
+            <?php endif; ?>
+        </div>
+
+    <div id="container-civic">
+        <header id="header" class="navbar-inverse">
+            <div class="<?php echo $containerClass; ?>">
+                <div class="<?php echo $gridMode; if ($this->countModules('featured')){echo ' dropup';} ?>">
+                    <w:logo name="menu" />
+                </div>
             </div>
-        </div>
-    <?php endif; ?>
+        </header>
 
-    <?php if ($this->countModules('grid-top2')) : ?>
-        <!-- grid-top2 -->
-        <div id="grid-top2" class="<?php echo $bgColorGridTop2; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop2Bg ?>">
-            <div class="grid-top2 <?php echo $containerClass; ?>">
-                <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+        <?php if ($this->countModules('grid-top')) : ?>
+            <!-- grid-top -->
+            <div id="grid-top" class="<?php echo $bgColorGridTop; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTopBg ?>">
+                <div class="grid-top <?php echo $containerClass; ?>">
+                    <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+                </div>
             </div>
-        </div>
-    <?php endif; ?>
+        <?php endif; ?>
 
-    <?php if ($this->countModules('grid-top3')) : ?>
-        <!-- grid-top3 -->
-        <div id="grid-top3" class="<?php echo $bgColorGridTop3; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop3Bg ?>">
-            <div class="grid-top3 <?php echo $containerClass; ?>">
-                <w:module type="<?php echo $gridMode; ?>" name="grid-top3" chrome="wrightflexgrid" />
+        <?php if ($this->countModules('grid-top2')) : ?>
+            <!-- grid-top2 -->
+            <div id="grid-top2" class="<?php echo $bgColorGridTop2; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop2Bg ?>">
+                <div class="grid-top2 <?php echo $containerClass; ?>">
+                    <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
 
-    <?php endif; ?>
+        <?php if ($this->countModules('grid-top3')) : ?>
+            <!-- grid-top3 -->
+            <div id="grid-top3" class="<?php echo $bgColorGridTop3; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop3Bg ?>">
+                <div class="grid-top3 <?php echo $containerClass; ?>">
+                    <w:module type="<?php echo $gridMode; ?>" name="grid-top3" chrome="wrightflexgrid" />
+                </div>
+            </div>
 
-    <?php if (!$this->countModules('grid-top') || !$this->countModules('grid-top2')) : ?>
-        <?php if (!$this->countModules('grid-top3')) : ?>
-            <div class="wrapp-breadcrumb">
-                <div class="<?php echo $containerClass; ?>">
-                    <div class="<?php echo $gridMode; ?>">
-                        <div class="span12">
-                            <?php if ($this->countModules('breadcrumbs')) : ?>
-                                <!-- breadcrumbs -->
-                                <div id="breadcrumbs">
-                                    <w:module type="single" name="breadcrumbs" chrome="none" />
-                                </div>
-                            <?php endif; ?>
+        <?php endif; ?>
+
+        <?php if (!$this->countModules('grid-top') || !$this->countModules('grid-top2')) : ?>
+            <?php if (!$this->countModules('grid-top3')) : ?>
+                <div class="wrapp-breadcrumb">
+                    <div class="<?php echo $containerClass; ?>">
+                        <div class="<?php echo $gridMode; ?>">
+                            <div class="span12">
+                                <?php if ($this->countModules('breadcrumbs')) : ?>
+                                    <!-- breadcrumbs -->
+                                    <div id="breadcrumbs">
+                                        <w:module type="single" name="breadcrumbs" chrome="none" />
+                                    </div>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         <?php endif; ?>
-    <?php endif; ?>
 
-    <div class="<?php echo $containerClass ?> wrapp-content">
-        <div id="main-content" class="<?php echo $gridMode; ?>">
-            <!-- sidebar1 -->
-            <aside id="sidebar1">
-                <w:module name="sidebar1" chrome="xhtml" />
-            </aside>
-            <!-- main -->
-            <section id="main">
-                <?php if ($this->countModules('above-content')) : ?>
-                <!-- above-content -->
-                <div id="above-content">
-                    <w:module type="none" name="above-content" chrome="xhtml" />
-                </div>
-                <?php endif; ?>
+        <div class="<?php echo $containerClass ?> wrapp-content">
+            <div id="main-content" class="<?php echo $gridMode; ?>">
+                <!-- sidebar1 -->
+                <aside id="sidebar1">
+                    <w:module name="sidebar1" chrome="xhtml" />
+                </aside>
+                <!-- main -->
+                <section id="main">
+                    <?php if ($this->countModules('above-content')) : ?>
+                    <!-- above-content -->
+                    <div id="above-content">
+                        <w:module type="none" name="above-content" chrome="xhtml" />
+                    </div>
+                    <?php endif; ?>
 
-                <?php if ($this->countModules('grid-top') && $this->countModules('grid-top2')) : ?>
-                    <?php if ($this->countModules('breadcrumbs')) : ?>
-                        <!-- breadcrumbs -->
-                        <div id="breadcrumbs">
-                            <w:module type="single" name="breadcrumbs" chrome="none" />
+                    <?php if ($this->countModules('grid-top') && $this->countModules('grid-top2')) : ?>
+                        <?php if ($this->countModules('breadcrumbs')) : ?>
+                            <!-- breadcrumbs -->
+                            <div id="breadcrumbs">
+                                <w:module type="single" name="breadcrumbs" chrome="none" />
+                            </div>
+                        <?php endif; ?>
+                    <?php endif; ?>
+
+                    <!-- component -->
+                    <w:content />
+                    <?php if ($this->countModules('below-content')) : ?>
+                    <!-- below-content -->
+                    <div id="below-content">
+                        <w:module type="none" name="below-content" chrome="xhtml" />
+                    </div>
+                    <?php endif; ?>
+                </section>
+                <!-- sidebar2 -->
+                <aside id="sidebar2">
+                    <w:module name="sidebar2" chrome="xhtml" />
+                </aside>
+            </div>
+
+
+        </div>
+
+        <?php if ($this->countModules('grid-bottom')) : ?>
+            <!-- grid-bottom -->
+            <div id="grid-bottom" class="<?php echo $bgColorGridBottom; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottomBg ?>">
+                <div class="grid-bottom">
+                    <?php if ($enableFluidContainerGridBottom == '0') : ?>
+                        <div class="<?php echo $containerClass ; ?>">
+                            <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
+                        </div>
+                    <?php else : ?>
+                        <div class="container-fluid container-no-padding">
+                            <div class="row-no-margin">
+                                <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
+                            </div>
                         </div>
                     <?php endif; ?>
-                <?php endif; ?>
-
-                <!-- component -->
-                <w:content />
-                <?php if ($this->countModules('below-content')) : ?>
-                <!-- below-content -->
-                <div id="below-content">
-                    <w:module type="none" name="below-content" chrome="xhtml" />
                 </div>
-                <?php endif; ?>
-            </section>
-            <!-- sidebar2 -->
-            <aside id="sidebar2">
-                <w:module name="sidebar2" chrome="xhtml" />
-            </aside>
-        </div>
+            </div>
+        <?php endif; ?>
 
+        <?php if ($this->countModules('grid-bottom2')) : ?>
+           <!-- grid-bottom2 -->
+            <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom2Bg ?>">
+                <div class="grid-bottom2">
+                    <?php if ($enableFluidContainerGridBottom2 == '0') : ?>
+                        <div class="<?php echo $containerClass ; ?>">
+                            <w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+                        </div>
+                    <?php else : ?>
+                        <div class="container-fluid container-no-padding">
+                            <div class="row-no-margin">
+                                <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid"/>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        <?php endif; ?>
 
+        <?php if ($this->countModules('grid-bottom3')) : ?>
+            <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>">
+                <div class="<?php echo $containerClass ?>">
+                    <!-- grid-bottom3 -->
+                    <div class="grid-bottom3">
+                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom3" chrome="wrightflexgrid" />
+                    </div>
+
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
-
-    <?php if ($this->countModules('grid-bottom')) : ?>
-        <!-- grid-bottom -->
-        <div id="grid-bottom" class="<?php echo $bgColorGridBottom; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottomBg ?>">
-            <div class="grid-bottom">
-                <?php if ($enableFluidContainerGridBottom == '0') : ?>
-                    <div class="<?php echo $containerClass ; ?>">
-                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
-                    </div>
-                <?php else : ?>
-                    <div class="container-fluid container-no-padding">
-                        <div class="row-no-margin">
-                            <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
-                        </div>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($this->countModules('grid-bottom2')) : ?>
-       <!-- grid-bottom2 -->
-        <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom2Bg ?>">
-            <div class="grid-bottom2">
-                <?php if ($enableFluidContainerGridBottom2 == '0') : ?>
-                    <div class="<?php echo $containerClass ; ?>">
-                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
-                    </div>
-                <?php else : ?>
-                    <div class="container-fluid container-no-padding">
-                        <div class="row-no-margin">
-                            <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid"/>
-                        </div>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($this->countModules('grid-bottom3')) : ?>
-        <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>">
-            <div class="<?php echo $containerClass ?>">
-                <!-- grid-bottom3 -->
-                <div class="grid-bottom3">
-                    <w:module type="<?php echo $gridMode; ?>" name="grid-bottom3" chrome="wrightflexgrid" />
-                </div>
-
-            </div>
-        </div>
-    <?php endif; ?>
 
     <!-- footer -->
     <div class="wrapper-footer">
@@ -239,8 +242,8 @@ defined('_JEXEC') or die('Restricted access');
     <script>
         jQuery(function() {
 
-            // Use Modernizr to detect for touch devices, 
-            // which don't support autoplay and may have less bandwidth, 
+            // Use Modernizr to detect for touch devices,
+            // which don't support autoplay and may have less bandwidth,
             // so just give them the poster images instead
             var screenIndex = 1,
                 numScreens = jQuery('.screen').length,
@@ -251,13 +254,13 @@ defined('_JEXEC') or die('Restricted access');
                 isTouch = Modernizr.touch,
                 $bigImage = jQuery('.big-image'),
                 $window = jQuery(window);
-            
+
             if (!isTouch) {
                 // initialize BigVideo
                 BV = new jQuery.BigVideo({forceAutoplay:isTouch});
                 BV.init();
                 showVideo();
-                
+
                 BV.getPlayer().on('loadeddata', function() {
                     onVideoLoaded();
                 });
@@ -269,7 +272,7 @@ defined('_JEXEC') or die('Restricted access');
                 // and on window resize
                 $window.on('resize', adjustImagePositioning);
             }
-            
+
             // Next button click goes to next div
             jQuery('#next-btn').on('click', function(e) {
                 e.preventDefault();
@@ -284,7 +287,7 @@ defined('_JEXEC') or die('Restricted access');
 
             function next() {
                 isTransitioning = true;
-                
+
                 // update video index, reset image opacity if starting over
                 if (screenIndex === numScreens) {
                     $bigImage.css('opacity',1);
@@ -292,11 +295,11 @@ defined('_JEXEC') or die('Restricted access');
                 } else {
                     screenIndex++;
                 }
-                
+
                 if (!isTouch) {
                     jQuery('#big-video-wrap').transit({'left':'-100%'},transitionDur)
                 }
-                    
+
                 (Modernizr.csstransitions)?
                     jQuery('.wrapper').transit(
                         {'left':'-'+(100*(screenIndex-1))+'%'},
