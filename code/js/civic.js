@@ -1,13 +1,10 @@
-// Civic
-
-
-
 jQuery(function() {
 	function CivciBgRezise(el){
 		el.css({
 			'background-image' : 'url(' + el.attr('data-bg-grid-top')+ ')'
 		});
 	}
+	/* Resize background in each position */
 	CivciBgRezise(jQuery('#grid-top'));
 	CivciBgRezise(jQuery('#grid-top2'));
 	CivciBgRezise(jQuery('#grid-top3'));

@@ -18,9 +18,6 @@
 		<!-- es-ES -->
 		<language tag="es-ES">es-ES/es-ES.tpl_js_civic.ini</language>
 		<language tag="es-ES">es-ES/es-ES.tpl_js_civic.sys.ini</language>
-		<!-- de-DE -->
-		<language tag="de-DE">de-DE/de-DE.tpl_js_civic.ini</language>
-		<language tag="de-DE">de-DE/de-DE.tpl_js_civic.sys.ini</language>
 	</languages>
 
 	<files>
