@@ -18,8 +18,8 @@ defined('_JEXEC') or die('Restricted access');
 <html>
 <head>
     <w:head />
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cousine:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cousine:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body class="<?php echo $responsive . $classSeparatorGridBottom2 . ' Tone' . $Tone?>">
     <?php if ($this->countModules('toolbar')) : ?>
