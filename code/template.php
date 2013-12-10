@@ -18,8 +18,9 @@ defined('_JEXEC') or die('Restricted access');
 <html>
 <head>
     <w:head />
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Cousine:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cousine:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="<?php echo JURI::root(true) ?>/templates/js_civic/css/bigvideo.css">
 </head>
 <body class="<?php echo $responsive . $classSeparatorGridBottom2 . ' Tone' . $Tone?>">
     <?php if ($this->countModules('toolbar')) : ?>
@@ -28,12 +29,40 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
 
 
-    <?php if ($this->countModules('featured')) : ?>
-        <!-- featured -->
-        <div id="featured">
-            <w:module type="none" name="featured" chrome="xhtml" />
+    <!-- featured -->
+    <div id="featured">
+
+        <div class="wrapper">
+            <div class="screen" id="screen-1" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/slider/videos/bird.mp4">
+                <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/bird.jpg" class="big-image" />
+                <h1 class="video-title">#1 Bird</h1>
+            </div>
+            <div class="screen" id="screen-2" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/slider/videos/satellite.mp4">
+                <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/satellite.jpg" class="big-image" />
+                <h1 class="video-title">#2 Satellite</h1>
+            </div>
+            <div class="screen" id="screen-3" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/slider/videos/camera.mp4">
+                <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/camera.jpg" class="big-image" />
+                <h1 class="video-title">#3 Camera</h1>
+            </div>
+            <div class="screen" id="screen-4" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/slider/videos/spider.mp4">
+                <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/spider.jpg" class="big-image" />
+                <h1 class="video-title">#4 Spider</h1>
+            </div>
+            <div class="screen" id="screen-5" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/slider/videos/dandelion.mp4">
+                <img src="<?php echo JURI::root(true) ?>/templates/js_civic/slider/images/dandelion.jpg" class="big-image" />
+                <h1 class="video-title">#5 Dandelion</h1>
+            </div>
         </div>
-    <?php endif; ?>
+
+        <nav id="next-btn">
+            <a href="#" class="next-icon"></a>
+        </nav>
+
+        <?php if ($this->countModules('featured')) : ?>
+            <w:module type="none" name="featured" chrome="xhtml" />
+        <?php endif; ?>
+    </div>
 
     <header id="header" class="navbar-inverse">
         <div class="<?php echo $containerClass; ?>">
@@ -199,7 +228,130 @@ defined('_JEXEC') or die('Restricted access');
     </div>
 
 
-    <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_civic/js/civic.js'></script>
+    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/civic.js"></script>
+    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/modernizr-2.5.3.min.js"></script>
+    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery.imagesloaded.min.js"></script>
+    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/video.js"></script>
+    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/bigvideo.js"></script>
+    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery.transit.min.js"></script>
 
+    <script>
+        jQuery(function() {
+
+            // Use Modernizr to detect for touch devices, 
+            // which don't support autoplay and may have less bandwidth, 
+            // so just give them the poster images instead
+            var screenIndex = 1,
+                numScreens = jQuery('.screen').length,
+                isTransitioning = false,
+                transitionDur = 1000,
+                BV,
+                videoPlayer,
+                isTouch = Modernizr.touch,
+                $bigImage = jQuery('.big-image'),
+                $window = jQuery(window);
+            
+            if (!isTouch) {
+                // initialize BigVideo
+                BV = new jQuery.BigVideo({forceAutoplay:isTouch});
+                BV.init();
+                showVideo();
+                
+                BV.getPlayer().on('loadeddata', function() {
+                    onVideoLoaded();
+                });
+
+                // adjust image positioning so it lines up with video
+                $bigImage
+                    .css('position','relative')
+                    .imagesLoaded(adjustImagePositioning);
+                // and on window resize
+                $window.on('resize', adjustImagePositioning);
+            }
+            
+            // Next button click goes to next div
+            jQuery('#next-btn').on('click', function(e) {
+                e.preventDefault();
+                if (!isTransitioning) {
+                    next();
+                }
+            });
+
+            function showVideo() {
+                BV.show(jQuery('#screen-'+screenIndex).attr('data-video'),{ambient:true});
+            }
+
+            function next() {
+                isTransitioning = true;
+                
+                // update video index, reset image opacity if starting over
+                if (screenIndex === numScreens) {
+                    $bigImage.css('opacity',1);
+                    screenIndex = 1;
+                } else {
+                    screenIndex++;
+                }
+                
+                if (!isTouch) {
+                    jQuery('#big-video-wrap').transit({'left':'-100%'},transitionDur)
+                }
+                    
+                (Modernizr.csstransitions)?
+                    jQuery('.wrapper').transit(
+                        {'left':'-'+(100*(screenIndex-1))+'%'},
+                        transitionDur,
+                        onTransitionComplete):
+                    onTransitionComplete();
+            }
+
+            function onVideoLoaded() {
+                jQuery('#screen-'+screenIndex).find('.big-image').transit({'opacity':0},500)
+            }
+
+            function onTransitionComplete() {
+                isTransitioning = false;
+                if (!isTouch) {
+                    jQuery('#big-video-wrap').css('left',0);
+                    showVideo();
+                }
+            }
+
+            function adjustImagePositioning() {
+                $bigImage.each(function(){
+                    var $img = jQuery(this),
+                        img = new Image();
+
+                    img.src = $img.attr('src');
+
+                    var windowWidth = $window.width(),
+                        windowHeight = $window.height(),
+                        r_w = windowHeight / windowWidth,
+                        i_w = img.width,
+                        i_h = img.height,
+                        r_i = i_h / i_w,
+                        new_w, new_h, new_left, new_top;
+
+                    if( r_w > r_i ) {
+                        new_h   = windowHeight;
+                        new_w   = windowHeight / r_i;
+                    }
+                    else {
+                        new_h   = windowWidth * r_i;
+                        new_w   = windowWidth;
+                    }
+
+                    $img.css({
+                        width   : new_w,
+                        height  : new_h,
+                        left    : ( windowWidth - new_w ) / 2,
+                        top     : ( windowHeight - new_h ) / 2
+                    })
+
+                });
+
+            }
+        });
+    </script>
 </body>
 </html>
