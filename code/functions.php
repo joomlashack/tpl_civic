@@ -10,6 +10,8 @@
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
+require_once('preg_find.php');
+
 // get the bootstrap row mode ( row / row-fluid )
 $gridMode = $this->params->get('bs_rowmode','row-fluid');
 $containerClass = 'container';
@@ -48,7 +50,6 @@ function checkImage($img, $default) {
         return $img;
 }
 
-
 $enableFluidContainerGridBottom = $this->params->get('enableFluidContainerGridBottom','0');
 $enableFluidContainerGridBottom2 = $this->params->get('enableFluidContainerGridBottom2','0');
 $separateGridBottom2 = $this->params->get('separateGridBottom2','1');
@@ -75,26 +76,65 @@ if ($imgGridBottomBg != "-1") $imgGridBottomBg = str_replace(JPATH_BASE, '', $im
 if ($imgGridBottom2Bg != "-1") $imgGridBottom2Bg = str_replace(JPATH_BASE, '', $imgGridBottom2Bg);
 if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $imgGridBottom3Bg);
 
-// $toneTemplate = $this->params->get('toneTemplate','tone_light');
-// $toneTemplate =  " " . $toneTemplate;
-
-
 // templateTone parameter (Light = '-Light' - Dark = '-Dark')
-$user = JFactory::getUser();
-if (!is_null(JRequest::getVar('templateTone', NULL)))
-{
-    $Tone = JRequest::getVar('templateTone');
-    if ($Tone == '-Light' || $Tone == '-Dark') {
-        $user->setParam('templateTone', JRequest::getVar('templateTone'));
-        $user->save(true);
+    $user = JFactory::getUser();
+    if (!is_null(JRequest::getVar('templateTone', NULL)))
+    {
+        $Tone = JRequest::getVar('templateTone');
+        if ($Tone == '-Light' || $Tone == '-Dark') {
+            $user->setParam('templateTone', JRequest::getVar('templateTone'));
+            $user->save(true);
+        }
+    }
+    $Tone = ($user->getParam('templateTone',''));
+    if ($Tone == '') {
+        $Tone =  $this->params->get('Tone','' );
+    }
+    elseif ($Tone == '-Light')
+    {
+        $Tone = '';
+    }
+
+// Videos folder
+$useSlider = ($this->params->get('useSlider','1') == '1');
+$videosFolder = $this->params->get('videosFolder','');
+$imagesFolder = $this->params->get('imagesFolder','');
+
+if (($videosFolder == '' || $videosFolder == '-1' || $imagesFolder == '' || $imagesFolder == '-1'))
+    $videosFolder = $imagesFolder = 'templates/js_civic/images/slider';
+else {
+    $videosFolder = JPATH_BASE . '/images/' . $videosFolder;
+    $imagesFolder = JPATH_BASE . '/images/' . $imagesFolder;
+}
+
+$sliderVideos = Array();
+$sliderImages = Array();
+
+if ($useSlider) {
+
+    // looks out for mp4 files in the videos folder, and equivalent file names (.jpg or .png) in the images folder
+    $rvideos = preg_find('/\.mp4$/D', $videosFolder, PREG_FIND_SORTKEYS);
+    if ($rvideos) {
+        foreach ($rvideos as $rvideo) {
+            $bname = pathinfo($rvideo)['filename'];
+            $image = $imagesFolder . '/' . $bname . '.jpg';
+            if (!file_exists($image)) {
+                $image = $imagesFolder . '/' . $bname . '.png';
+                if (!file_exists($image))
+                    $image = '';
+            }
+            if ($image != '') {
+                $sliderVideos[] = JURI::root(true) . substr($rvideo, strlen(JPATH_BASE));
+                $sliderImages[] = JURI::root(true) . substr($image, strlen(JPATH_BASE));
+            }
+        }
     }
 }
 
-$Tone = ($user->getParam('templateTone',''));
-if ($Tone == '') {
-    $Tone =  $this->params->get('Tone','' );
-}
-elseif ($Tone == '-Light')
-{
-    $Tone = '';
-}
+if (empty($sliderVideos))
+    $useSlider = false;
+
+if ($this->countModules('featured') || $useSlider)
+    $featuredSpace = true;
+else
+    $featuredSpace = false;

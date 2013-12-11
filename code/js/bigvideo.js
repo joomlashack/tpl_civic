@@ -20,9 +20,9 @@
 	} else {
 		factory(jQuery, videojs);
 	}
-})(function(jQuery, videojs) {
+})(function($, videojs) {
 
-	jQuery.BigVideo = function(options) {
+	$.BigVideo = function(options) {
 
 		var defaults = {
 			// If you want to use a single mp4 source, set as true
@@ -32,14 +32,14 @@
 			forceAutoplay:false,
 			controls:true,
 			doLoop:false,
-			container:jQuery('body')
+			container:$('body')
 		};
 
 		var BigVideo = this,
 			player,
 			vidEl = '#big-video-vid',
-			wrap = jQuery('<div id="big-video-wrap"></div>'),
-			video = jQuery(''),
+			wrap = $('<div id="big-video-wrap"></div>'),
+			video = $(''),
 			mediaAspect = 16/9,
 			vidDur = 0,
 			defaultVolume = 0.8,
@@ -52,11 +52,11 @@
 			currMediaIndex,
 			currMediaType;
 
-		var settings = jQuery.extend({}, defaults, options);
+		var settings = $.extend({}, defaults, options);
 
 		function updateSize() {
-			var windowW = jQuery(window).width();
-			var windowH = jQuery(window).height();
+			var windowW = $(window).width();
+			var windowH = $(window).height();
 			var windowAspect = windowW/windowH;
 			if (windowAspect < mediaAspect) {
 				// taller
@@ -64,17 +64,17 @@
 					player
 						.width(windowH*mediaAspect)
 						.height(windowH);
-					jQuery(vidEl)
+					$(vidEl)
 						.css('top',0)
 						.css('left',-(windowH*mediaAspect-windowW)/2)
 						.css('height',windowH);
-					jQuery(vidEl+'_html5_api').css('width',windowH*mediaAspect);
-					jQuery(vidEl+'_flash_api')
+					$(vidEl+'_html5_api').css('width',windowH*mediaAspect);
+					$(vidEl+'_flash_api')
 						.css('width',windowH*mediaAspect)
 						.css('height',windowH);
 				} else {
 					// is image
-					jQuery('#big-video-image')
+					$('#big-video-image')
 						.css({
 							width: 'auto',
 							height: windowH,
@@ -88,17 +88,17 @@
 					player
 						.width(windowW)
 						.height(windowW/mediaAspect);
-					jQuery(vidEl)
+					$(vidEl)
 						.css('top',-(windowW/mediaAspect-windowH)/2)
 						.css('left',0)
 						.css('height',windowW/mediaAspect);
-					jQuery(vidEl+'_html5_api').css('width','100%');
-					jQuery(vidEl+'_flash_api')
+					$(vidEl+'_html5_api').css('width','100%');
+					$(vidEl+'_flash_api')
 						.css('width',windowW)
 						.css('height',windowW/mediaAspect);
 				} else {
 					// is image
-					jQuery('#big-video-image')
+					$('#big-video-image')
 						.css({
 							width: windowW,
 							height: 'auto',
@@ -128,15 +128,15 @@
 			settings.container.append(markup);
 
 			// hide until playVideo
-			jQuery('#big-video-control-container').css('display','none');
+			$('#big-video-control-container').css('display','none');
 
 			// add events
-			jQuery('#big-video-control-track').slider({
+			$('#big-video-control-track').slider({
 				animate: true,
 				step: 0.01,
 				slide: function(e,ui) {
 					isSeeking = true;
-					jQuery('#big-video-control-progress').css('width',(ui.value-0.16)+'%');
+					$('#big-video-control-progress').css('width',(ui.value-0.16)+'%');
 					player.currentTime((ui.value/100)*player.duration());
 				},
 				stop:function(e,ui) {
@@ -144,10 +144,10 @@
 					player.currentTime((ui.value/100)*player.duration());
 				}
 			});
-			jQuery('#big-video-control-bar').click(function(e) {
-				player.currentTime((e.offsetX/jQuery(this).width())*player.duration());
+			$('#big-video-control-bar').click(function(e) {
+				player.currentTime((e.offsetX/$(this).width())*player.duration());
 			});
-			jQuery('#big-video-control-play').click(function(e) {
+			$('#big-video-control-play').click(function(e) {
 				e.preventDefault();
 				playControl('toggle');
 			});
@@ -158,9 +158,9 @@
 					var seconds = Math.floor(currTime) - (60*minutes);
 					if (seconds < 10) seconds='0'+seconds;
 					var progress = player.currentTime()/player.duration()*100;
-					jQuery('#big-video-control-track').slider('value',progress);
-					jQuery('#big-video-control-progress').css('width',(progress-0.16)+'%');
-					jQuery('#big-video-control-timer').text(minutes+':'+seconds+'/'+vidDur);
+					$('#big-video-control-track').slider('value',progress);
+					$('#big-video-control-progress').css('width',(progress-0.16)+'%');
+					$('#big-video-control-timer').text(minutes+':'+seconds+'/'+vidDur);
 				}
 			});
 		}
@@ -170,12 +170,12 @@
 			if (action === 'toggle') action = isPlaying ? 'pause' : 'play';
 			if (action === 'pause') {
 				player.pause();
-				jQuery('#big-video-control-play').css('background-position','-16px');
+				$('#big-video-control-play').css('background-position','-16px');
 				isPlaying = false;
 
 			} else if (action === 'play') {
 				player.play();
-				jQuery('#big-video-control-play').css('background-position','0');
+				$('#big-video-control-play').css('background-position','0');
 				isPlaying = true;
 			}
 		}
@@ -194,43 +194,43 @@
 		function playVideo(source) {
 
 			// clear image
-			jQuery(vidEl).css('display','block');
+			$(vidEl).css('display','block');
 			currMediaType = 'video';
 			player.src(source);
 			isPlaying = true;
 			if (isAmbient) {
-				jQuery('#big-video-control-container').css('display','none');
+				$('#big-video-control-container').css('display','none');
 				player.ready(function(){
 					player.volume(0);
 				});
 				doLoop = true;
 			} else {
-				jQuery('#big-video-control-container').css('display','block');
+				$('#big-video-control-container').css('display','block');
 				player.ready(function(){
 					player.volume(defaultVolume);
 				});
 				doLoop = false;
 			}
-			jQuery('#big-video-image').css('display','none');
-			jQuery(vidEl).css('display','block');
+			$('#big-video-image').css('display','none');
+			$(vidEl).css('display','block');
 		}
 
 		function showPoster(source) {
 			// remove old image
-			jQuery('#big-video-image').remove();
+			$('#big-video-image').remove();
 
 			// hide video
 			player.pause();
-			jQuery(vidEl).css('display','none');
-			jQuery('#big-video-control-container').css('display','none');
+			$(vidEl).css('display','none');
+			$('#big-video-control-container').css('display','none');
 
 			// show image
 			currMediaType = 'image';
-			var bgImage = jQuery('<img id="big-video-image" src='+source+' />');
+			var bgImage = $('<img id="big-video-image" src='+source+' />');
 			wrap.append(bgImage);
 
-			jQuery('#big-video-image').imagesLoaded(function() {
-				mediaAspect = jQuery('#big-video-image').width() / jQuery('#big-video-image').height();
+			$('#big-video-image').imagesLoaded(function() {
+				mediaAspect = $('#big-video-image').width() / $('#big-video-image').height();
 				updateSize();
 			});
 		}
@@ -240,7 +240,7 @@
 				// create player
 				settings.container.prepend(wrap);
 				var autoPlayString = settings.forceAutoplay ? 'autoplay' : '';
-				player = jQuery('<video id="'+vidEl.substr(1)+'" class="video-js vjs-default-skin" preload="auto" data-setup="{}" '+autoPlayString+' webkit-playsinline></video>');
+				player = $('<video id="'+vidEl.substr(1)+'" class="video-js vjs-default-skin" preload="auto" data-setup="{}" '+autoPlayString+' webkit-playsinline></video>');
 				player.css('position','absolute');
 				wrap.append(player);
 
@@ -267,16 +267,16 @@
 				isPlaying = false;
 
 				if (settings.forceAutoplay) {
-					jQuery('body').on('click', setUpAutoPlay);
+					$('body').on('click', setUpAutoPlay);
 				}
 
-				jQuery('#big-video-vid_flash_api')
+				$('#big-video-vid_flash_api')
 					.attr('scale','noborder')
 					.attr('width','100%')
 					.attr('height','100%');
 
 				// set events
-				jQuery(window).on('resize.bigvideo', function() {
+				$(window).on('resize.bigvideo', function() {
 					updateSize();
 				});
 
@@ -286,7 +286,7 @@
 						mediaAspect = document.getElementById('big-video-vid_flash_api').vjs_getProperty('videoWidth')/document.getElementById('big-video-vid_flash_api').vjs_getProperty('videoHeight');
 					} else {
 						// use html5 player to get mediaAspect
-						mediaAspect = jQuery('#big-video-vid_html5_api').prop('videoWidth')/jQuery('#big-video-vid_html5_api').prop('videoHeight');
+						mediaAspect = $('#big-video-vid_html5_api').prop('videoWidth')/$('#big-video-vid_html5_api').prop('videoHeight');
 					}
 					updateSize();
 					var dur = Math.round(player.duration());
@@ -343,7 +343,7 @@
 			isInitialized = false;
 
 			wrap.remove();
-			jQuery(window).off('resize.bigvideo');
+			$(window).off('resize.bigvideo');
 
 			if(player) {
 				player.off('loadedmetadata');

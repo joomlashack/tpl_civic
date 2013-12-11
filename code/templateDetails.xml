@@ -29,6 +29,7 @@
 		<filename>template.php</filename>
 		<filename>templateDetails.xml</filename>
 		<filename>template_thumbnail.png</filename>
+		<filename>preg_find.php</filename>
 		<folder>css</folder>
 		<folder>html</folder>
 		<folder>images</folder>
@@ -107,6 +108,15 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_CIVIC">
+				<field name="useSlider" type="list" default="1" label="TPL_JS_CIVIC_USE_SLIDER" description="TPL_JS_CIVIC_USE_SLIDER_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="videosFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_VIDEOS_FOLDER" description="TPL_JS_CIVIC_VIDEOS_FOLDER_DESC" />
+
+				<field name="imagesFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_IMAGES_FOLDER" description="TPL_JS_CIVIC_IMAGES_FOLDER_DESC" />
+
 				<field name="enableFluidContainerGridBottom" type="radio" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>

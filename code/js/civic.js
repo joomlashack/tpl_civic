@@ -1,33 +1,19 @@
-jQuery(function() {
-    function CivciBgRezise(el) {
-        el.css({
-            'background-image': 'url(' + el.attr('data-bg-grid-top') + ')'
-        });
-    } /* Resize background in each position */
-    CivciBgRezise(jQuery('#grid-top'));
-    CivciBgRezise(jQuery('#grid-top2'));
-    CivciBgRezise(jQuery('#grid-top3'));
-    CivciBgRezise(jQuery('#grid-bottom'));
-    CivciBgRezise(jQuery('#grid-bottom2'));
-    CivciBgRezise(jQuery('#grid-bottom3'));
+function civicVideos($) {
 
-
-
-    // Video Slider
-    // Use Modernizr to detect for touch devices,
-    // which don't support autoplay and may have less bandwidth,
+    // Use Modernizr to detect for touch devices, 
+    // which don't support autoplay and may have less bandwidth, 
     // so just give them the poster images instead
     var screenIndex = 1,
-        numScreens = jQuery('.screen').length,
+        numScreens = $('.screen').length,
         isTransitioning = false,
         transitionDur = 1000,
         BV, videoPlayer, isTouch = Modernizr.touch,
-        $bigImage = jQuery('.big-image'),
-        $window = jQuery(window);
+        $bigImage = $('.big-image'),
+        $window = $(window);
 
     if (!isTouch) {
         // initialize BigVideo
-        BV = new jQuery.BigVideo({
+        BV = new $.BigVideo({
             forceAutoplay: isTouch
         });
         BV.init();
@@ -44,15 +30,15 @@ jQuery(function() {
     }
 
     // Next button click goes to next div
-    jQuery('#next-btn').on('click', function(e) {
+    $('#next-btn').on('click', function(e) {
         e.preventDefault();
         if (!isTransitioning) {
             next();
         }
     });
 
-    // Previous button click goes to next div
-    jQuery('#prev-btn').on('click', function(e) {
+    // Prev button click goes to previous div
+    $('#prev-btn').on('click', function(e) {
         e.preventDefault();
         if (!isTransitioning) {
             previous();
@@ -60,67 +46,66 @@ jQuery(function() {
     });
 
     function showVideo() {
-        BV.show(jQuery('#screen-' + screenIndex).attr('data-video'), {
+        BV.show($('#screen-' + screenIndex).attr('data-video'), {
             ambient: true
         });
     }
-
 
     function next() {
         isTransitioning = true;
         // update video index, reset image opacity if starting over
         if (screenIndex === numScreens) {
-            $bigImage.css('opacity', 1);
             screenIndex = 1;
         } else {
             screenIndex++;
         }
         if (!isTouch) {
-            jQuery('#big-video-wrap').transit({
+            $('#big-video-wrap').transit({
                 'left': '-100%'
             }, transitionDur)
         }
-        (Modernizr.csstransitions) ? jQuery('.wrapper').transit({
+        $bigImage.css('opacity', 1);
+        $('.wrapper').transit({
             'left': '-' + (100 * (screenIndex - 1)) + '%'
-        }, transitionDur, onTransitionComplete) : onTransitionComplete();
+        }, transitionDur, onTransitionComplete);
     }
 
     function previous() {
         isTransitioning = true;
         // update video index, reset image opacity if starting over
         if (screenIndex === 1) {
-            $bigImage.css('opacity', 1);
             screenIndex = numScreens;
         } else {
             screenIndex--;
         }
         if (!isTouch) {
-            jQuery('#big-video-wrap').transit({
+            $('#big-video-wrap').transit({
                 'left': '100%'
             }, transitionDur)
         }
-        (Modernizr.csstransitions) ? jQuery('.wrapper').transit({
+        $bigImage.css('opacity', 1);
+        $('.wrapper').transit({
             'left': '-' + (100 * (screenIndex - 1)) + '%'
-        }, transitionDur, onTransitionComplete) : onTransitionComplete();
+        }, transitionDur, onTransitionComplete);
     }
 
     function onVideoLoaded() {
-        jQuery('#screen-' + screenIndex).find('.big-image').transit({
+        $('#screen-' + screenIndex).find('.big-image').transit({
             'opacity': 0
-        }, 500)
+        }, 3000)
     }
 
     function onTransitionComplete() {
         isTransitioning = false;
         if (!isTouch) {
-            jQuery('#big-video-wrap').css('left', 0);
+            $('#big-video-wrap').css('left', 0);
             showVideo();
         }
     }
 
     function adjustImagePositioning() {
         $bigImage.each(function() {
-            var $img = jQuery(this),
+            var $img = $(this),
                 img = new Image();
 
             img.src = $img.attr('src');
@@ -151,6 +136,22 @@ jQuery(function() {
         });
 
     }
+}
+
+jQuery(function() {
+    function CivciBgRezise(el) {
+        el.css({
+            'background-image': 'url(' + el.attr('data-bg-grid-top') + ')'
+        });
+    } /* Resize background in each position */
+    CivciBgRezise(jQuery('#grid-top'));
+    CivciBgRezise(jQuery('#grid-top2'));
+    CivciBgRezise(jQuery('#grid-top3'));
+    CivciBgRezise(jQuery('#grid-bottom'));
+    CivciBgRezise(jQuery('#grid-bottom2'));
+    CivciBgRezise(jQuery('#grid-bottom3'));
+
+    civicVideos(jQuery);
 
     var featured = jQuery('#featured');
     var header = jQuery('#header');

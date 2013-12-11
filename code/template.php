@@ -22,53 +22,57 @@ defined('_JEXEC') or die('Restricted access');
     <link href="https://fonts.googleapis.com/css?family=Cousine:400,700" rel="stylesheet" type="text/css">
 </head>
 <body class="<?php echo $responsive . $classSeparatorGridBottom2 . ' Tone' . $Tone?>">
-        <?php if ($this->countModules('toolbar')) : ?>
-            <!-- toolbar -->
-            <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
-        <?php endif; ?>
+    <?php if ($this->countModules('toolbar')) : ?>
+        <!-- toolbar -->
+        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+    <?php endif; ?>
 
-
+    <?php if ($featuredSpace) : ?>
         <!-- featured -->
         <div id="featured">
 
-            <nav id="prev-btn">
-                <a href="#" class="nav-icon prev-icon"> Previous </a>
-            </nav>
+            <?php if ($useSlider) : ?>
 
-            <div class="wrapper">
-                <div class="screen" id="screen-1" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/images/slider/civic01.mp4">
-                    <img src="<?php echo JURI::root(true) ?>/templates/js_civic/images/slider/civic01.jpg" class="big-image" />
+                <nav id="prev-btn">
+                    <a href="#" class="nav-icon prev-icon"> Previous </a>
+                </nav>
+
+                <div class="wrapper">
+                    <?php $v = 1; foreach ($sliderVideos as $video) : ?>
+                        <div class="screen" id="screen-<?php echo $v ?>" data-video="<?php echo $video ?>">
+                            <img src="<?php echo $sliderImages[$v-1] ?>" class="big-image" />
+                        </div>
+                    <?php $v++; endforeach; ?>
                 </div>
-                <div class="screen" id="screen-2" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/images/slider/civic02.mp4">
-                    <img src="<?php echo JURI::root(true) ?>/templates/js_civic/images/slider/civic02.jpg" class="big-image" />
-                </div>
-            </div>
 
-            <nav id="next-btn">
-                <a href="#" class="nav-icon next-icon"> Next </a>
-            </nav>
-
+                <nav id="next-btn">
+                    <a href="#" class="nav-icon next-icon"> Next </a>
+                </nav>
+            
+            <?php endif; ?>
+            
             <?php if ($this->countModules('featured')) : ?>
                 <div class="featured-inner">
                     <w:module type="none" name="featured" chrome="xhtml" />
                 </div>
             <?php endif; ?>
 
-            <?php if ($this->countModules('slider')) : ?>
+            <?php if ($this->countModules('slider') && $useSlider) : ?>
                 <div class="slider <?php echo $containerClass; ?>">
                     <w:module type="none" name="slider" chrome="xhtml" />
                 </div>
             <?php endif; ?>
 
-            <div class="slider-filter"></div>
-
-
+            <?php if ($useSlider) : ?>
+                <div class="slider-filter"></div>
+            <?php endif ?>
         </div>
+    <?php endif; ?>
 
     <div id="container-civic">
         <header id="header" class="navbar-inverse">
             <div class="<?php echo $containerClass; ?>">
-                <div class="<?php echo $gridMode; if ($this->countModules('featured') || $this->countModules('slider')){echo ' dropup';} ?>">
+                <div class="<?php echo $gridMode; if ($featuredSpace) { echo ' dropup';} ?>">
                     <w:logo name="menu" />
                 </div>
             </div>
