@@ -31,6 +31,10 @@ defined('_JEXEC') or die('Restricted access');
         <!-- featured -->
         <div id="featured">
 
+            <nav id="prev-btn">
+                <a href="#" class="prev-icon">PREVIOUS</a>
+            </nav>
+
             <div class="wrapper">
                 <div class="screen" id="screen-1" data-video="<?php echo JURI::root(true) ?>/templates/js_civic/images/slider/civic01.mp4">
                     <img src="<?php echo JURI::root(true) ?>/templates/js_civic/images/slider/civic01.jpg" class="big-image" />
@@ -41,7 +45,7 @@ defined('_JEXEC') or die('Restricted access');
             </div>
 
             <nav id="next-btn">
-                <a href="#" class="next-icon"></a>
+                <a href="#" class="next-icon">NEXT</a>
             </nav>
 
             <?php if ($this->countModules('featured')) : ?>
