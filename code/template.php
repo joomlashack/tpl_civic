@@ -55,7 +55,7 @@ defined('_JEXEC') or die('Restricted access');
             </div>
 
             <nav id="next-btn">
-                <a href="#" class="next-icon"></a>
+                <a href="#" class="nav-icon next-icon"> Next </a>
             </nav>
 
             <?php if ($this->countModules('featured')) : ?>
@@ -63,12 +63,22 @@ defined('_JEXEC') or die('Restricted access');
                     <w:module type="none" name="featured" chrome="xhtml" />
                 </div>
             <?php endif; ?>
+
+            <?php if ($this->countModules('slider')) : ?>
+                <div class="slider <?php echo $containerClass; ?>">
+                    <w:module type="none" name="slider" chrome="xhtml" />
+                </div>
+            <?php endif; ?>
+
+            <div class="slider-filter"></div>
+
+
         </div>
 
     <div id="container-civic">
         <header id="header" class="navbar-inverse">
             <div class="<?php echo $containerClass; ?>">
-                <div class="<?php echo $gridMode; if ($this->countModules('featured')){echo ' dropup';} ?>">
+                <div class="<?php echo $gridMode; if ($this->countModules('featured') || $this->countModules('slider')){echo ' dropup';} ?>">
                     <w:logo name="menu" />
                 </div>
             </div>
@@ -238,5 +248,6 @@ defined('_JEXEC') or die('Restricted access');
     <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/bigvideo.js"></script>
     <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery.transit.min.js"></script>
     <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/civic.js"></script>
+
 </body>
 </html>

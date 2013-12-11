@@ -2391,6 +2391,9 @@ input.btn{
 	.white{
 		color: @textColor;
 	}
+	#container-civic{
+		background-color: @grayDarker;
+	}
 }
 
 #grid-bottom3{
@@ -2497,24 +2500,27 @@ button[name="Search"]{
     text-transform: uppercase;
 }
 
+
+#next-btn{
+	position: absolute;
+    top: 45%;
+    z-index: 3;
+	right: 4%;
+}
 .nav-icon{
 	font-family: @altFontFamily;
 	font-size: @baseFontSize + 6;
-	position: absolute;
 	text-transform: uppercase;
     border-bottom: 1px solid @color_two;
     border-top: 1px solid @color_two;
     color: @color_two;
     display: block;
-    top: 45%;
-    z-index: 3;
-}
-.next-icon {
-	right: 4%;
-}
-
-.prev-icon {
-	left: 4%;
+    &:hover, &:focus{
+    	color: @white;
+	    border-bottom: 1px solid @white;
+	    border-top: 1px solid @white;
+		text-decoration: none;
+    }
 }
 
 // Codrops Header Style
@@ -2569,6 +2575,7 @@ button[name="Search"]{
 
 #container-civic{
 	background-color: @bodyBackground;
+	.clearfix();
 }
 
 .featured-inner,
