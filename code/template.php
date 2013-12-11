@@ -48,9 +48,9 @@ defined('_JEXEC') or die('Restricted access');
                 <nav id="next-btn">
                     <a href="#" class="nav-icon next-icon"> Next </a>
                 </nav>
-            
+
             <?php endif; ?>
-            
+
             <?php if ($this->countModules('featured')) : ?>
                 <div class="featured-inner">
                     <w:module type="none" name="featured" chrome="xhtml" />
@@ -216,6 +216,31 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
             </div>
         <?php endif; ?>
+
+        <?php if ($this->countModules('grid-bottom4')) : ?>
+            <div id="grid-bottom4" class="<?php echo $bgColorGridBottom4; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom4Bg ?>">
+                <div class="<?php echo $containerClass ?>">
+                    <!-- grid-bottom4 -->
+                    <div class="grid-bottom4">
+                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom4" chrome="wrightflexgrid" />
+                    </div>
+
+                </div>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($this->countModules('grid-bottom5')) : ?>
+            <div id="grid-bottom5" class="<?php echo $bgColorGridBottom5; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom5Bg ?>">
+                <div class="<?php echo $containerClass ?>">
+                    <!-- grid-bottom5 -->
+                    <div class="grid-bottom5">
+                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom5" chrome="wrightflexgrid" />
+                    </div>
+
+                </div>
+            </div>
+        <?php endif; ?>
+
     </div>
 
     <!-- footer -->

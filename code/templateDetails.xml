@@ -53,6 +53,9 @@
 		<position>below-content</position>
 		<position>grid-bottom</position>
 		<position>grid-bottom2</position>
+		<position>grid-bottom3</position>
+		<position>grid-bottom4</position>
+		<position>grid-bottom5</position>
 		<position>bottom-menu</position>
 		<position>footer</position>
 	</positions>
@@ -150,7 +153,11 @@
 
 				<field name="imgGridBottom2Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
 
-				<field name="imgGridBottom3Bg" type="imagelist" default="templates/js_civic/images/default-bg-grid-bottom-3.jpg" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
+				<field name="imgGridBottom3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
+
+				<field name="imgGridBottom4Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_4_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
+
+				<field name="imgGridBottom5Bg" type="imagelist" default="templates/js_civic/images/default-bg-grid-bottom-3.jpg" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_5_IMAGE_BG" description="TPL_JS_CIVIC_GRID_IMAGE_BG_DESC" />
 			</fieldset>
 
 			<fieldset name="TPL_CIVIC_BACKGROUND_COLOR_GRIDS_POSITIONS">
@@ -204,7 +211,27 @@
 					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
 					<option value="white">TPL_JS_CIVIC_WHITE</option>
 				</field>
-				<field name="bgColorGridBottom3" type="list" default="tone_inverse_color" label="TPL_JS_CIVIC_GRID_BOTTOM_3_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
+				<field name="bgColorGridBottom3" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM_3_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
+					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
+					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
+					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+					<option value="white">TPL_JS_CIVIC_WHITE</option>
+				</field>
+				<field name="bgColorGridBottom4" type="list" default="white" label="TPL_JS_CIVIC_GRID_BOTTOM_4_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
+					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
+					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
+					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+					<option value="white">TPL_JS_CIVIC_WHITE</option>
+				</field>
+				<field name="bgColorGridBottom5" type="list" default="tone_inverse_color" label="TPL_JS_CIVIC_GRID_BOTTOM_5_BG_COLOR" description="TPL_JS_CIVIC_GRID_BG_COLOR_DESC">
 					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
 					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
 					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>

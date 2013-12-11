@@ -150,6 +150,8 @@ jQuery(function() {
     CivciBgRezise(jQuery('#grid-bottom'));
     CivciBgRezise(jQuery('#grid-bottom2'));
     CivciBgRezise(jQuery('#grid-bottom3'));
+    CivciBgRezise(jQuery('#grid-bottom4'));
+    CivciBgRezise(jQuery('#grid-bottom5'));
 
     civicVideos(jQuery);
 

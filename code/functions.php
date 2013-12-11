@@ -58,16 +58,20 @@ $classSeparatorGridBottom2 = ($separateGridBottom2 == '0') ? ' noSeparateGridBot
 $bgColorGridTop = $this->params->get('bgColorGridTop','tone_color');
 $bgColorGridTop2 = $this->params->get('bgColorGridTop2','tone_color');
 $bgColorGridTop3 = $this->params->get('bgColorGridTop3','tone_color');
-$bgColorGridBottom = $this->params->get('bgColorGridBottom','tone_color');
+$bgColorGridBottom = $this->params->get('bgColorGridBottom','color_one');
 $bgColorGridBottom2 = $this->params->get('bgColorGridBottom2','tone_color');
 $bgColorGridBottom3 = $this->params->get('bgColorGridBottom3','tone_color');
+$bgColorGridBottom4 = $this->params->get('bgColorGridBottom4','white');
+$bgColorGridBottom5 = $this->params->get('bgColorGridBottom5','tone_inverse_color');
 
 $imgGridTopBg = checkImage($this->params->get("imgGridTopBg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
 $imgGridTop2Bg = checkImage($this->params->get("imgGridTop2Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
 $imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", "templates/js_civic/images/default-bg-grid-top-3.jpg"), "templates/js_civic/images/default-bg-grid-top-3.jpg");
 $imgGridBottomBg = checkImage($this->params->get("imgGridBottomBg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
 $imgGridBottom2Bg = checkImage($this->params->get("imgGridBottom2Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", "templates/js_civic/images/default-bg-grid-bottom-3.jpg"), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
+$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
+$imgGridBottom4Bg = checkImage($this->params->get("imgGridBottom4Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
+$imgGridBottom5Bg = checkImage($this->params->get("imgGridBottom5Bg", "templates/js_civic/images/default-bg-grid-bottom-3.jpg"), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
 
 if ($imgGridTopBg != "-1") $imgGridTopBg = str_replace(JPATH_BASE, '', $imgGridTopBg);
 if ($imgGridTop2Bg != "-1") $imgGridTop2Bg = str_replace(JPATH_BASE, '', $imgGridTop2Bg);
@@ -75,6 +79,8 @@ if ($imgGridTop3Bg != "-1") $imgGridTop3Bg = str_replace(JPATH_BASE, '', $imgGri
 if ($imgGridBottomBg != "-1") $imgGridBottomBg = str_replace(JPATH_BASE, '', $imgGridBottomBg);
 if ($imgGridBottom2Bg != "-1") $imgGridBottom2Bg = str_replace(JPATH_BASE, '', $imgGridBottom2Bg);
 if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $imgGridBottom3Bg);
+if ($imgGridBottom4Bg != "-1") $imgGridBottom4Bg = str_replace(JPATH_BASE, '', $imgGridBottom4Bg);
+if ($imgGridBottom5Bg != "-1") $imgGridBottom5Bg = str_replace(JPATH_BASE, '', $imgGridBottom5Bg);
 
 // templateTone parameter (Light = '-Light' - Dark = '-Dark')
     $user = JFactory::getUser();
