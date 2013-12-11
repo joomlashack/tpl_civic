@@ -116,7 +116,8 @@ if ($useSlider) {
     $rvideos = preg_find('/\.mp4$/D', $videosFolder, PREG_FIND_SORTKEYS);
     if ($rvideos) {
         foreach ($rvideos as $rvideo) {
-            $bname = pathinfo($rvideo)['filename'];
+            $pinfo = pathinfo($rvideo);
+            $bname = $pinfo['filename'];
             $image = $imagesFolder . '/' . $bname . '.jpg';
             if (!file_exists($image)) {
                 $image = $imagesFolder . '/' . $bname . '.png';
