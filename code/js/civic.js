@@ -65,10 +65,12 @@ jQuery(function() {
         });
     }
 
+
     function next() {
         isTransitioning = true;
         // update video index, reset image opacity if starting over
         if (screenIndex === numScreens) {
+            $bigImage.css('opacity', 1);
             screenIndex = 1;
         } else {
             screenIndex++;
@@ -78,16 +80,16 @@ jQuery(function() {
                 'left': '-100%'
             }, transitionDur)
         }
-        $bigImage.css('opacity', 1);
-        jQuery('.homepage-video-slider').transit({
+        (Modernizr.csstransitions) ? jQuery('.wrapper').transit({
             'left': '-' + (100 * (screenIndex - 1)) + '%'
-        }, transitionDur, onTransitionComplete);
+        }, transitionDur, onTransitionComplete) : onTransitionComplete();
     }
 
     function previous() {
         isTransitioning = true;
         // update video index, reset image opacity if starting over
         if (screenIndex === 1) {
+            $bigImage.css('opacity', 1);
             screenIndex = numScreens;
         } else {
             screenIndex--;
@@ -97,10 +99,9 @@ jQuery(function() {
                 'left': '100%'
             }, transitionDur)
         }
-        $bigImage.css('opacity', 1);
-        jQuery('.homepage-video-slider').transit({
+        (Modernizr.csstransitions) ? jQuery('.wrapper').transit({
             'left': '-' + (100 * (screenIndex - 1)) + '%'
-        }, transitionDur, onTransitionComplete);
+        }, transitionDur, onTransitionComplete) : onTransitionComplete();
     }
 
     function onVideoLoaded() {
