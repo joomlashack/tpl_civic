@@ -2417,6 +2417,11 @@ input.btn{
 			top: auto;
 			bottom: 0;
 		}
+		.dropdown-menu{
+			margin-bottom: 0;
+			padding: 0;
+		}
+
 	}
 }
 
@@ -2639,4 +2644,31 @@ button[name="Search"]{
 		font-size: @baseFontSize + 66;
 		font-weight: 700;
 	}
+}
+
+#menu{
+	.navbar {
+		margin-bottom: 0;
+		.nav{
+			>li{
+				margin-bottom: 0;
+				margin-top: 0;
+				padding-bottom: 15px;
+				padding-top: 33px;
+			}
+		}
+	}
+}
+.header{
+	padding-top: 0;
+}
+#logo{
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+.navbar-inverse .nav li.dropdown .dropdown-menu li>a:hover .caret,
+.navbar-inverse .navbar-inner li.dropdown .dropdown-menu li>a:hover .caret,
+.navbar-inverse .navbar .nav li.dropdown .dropdown-menu li>a:hover .caret{
+	border-top-color: transparent;
+	border-bottom-color: transparent;
 }

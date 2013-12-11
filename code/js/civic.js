@@ -1,7 +1,7 @@
 function civicVideos($) {
 
-    // Use Modernizr to detect for touch devices, 
-    // which don't support autoplay and may have less bandwidth, 
+    // Use Modernizr to detect for touch devices,
+    // which don't support autoplay and may have less bandwidth,
     // so just give them the poster images instead
     var screenIndex = 1,
         numScreens = $('.screen').length,
@@ -158,15 +158,9 @@ jQuery(function() {
 
     function FeaturedHeight() {
         featured.css({
-            'height': jQuery(window).height() - (header.height() + 20 + jQuery('.wrapper-toolbar').height()) + 'px',
+            'height': jQuery(window).height() - (header.height() + jQuery('.wrapper-toolbar').height()) + 'px',
             'width': jQuery(window).width() + 'px'
         });
-
-        if (jQuery(window).width() < 979) {
-            featured.css({
-                'height': jQuery(window).height() - (header.height() + jQuery('.wrapper-toolbar').height()) + 'px',
-            });
-        }
     }
 
     FeaturedHeight();
