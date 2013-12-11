@@ -100,11 +100,14 @@ $useSlider = ($this->params->get('useSlider','1') == '1');
 $videosFolder = $this->params->get('videosFolder','');
 $imagesFolder = $this->params->get('imagesFolder','');
 
-if (($videosFolder == '' || $videosFolder == '-1' || $imagesFolder == '' || $imagesFolder == '-1'))
+if (($videosFolder == '' || $videosFolder == '-1' || $imagesFolder == '' || $imagesFolder == '-1')) {
     $videosFolder = $imagesFolder = 'templates/js_civic/images/slider';
+    $sliderDefault = true;
+}
 else {
     $videosFolder = JPATH_BASE . '/images/' . $videosFolder;
     $imagesFolder = JPATH_BASE . '/images/' . $imagesFolder;
+    $sliderDefault = false;
 }
 
 $sliderVideos = Array();
@@ -125,8 +128,14 @@ if ($useSlider) {
                     $image = '';
             }
             if ($image != '') {
-                $sliderVideos[] = JURI::root(true) . substr($rvideo, strlen(JPATH_BASE));
-                $sliderImages[] = JURI::root(true) . substr($image, strlen(JPATH_BASE));
+                if ($sliderDefault) {
+                    $sliderVideos[] = JURI::root(true) . '/' . $rvideo;
+                    $sliderImages[] = JURI::root(true) . '/' . $image;
+                }
+                else {
+                    $sliderVideos[] = JURI::root(true) . substr($rvideo, strlen(JPATH_BASE));
+                    $sliderImages[] = JURI::root(true) . substr($image, strlen(JPATH_BASE));
+                }
             }
         }
     }
