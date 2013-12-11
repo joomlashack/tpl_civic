@@ -220,7 +220,7 @@ div.bs-docs-example blockquote{
 
 .hero-unit{
 	border-radius: 0;
-	color: @textColor;
+	color: @textColor !important;
 	font-size: 16px;
 	text-align: center;
 	h1,h2,h3,h4,h5,h6{
@@ -2394,6 +2394,9 @@ input.btn{
 	#container-civic{
 		background-color: @grayDarker;
 	}
+	.counter{
+		color: @grayLighter;
+	}
 }
 
 #grid-bottom3{
@@ -2578,7 +2581,6 @@ button[name="Search"]{
 	.clearfix();
 }
 
-.featured-inner,
 .slider{
 	position: relative;
 	z-index: 2;
@@ -2593,8 +2595,18 @@ button[name="Search"]{
 	z-index: 1;
 }
 .featured-inner{
+	position: absolute;
 	text-align: center;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+
 	> div{
+		position: absolute;
+		text-align: center;
+		z-index: 2;
+		height: 100%;
+		width: 100%;
 		> *{
 			color: @white;
 			margin-left: auto;
