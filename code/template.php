@@ -231,7 +231,7 @@ defined('_JEXEC') or die('Restricted access');
     </div>
 
 
-    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/modernizr-2.5.3.min.js"></script>
+    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/modernizr-2.7.1.min.js"></script>
     <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery.imagesloaded.min.js"></script>
     <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/video.js"></script>
