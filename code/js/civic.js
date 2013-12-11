@@ -74,12 +74,12 @@ jQuery(function() {
             screenIndex++;
         }
         if (!isTouch) {
-            $('#big-video-wrap').transit({
+            jQuery('#big-video-wrap').transit({
                 'left': '-100%'
             }, transitionDur)
         }
         $bigImage.css('opacity', 1);
-        $('.homepage-video-slider').transit({
+        jQuery('.homepage-video-slider').transit({
             'left': '-' + (100 * (screenIndex - 1)) + '%'
         }, transitionDur, onTransitionComplete);
     }
@@ -93,12 +93,12 @@ jQuery(function() {
             screenIndex--;
         }
         if (!isTouch) {
-            $('#big-video-wrap').transit({
+            jQuery('#big-video-wrap').transit({
                 'left': '100%'
             }, transitionDur)
         }
         $bigImage.css('opacity', 1);
-        $('.homepage-video-slider').transit({
+        jQuery('.homepage-video-slider').transit({
             'left': '-' + (100 * (screenIndex - 1)) + '%'
         }, transitionDur, onTransitionComplete);
     }
