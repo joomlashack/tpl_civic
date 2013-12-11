@@ -188,7 +188,6 @@ div.bs-docs-example blockquote{
 }
 #featured{
 	margin-bottom: 0;
-	text-align: center;
 
 	.clearfix();
 	.moduletable, .module{
@@ -2432,9 +2431,11 @@ button[name="Search"]{
 	}
 }
 
+
+
+
 // Slider
 // ---------------------
-
 
 
 //	BigVideo Styles
@@ -2496,21 +2497,24 @@ button[name="Search"]{
     text-transform: uppercase;
 }
 
-.next-icon {
+.nav-icon{
+	font-family: @altFontFamily;
+	font-size: @baseFontSize + 6;
+	position: absolute;
+	text-transform: uppercase;
+    border-bottom: 1px solid @color_two;
+    border-top: 1px solid @color_two;
+    color: @color_two;
     display: block;
-    border-top: solid 2px #fff;
-    border-right: solid 2px #fff;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    left: -5px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    color: #fff;
-    text-decoration: none;
+    top: 45%;
+    z-index: 3;
+}
+.next-icon {
+	right: 4%;
+}
+
+.prev-icon {
+	left: 4%;
 }
 
 // Codrops Header Style
@@ -2546,18 +2550,6 @@ button[name="Search"]{
     display: block;
 }
 
-nav#next-btn {
-	position: absolute;
-	right: 5%;
-	top: 45%;
-	padding: 20px;
-	background: #000;
-	border-radius: 40px;
-	opacity: .4;
-	cursor: pointer;
-	z-index: 1000;
-}
-
 // End Codrops Header Style
 
 
@@ -2579,7 +2571,40 @@ nav#next-btn {
 	background-color: @bodyBackground;
 }
 
-.featured-inner{
+.featured-inner,
+.slider{
 	position: relative;
+	z-index: 2;
+}
+.slider-filter{
+	background-image: url(../../images/slider-filter.png);
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 	z-index: 1;
+}
+.featured-inner{
+	text-align: center;
+	> div{
+		> *{
+			color: @white;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 90%;
+		}
+	}
+}
+
+.slider{
+	color: @white;
+	font-family: @altFontFamily;
+	font-size: @baseFontSize + 6;
+
+	h2{
+		font-family: @sansFontFamily;
+		font-size: @baseFontSize + 66;
+		font-weight: 700;
+	}
 }

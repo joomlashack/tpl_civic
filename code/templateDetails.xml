@@ -47,6 +47,7 @@
 		<position>grid-top3</position>
 		<position>above-content</position>
 		<position>breadcrumbs</position>
+		<position>slider</position>
 		<position>sidebar1</position>
 		<position>sidebar2</position>
 		<position>below-content</position>

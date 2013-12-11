@@ -128,4 +128,27 @@ jQuery(function() {
         });
 
     }
+
+    var featured = jQuery('#featured');
+    var header = jQuery('#header');
+
+    function FeaturedHeight(){
+        featured.css({
+            'height': jQuery(window).height() - (header.height() + 20 + jQuery('.wrapper-toolbar').height()) + 'px',
+            'width': jQuery(window).width() + 'px'
+        });
+
+        if (jQuery(window).width() < 979 ){
+            featured.css({
+                'height': jQuery(window).height() - (header.height() + jQuery('.wrapper-toolbar').height()) + 'px',
+            });
+        }
+    }
+
+    FeaturedHeight();
+
+    jQuery(window).resize(function() {
+        FeaturedHeight();
+    });
+
 });
