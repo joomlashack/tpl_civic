@@ -335,7 +335,9 @@
 	#grid-top3,
 	#grid-bottom,
 	#grid-bottom2,
-	#grid-bottom3{
+	#grid-bottom3,
+	#grid-bottom4,
+	#grid-bottom5{
 		&.container,&.container-fluid,
 		.container{
 			padding-left: 20px;
@@ -348,7 +350,8 @@
 
 	.grid-bottom3,
 	.footer-content,
-	.wrapp-breadcrumb{
+	.wrapp-breadcrumb,
+	#main-content{
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -386,5 +389,10 @@
 		}
 		h2{font-size: @baseFontSize + 16;}
 		p{font-size: @baseFontSize -2;}
+	}
+	.items-row{
+		.items{
+			margin-bottom: 20px;
+		}
 	}
 }
