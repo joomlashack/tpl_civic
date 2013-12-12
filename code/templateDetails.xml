@@ -241,6 +241,7 @@
 					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
 					<option value="white">TPL_JS_CIVIC_WHITE</option>
 				</field>
+				<field name="civicColorReference" type="templatecustom" default="" label="TPL_JS_CIVIC_COLOR_REFERENCE" description="TPL_JS_CIVIC_COLOR_REFERENCE_DESC"/>
 			</fieldset>
 
 		</fields>
