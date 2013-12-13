@@ -139,6 +139,9 @@ function civicVideos($) {
 }
 
 jQuery(function() {
+    if (civicSlider)
+        civicVideos(jQuery);
+
     function CivciBgRezise(el) {
         el.css({
             'background-image': 'url(' + el.attr('data-bg-grid-top') + ')'
@@ -152,8 +155,6 @@ jQuery(function() {
     CivciBgRezise(jQuery('#grid-bottom3'));
     CivciBgRezise(jQuery('#grid-bottom4'));
     CivciBgRezise(jQuery('#grid-bottom5'));
-
-    civicVideos(jQuery);
 
     var featured = jQuery('#featured');
     var header = jQuery('#header');
