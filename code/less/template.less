@@ -385,6 +385,12 @@ div.bs-docs-example blockquote{
 		.wrightmodule-content{
 			background-color: fade(@color_two, 95%);
 			padding: 13px 25px;
+			
+			>h3{
+				font-size: ((@baseFontSize + 1) * 2 ) + 10;
+				margin-top: 0;
+				text-transform: uppercase;
+			}
 
 			h4.wrightmodule-subtitle{
 				font-size: @baseFontSize + 2;
@@ -2492,12 +2498,13 @@ button[name="Search"]{
 .vjs-control-bar {
 	display: none;
 }
-
-.wrapper {
-    position: absolute;
-    width: 500%;
-    height: 100%;
-    z-index: 0;
+#featured{
+	.wrapper {
+	    position: absolute;
+	    width: 500%;
+	    height: 100%;
+	    z-index: 0;
+	}
 }
 
 // Video Pages
