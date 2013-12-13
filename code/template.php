@@ -20,6 +20,14 @@ defined('_JEXEC') or die('Restricted access');
     <w:head />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Cousine:400,700" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #featured .wrapper {
+            width: <?php echo 100*sizeof($sliderVideos); ?>%;
+        }
+        .screen {
+            width: <?php echo round(100/sizeof($sliderVideos),5); ?>%;            
+        }
+    </style>
 </head>
 <body class="<?php echo $responsive . ' Tone' . $Tone?>">
     <?php if ($this->countModules('toolbar')) : ?>
