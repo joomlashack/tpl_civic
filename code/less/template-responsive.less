@@ -25,6 +25,27 @@
 			width: 200%;
 		}
 	}
+	.header{
+		.container{
+			width: auto;
+			.row{
+				margin-left: 0;
+			}
+		}
+		#logo, #menu{
+			margin-left: 0;
+			width: 100%;
+		}
+		.navbar-inner {
+			min-height: 0;
+			position: relative;
+			.btn-navbar {
+				bottom: 100%;
+				position: absolute;
+				right: 0;
+			}
+		}
+	}
 }
 
 @media (max-width: 979px){
@@ -90,11 +111,11 @@
 				.dropdown-menu{
 					li {
 						> a{
-							color: @linkColor !important;
+							color: @linkColor;
 						}
 						.sub-menu{
 							li a{
-								color: @white !important;
+								color: @white;
 							}
 						}
 					}
@@ -102,6 +123,28 @@
 			}
 		}
 	}
+
+	// Styles of bootstrap
+
+	.navbar-inverse .nav li.dropdown .dropdown-menu li>a,
+	.navbar-inverse .navbar-inner li.dropdown .dropdown-menu li>a,
+	.navbar-inverse .nav .navbar-inner li.dropdown .dropdown-menu li>a,
+	.navbar-inverse .navbar .nav li.dropdown .dropdown-menu li>a,
+	.navbar-inverse .navbar .nav .navbar-inner li.dropdown .dropdown-menu li>a{
+		color: @linkColor;
+		> .caret{
+			border-top-color: @linkColor;
+		}
+	}
+
+	.navbar-inverse .nav li.dropdown .dropdown-menu li>a:hover .caret,
+	.navbar-inverse .navbar-inner li.dropdown .dropdown-menu li>a:hover .caret,
+	.navbar-inverse .navbar .nav li.dropdown .dropdown-menu li>a:hover .caret{
+		border-top-color: @linkColor;
+	}
+
+	//---
+
 	.navbar-inverse .nav-collapse .nav>li>a{
 		&.item-desc{
 			color : @color_three;
@@ -259,6 +302,24 @@
 		.navbar-fixed-top{
 			position: relative;
 			z-index: 3;
+		}
+	}
+
+	.header{
+		#menu{
+			min-height: 0;
+
+			.navbar .nav>li{
+				padding-bottom: 0;
+				padding-top: 0;
+				> a{
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+			}
+		}
+		.nav-collapse .nav>li>a{
+			margin-bottom: 0;
 		}
 	}
 }
