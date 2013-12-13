@@ -20,8 +20,16 @@ defined('_JEXEC') or die('Restricted access');
     <w:head />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Cousine:400,700" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #featured .wrapper {
+            width: <?php echo 100*sizeof($sliderVideos); ?>%;
+        }
+        .screen {
+            width: <?php echo round(100/sizeof($sliderVideos),5); ?>%;            
+        }
+    </style>
 </head>
-<body class="<?php echo $responsive . $classSeparatorGridBottom2 . ' Tone' . $Tone?>">
+<body class="<?php echo $responsive . ' Tone' . $Tone?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
@@ -43,6 +51,11 @@ defined('_JEXEC') or die('Restricted access');
                             <img src="<?php echo $sliderImages[$v-1] ?>" class="big-image" />
                         </div>
                     <?php $v++; endforeach; ?>
+                </div>
+
+                <div class="big-loader">
+                    <i class="icon-spinner icon-spin icon-4x"></i>
+                    <h4>loading...</h4>
                 </div>
 
                 <nav id="next-btn">
@@ -80,7 +93,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top')) : ?>
             <!-- grid-top -->
-            <div id="grid-top" class="<?php echo $bgColorGridTop; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTopBg ?>">
+            <div id="grid-top" class="<?php echo $bgColorGridTop; ?>" data-bg-grid-top="<?php echo $imgGridTopBg ?>">
                 <div class="grid-top <?php echo $containerClass; ?>">
                     <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
                 </div>
@@ -89,7 +102,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top2')) : ?>
             <!-- grid-top2 -->
-            <div id="grid-top2" class="<?php echo $bgColorGridTop2; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop2Bg ?>">
+            <div id="grid-top2" class="<?php echo $bgColorGridTop2; ?>" data-bg-grid-top="<?php echo $imgGridTop2Bg ?>">
                 <div class="grid-top2 <?php echo $containerClass; ?>">
                     <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
                 </div>
@@ -98,7 +111,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top3')) : ?>
             <!-- grid-top3 -->
-            <div id="grid-top3" class="<?php echo $bgColorGridTop3; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop3Bg ?>">
+            <div id="grid-top3" class="<?php echo $bgColorGridTop3; ?>" data-bg-grid-top="<?php echo $imgGridTop3Bg ?>">
                 <div class="grid-top3 <?php echo $containerClass; ?>">
                     <w:module type="<?php echo $gridMode; ?>" name="grid-top3" chrome="wrightflexgrid" />
                 </div>
@@ -169,7 +182,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom')) : ?>
             <!-- grid-bottom -->
-            <div id="grid-bottom" class="<?php echo $bgColorGridBottom; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottomBg ?>">
+            <div id="grid-bottom" class="<?php echo $bgColorGridBottom . $classSeparatorGridBottom; ?>" data-bg-grid-top="<?php $imgGridBottomBg ?>">
                 <div class="grid-bottom">
                     <?php if ($enableFluidContainerGridBottom == '0') : ?>
                         <div class="<?php echo $containerClass ; ?>">
@@ -188,7 +201,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
            <!-- grid-bottom2 -->
-            <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom2Bg ?>">
+            <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2 . $classSeparatorGridBottom2; ?>" data-bg-grid-top="<?php echo $imgGridBottom2Bg ?>">
                 <div class="grid-bottom2">
                     <?php if ($enableFluidContainerGridBottom2 == '0') : ?>
                         <div class="<?php echo $containerClass ; ?>">
@@ -206,7 +219,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom3')) : ?>
-            <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>">
+            <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3 . $classSeparatorGridBottom3; ?>" data-bg-grid-top="<?php echo $imgGridBottom3Bg ?>">
                 <div class="<?php echo $containerClass ?>">
                     <!-- grid-bottom3 -->
                     <div class="grid-bottom3">
@@ -218,7 +231,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom4')) : ?>
-            <div id="grid-bottom4" class="<?php echo $bgColorGridBottom4; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom4Bg ?>">
+            <div id="grid-bottom4" class="<?php echo $bgColorGridBottom4 . $classSeparatorGridBottom4; ?>" data-bg-grid-top="<?php echo $imgGridBottom4Bg ?>">
                 <div class="<?php echo $containerClass ?>">
                     <!-- grid-bottom4 -->
                     <div class="grid-bottom4">
@@ -229,16 +242,34 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         <?php endif; ?>
 
-        <?php if ($this->countModules('grid-bottom5')) : ?>
-            <div id="grid-bottom5" class="<?php echo $bgColorGridBottom5; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom5Bg ?>">
-                <div class="<?php echo $containerClass ?>">
-                    <!-- grid-bottom5 -->
-                    <div class="grid-bottom5">
-                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom5" chrome="wrightflexgrid" />
-                    </div>
+        <?php if ($this->countModules('grid-bottom5') || $this->countModules('grid-bottom6')) : ?>
 
-                </div>
+            <div id="grid-bottom5_6" class="<?php echo $bgColorGridBottom5_6; ?>" data-bg-grid-top="<?php echo $imgGridBottom5_6Bg ?>">
+                <?php if ($this->countModules('grid-bottom5')) : ?>
+                    <div id="grid-bottom5" class="<?php echo $classSeparatorGridBottom5 ?>">
+                        <div class="<?php echo $containerClass ?>">
+                            <!-- grid-bottom5 -->
+                            <div class="grid-bottom5">
+                                <w:module type="<?php echo $gridMode; ?>" name="grid-bottom5" chrome="wrightflexgrid" />
+                            </div>
+    
+                        </div>
+                    </div>
+                <?php endif; ?>
+            
+                <?php if ($this->countModules('grid-bottom6')) : ?>
+                    <div id="grid-bottom6" class="<?php echo $classSeparatorGridBottom6 ?>">
+                        <div class="<?php echo $containerClass ?>">
+                            <!-- grid-bottom6 -->
+                            <div class="grid-bottom6">
+                                <w:module type="<?php echo $gridMode; ?>" name="grid-bottom6" chrome="wrightflexgrid" />
+                            </div>
+    
+                        </div>
+                    </div>
+                <?php endif; ?>
             </div>
+
         <?php endif; ?>
 
     </div>
@@ -260,12 +291,17 @@ defined('_JEXEC') or die('Restricted access');
     </div>
 
 
-    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/modernizr-2.7.1.min.js"></script>
-    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery.imagesloaded.min.js"></script>
-    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/video.js"></script>
-    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/bigvideo.js"></script>
-    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery.transit.min.js"></script>
+    <?php if ($useSlider) : ?>
+        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/modernizr-2.7.1.min.js"></script>
+        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery.imagesloaded.min.js"></script>
+        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/video.js"></script>
+        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/bigvideo.js"></script>
+        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/jquery.transit.min.js"></script>
+    <?php endif; ?>
+    <script type="text/javascript">
+        var civicSlider = <?php echo ($useSlider ? "true" : "false") ?>;
+    </script>
     <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/civic.js"></script>
 
 </body>

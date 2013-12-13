@@ -30,30 +30,46 @@ if ($this->countModules('grid-top') || $this->countModules('grid-top2')){
 	$fullBreadcrumb = true;
 }
 
-// Parameters Civic
 
-function checkImage($img, $default) {
-        if ($img == "") {
-                $img = $default;
-        }
-        elseif ($img != "-1") {
-                $img = "images/" . $img;
-        }
+function checkImage($img, $default = "-1") {
+    if ($img == "") {
+        $img = $default;
+    }
+    elseif ($img != "-1") {
+        $img = "images/" . $img;
+    }
 
-        if ($img != "-1") {
-                $img = JPATH_BASE . '/' . $img;
-                if (!file_exists($img)) {
-                        $img = "-1";
-                }
+    if ($img != "-1") {
+        if (!file_exists(JPATH_BASE . '/' . $img)) {
+            $img = "-1";
         }
-
-        return $img;
+    }
+    if ($img == "-1")
+        return "";
+    else
+        return JURI::root(true) . "/" . $img;
 }
 
 $enableFluidContainerGridBottom = $this->params->get('enableFluidContainerGridBottom','0');
 $enableFluidContainerGridBottom2 = $this->params->get('enableFluidContainerGridBottom2','0');
+$enableFluidContainerGridBottom3 = $this->params->get('enableFluidContainerGridBottom3','0');
+$enableFluidContainerGridBottom4 = $this->params->get('enableFluidContainerGridBottom4','0');
+$enableFluidContainerGridBottom5 = $this->params->get('enableFluidContainerGridBottom5','0');
+$enableFluidContainerGridBottom6 = $this->params->get('enableFluidContainerGridBottom6','0');
+
+$separateGridBottom = $this->params->get('separateGridBottom','1');
 $separateGridBottom2 = $this->params->get('separateGridBottom2','1');
-$classSeparatorGridBottom2 = ($separateGridBottom2 == '0') ? ' noSeparateGridBottom2' : '' ;
+$separateGridBottom3 = $this->params->get('separateGridBottom3','1');
+$separateGridBottom4 = $this->params->get('separateGridBottom4','1');
+$separateGridBottom5 = $this->params->get('separateGridBottom5','1');
+$separateGridBottom6 = $this->params->get('separateGridBottom6','1');
+
+$classSeparatorGridBottom = ($separateGridBottom == '0') ? ' noSeparateGridBottom' : '' ;
+$classSeparatorGridBottom2 = ($separateGridBottom2 == '0') ? ' noSeparateGridBottom' : '' ;
+$classSeparatorGridBottom3 = ($separateGridBottom3 == '0') ? ' noSeparateGridBottom' : '' ;
+$classSeparatorGridBottom4 = ($separateGridBottom4 == '0') ? ' noSeparateGridBottom' : '' ;
+$classSeparatorGridBottom5 = ($separateGridBottom5 == '0') ? ' noSeparateGridBottom' : '' ;
+$classSeparatorGridBottom6 = ($separateGridBottom6 == '0') ? ' noSeparateGridBottom' : '' ;
 
 $bgColorGridTop = $this->params->get('bgColorGridTop','tone_color');
 $bgColorGridTop2 = $this->params->get('bgColorGridTop2','tone_color');
@@ -62,25 +78,16 @@ $bgColorGridBottom = $this->params->get('bgColorGridBottom','color_one');
 $bgColorGridBottom2 = $this->params->get('bgColorGridBottom2','tone_color');
 $bgColorGridBottom3 = $this->params->get('bgColorGridBottom3','tone_color');
 $bgColorGridBottom4 = $this->params->get('bgColorGridBottom4','white');
-$bgColorGridBottom5 = $this->params->get('bgColorGridBottom5','tone_inverse_color');
+$bgColorGridBottom5_6 = $this->params->get('bgColorGridBottom5_6','tone_inverse_color');
 
-$imgGridTopBg = checkImage($this->params->get("imgGridTopBg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
-$imgGridTop2Bg = checkImage($this->params->get("imgGridTop2Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
-$imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", "templates/js_civic/images/default-bg-grid-top-3.jpg"), "templates/js_civic/images/default-bg-grid-top-3.jpg");
-$imgGridBottomBg = checkImage($this->params->get("imgGridBottomBg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridBottom2Bg = checkImage($this->params->get("imgGridBottom2Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridBottom4Bg = checkImage($this->params->get("imgGridBottom4Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridBottom5Bg = checkImage($this->params->get("imgGridBottom5Bg", "templates/js_civic/images/default-bg-grid-bottom-3.jpg"), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-
-if ($imgGridTopBg != "-1") $imgGridTopBg = str_replace(JPATH_BASE, '', $imgGridTopBg);
-if ($imgGridTop2Bg != "-1") $imgGridTop2Bg = str_replace(JPATH_BASE, '', $imgGridTop2Bg);
-if ($imgGridTop3Bg != "-1") $imgGridTop3Bg = str_replace(JPATH_BASE, '', $imgGridTop3Bg);
-if ($imgGridBottomBg != "-1") $imgGridBottomBg = str_replace(JPATH_BASE, '', $imgGridBottomBg);
-if ($imgGridBottom2Bg != "-1") $imgGridBottom2Bg = str_replace(JPATH_BASE, '', $imgGridBottom2Bg);
-if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $imgGridBottom3Bg);
-if ($imgGridBottom4Bg != "-1") $imgGridBottom4Bg = str_replace(JPATH_BASE, '', $imgGridBottom4Bg);
-if ($imgGridBottom5Bg != "-1") $imgGridBottom5Bg = str_replace(JPATH_BASE, '', $imgGridBottom5Bg);
+$imgGridTopBg = checkImage($this->params->get("imgGridTopBg", ""));
+$imgGridTop2Bg = checkImage($this->params->get("imgGridTop2Bg", ""));
+$imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", ""));
+$imgGridBottomBg = checkImage($this->params->get("imgGridBottomBg", ""));
+$imgGridBottom2Bg = checkImage($this->params->get("imgGridBottom2Bg", ""));
+$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""));
+$imgGridBottom4Bg = checkImage($this->params->get("imgGridBottom4Bg", ""));
+$imgGridBottom5_6Bg = checkImage($this->params->get("imgGridBottom5_6Bg"));
 
 // templateTone parameter (Light = '-Light' - Dark = '-Dark')
     $user = JFactory::getUser();
@@ -107,13 +114,11 @@ $videosFolder = $this->params->get('videosFolder','');
 $imagesFolder = $this->params->get('imagesFolder','');
 
 if (($videosFolder == '' || $videosFolder == '-1' || $imagesFolder == '' || $imagesFolder == '-1')) {
-    $videosFolder = $imagesFolder = 'templates/js_civic/images/slider';
-    $sliderDefault = true;
+    $useSlider = false;
 }
 else {
     $videosFolder = JPATH_BASE . '/images/' . $videosFolder;
     $imagesFolder = JPATH_BASE . '/images/' . $imagesFolder;
-    $sliderDefault = false;
 }
 
 $sliderVideos = Array();
@@ -134,14 +139,8 @@ if ($useSlider) {
                     $image = '';
             }
             if ($image != '') {
-                if ($sliderDefault) {
-                    $sliderVideos[] = JURI::root(true) . '/' . $rvideo;
-                    $sliderImages[] = JURI::root(true) . '/' . $image;
-                }
-                else {
-                    $sliderVideos[] = JURI::root(true) . substr($rvideo, strlen(JPATH_BASE));
-                    $sliderImages[] = JURI::root(true) . substr($image, strlen(JPATH_BASE));
-                }
+                $sliderVideos[] = JURI::root(true) . substr($rvideo, strlen(JPATH_BASE));
+                $sliderImages[] = JURI::root(true) . substr($image, strlen(JPATH_BASE));
             }
         }
     }

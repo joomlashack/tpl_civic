@@ -9,6 +9,7 @@ function civicVideos($) {
         transitionDur = 1000,
         BV, videoPlayer, isTouch = Modernizr.touch,
         $bigImage = $('.big-image'),
+        $bigLoader = $('.big-loader'),
         $window = $(window);
 
     if (!isTouch) {
@@ -22,6 +23,12 @@ function civicVideos($) {
         BV.getPlayer().on('loadeddata', function() {
             onVideoLoaded();
         });
+
+        BV.getPlayer().on('ended', function() {
+            if (!isTransitioning) {
+                next();
+            }
+        })
 
         // adjust image positioning so it lines up with video
         $bigImage.css('position', 'relative').imagesLoaded(adjustImagePositioning);
@@ -65,6 +72,7 @@ function civicVideos($) {
             }, transitionDur)
         }
         $bigImage.css('opacity', 1);
+        $bigLoader.css('opacity', 1);
         $('.wrapper').transit({
             'left': '-' + (100 * (screenIndex - 1)) + '%'
         }, transitionDur, onTransitionComplete);
@@ -84,6 +92,7 @@ function civicVideos($) {
             }, transitionDur)
         }
         $bigImage.css('opacity', 1);
+        $bigLoader.css('opacity', 1);
         $('.wrapper').transit({
             'left': '-' + (100 * (screenIndex - 1)) + '%'
         }, transitionDur, onTransitionComplete);
@@ -92,7 +101,10 @@ function civicVideos($) {
     function onVideoLoaded() {
         $('#screen-' + screenIndex).find('.big-image').transit({
             'opacity': 0
-        }, 3000)
+        }, 3000);
+        $bigLoader.transit({
+            'opacity': 0
+        }, 1000);
     }
 
     function onTransitionComplete() {
@@ -139,6 +151,9 @@ function civicVideos($) {
 }
 
 jQuery(function() {
+    if (civicSlider)
+        civicVideos(jQuery);
+
     function CivciBgRezise(el) {
         el.css({
             'background-image': 'url(' + el.attr('data-bg-grid-top') + ')'
@@ -151,9 +166,7 @@ jQuery(function() {
     CivciBgRezise(jQuery('#grid-bottom2'));
     CivciBgRezise(jQuery('#grid-bottom3'));
     CivciBgRezise(jQuery('#grid-bottom4'));
-    CivciBgRezise(jQuery('#grid-bottom5'));
-
-    civicVideos(jQuery);
+    CivciBgRezise(jQuery('#grid-bottom5_6'));
 
     var featured = jQuery('#featured');
     var header = jQuery('#header');
@@ -171,4 +184,12 @@ jQuery(function() {
         FeaturedHeight();
     });
 
+    var htoolbar = jQuery('div.wrapper-toolbar').height();
+    jQuery('.civic-scroll').click(function () {
+        if (jQuery(this).attr('rel') != '')
+            jQuery('html, body').animate({
+                scrollTop: (jQuery(this).attr('rel') == 'top' ? 0 : jQuery('#' + jQuery(this).attr('rel')).offset().top) - htoolbar
+            }, 2000);
+        return false;
+    });
 });
