@@ -53,6 +53,11 @@ defined('_JEXEC') or die('Restricted access');
                     <?php $v++; endforeach; ?>
                 </div>
 
+                <div class="big-loader">
+                    <i class="icon-spinner icon-spin icon-4x"></i>
+                    <h4>loading...</h4>
+                </div>
+
                 <nav id="next-btn">
                     <a href="#" class="nav-icon next-icon"> Next </a>
                 </nav>

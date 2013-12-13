@@ -297,6 +297,9 @@
 				});
 
 				player.on('ended', function() {
+
+					$(this).trigger('ended');
+
 					if (settings.doLoop) {
 						player.currentTime(0);
 						player.play();

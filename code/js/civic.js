@@ -9,6 +9,7 @@ function civicVideos($) {
         transitionDur = 1000,
         BV, videoPlayer, isTouch = Modernizr.touch,
         $bigImage = $('.big-image'),
+        $bigLoader = $('.big-loader'),
         $window = $(window);
 
     if (!isTouch) {
@@ -22,6 +23,12 @@ function civicVideos($) {
         BV.getPlayer().on('loadeddata', function() {
             onVideoLoaded();
         });
+
+        BV.getPlayer().on('ended', function() {
+            if (!isTransitioning) {
+                next();
+            }
+        })
 
         // adjust image positioning so it lines up with video
         $bigImage.css('position', 'relative').imagesLoaded(adjustImagePositioning);
@@ -65,6 +72,7 @@ function civicVideos($) {
             }, transitionDur)
         }
         $bigImage.css('opacity', 1);
+        $bigLoader.css('opacity', 1);
         $('.wrapper').transit({
             'left': '-' + (100 * (screenIndex - 1)) + '%'
         }, transitionDur, onTransitionComplete);
@@ -84,6 +92,7 @@ function civicVideos($) {
             }, transitionDur)
         }
         $bigImage.css('opacity', 1);
+        $bigLoader.css('opacity', 1);
         $('.wrapper').transit({
             'left': '-' + (100 * (screenIndex - 1)) + '%'
         }, transitionDur, onTransitionComplete);
@@ -92,7 +101,10 @@ function civicVideos($) {
     function onVideoLoaded() {
         $('#screen-' + screenIndex).find('.big-image').transit({
             'opacity': 0
-        }, 3000)
+        }, 3000);
+        $bigLoader.transit({
+            'opacity': 0
+        }, 1000);
     }
 
     function onTransitionComplete() {
