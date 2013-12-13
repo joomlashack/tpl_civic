@@ -26,7 +26,7 @@ blockquote{
 	small{
 		color : @white;
 		font-family: @altFontFamily;
-		font-size: @baseFontSize;
+		font-size: @baseFontSize + 5;
 		&:before{
 			content : none;
 		}
@@ -476,7 +476,6 @@ div.bs-docs-example blockquote{
 			color: #888;
 			font-family: @altFontFamily;
 			margin: 0;
-			text-transform: none;
 			[class^="icon-"]{
 				display: none;
 			}
@@ -2533,9 +2532,11 @@ button[name="Search"]{
 #prev-btn,
 #next-btn{
 	position: absolute;
-    top: 45%;
+    top: auto;
+    bottom: 7%;
     z-index: 3;
 }
+
 #next-btn{
 	right: 4%;
 }
@@ -2622,6 +2623,7 @@ button[name="Search"]{
 .slider{
 	position: relative;
 	z-index: 2;
+	padding-top: 2em;
 }
 .slider-filter{
 	background-image: url(../../images/slider-filter.png);
