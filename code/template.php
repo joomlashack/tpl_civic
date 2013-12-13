@@ -25,7 +25,7 @@ defined('_JEXEC') or die('Restricted access');
             width: <?php echo 100*sizeof($sliderVideos); ?>%;
         }
         .screen {
-            width: <?php echo round(100/sizeof($sliderVideos),5); ?>%;            
+            width: <?php echo round(100/sizeof($sliderVideos),5); ?>%;
         }
     </style>
 </head>
@@ -189,10 +189,8 @@ defined('_JEXEC') or die('Restricted access');
                             <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
                         </div>
                     <?php else : ?>
-                        <div class="container-fluid container-no-padding">
-                            <div class="row-no-margin">
-                                <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
-                            </div>
+                        <div class="container-fluid container-no-padding row-no-margin">
+                            <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
                         </div>
                     <?php endif; ?>
                 </div>
@@ -208,10 +206,8 @@ defined('_JEXEC') or die('Restricted access');
                             <w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
                         </div>
                     <?php else : ?>
-                        <div class="container-fluid container-no-padding">
-                            <div class="row-no-margin">
-                                <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid"/>
-                            </div>
+                        <div class="container-fluid container-no-padding row-no-margin">
+                            <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid"/>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -220,52 +216,73 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom3')) : ?>
             <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3 . $classSeparatorGridBottom3; ?>" data-bg-grid-top="<?php echo $imgGridBottom3Bg ?>">
-                <div class="<?php echo $containerClass ?>">
-                    <!-- grid-bottom3 -->
-                    <div class="grid-bottom3">
+                <?php if ($enableFluidContainerGridBottom3 == '0') : ?>
+                    <div class="<?php echo $containerClass ?>">
                         <w:module type="<?php echo $gridMode; ?>" name="grid-bottom3" chrome="wrightflexgrid" />
                     </div>
-
-                </div>
+                <?php else : ?>
+                    <div class="container-fluid container-no-padding row-no-margin">
+                        <w:module type="row-fluid" name="grid-bottom3" chrome="wrightflexgrid" />
+                    </div>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom4')) : ?>
             <div id="grid-bottom4" class="<?php echo $bgColorGridBottom4 . $classSeparatorGridBottom4; ?>" data-bg-grid-top="<?php echo $imgGridBottom4Bg ?>">
-                <div class="<?php echo $containerClass ?>">
-                    <!-- grid-bottom4 -->
-                    <div class="grid-bottom4">
+                <?php if ($enableFluidContainerGridBottom4 == '0') : ?>
+                    <div class="<?php echo $containerClass ?>">
                         <w:module type="<?php echo $gridMode; ?>" name="grid-bottom4" chrome="wrightflexgrid" />
                     </div>
-
-                </div>
+                <?php else : ?>
+                    <div class="container-fluid container-no-padding row-no-margin">
+                        <w:module type="row-fluid" name="grid-bottom4" chrome="wrightflexgrid" />
+                    </div>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom5') || $this->countModules('grid-bottom6')) : ?>
 
             <div id="grid-bottom5_6" class="<?php echo $bgColorGridBottom5_6; ?>" data-bg-grid-top="<?php echo $imgGridBottom5_6Bg ?>">
+
                 <?php if ($this->countModules('grid-bottom5')) : ?>
                     <div id="grid-bottom5" class="<?php echo $classSeparatorGridBottom5 ?>">
-                        <div class="<?php echo $containerClass ?>">
-                            <!-- grid-bottom5 -->
-                            <div class="grid-bottom5">
+
+                        <?php if ($enableFluidContainerGridBottom5 == '0') : ?>
+
+                            <div class="<?php echo $containerClass ?>">
                                 <w:module type="<?php echo $gridMode; ?>" name="grid-bottom5" chrome="wrightflexgrid" />
                             </div>
-    
-                        </div>
+
+                        <?php else : ?>
+
+                            <div class="container-fluid container-no-padding row-no-margin">
+                                <w:module type="row-fluid" name="grid-bottom5" chrome="wrightflexgrid" />
+                            </div>
+
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
-            
+
                 <?php if ($this->countModules('grid-bottom6')) : ?>
+
                     <div id="grid-bottom6" class="<?php echo $classSeparatorGridBottom6 ?>">
-                        <div class="<?php echo $containerClass ?>">
-                            <!-- grid-bottom6 -->
-                            <div class="grid-bottom6">
+
+                        <?php if ($enableFluidContainerGridBottom6 == '0') : ?>
+
+                            <div class="<?php echo $containerClass ?>">
                                 <w:module type="<?php echo $gridMode; ?>" name="grid-bottom6" chrome="wrightflexgrid" />
                             </div>
-    
-                        </div>
+
+                        <?php else : ?>
+
+                            <div class="container-fluid container-no-padding row-no-margin">
+                                <w:module type="row-fluid" name="grid-bottom6" chrome="wrightflexgrid" />
+                            </div>
+
+                        <?php endif; ?>
+
                     </div>
                 <?php endif; ?>
             </div>
