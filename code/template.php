@@ -229,28 +229,34 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         <?php endif; ?>
 
-        <?php if ($this->countModules('grid-bottom5')) : ?>
-            <div id="grid-bottom5" class="<?php echo $bgColorGridBottom5; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom5Bg ?>">
-                <div class="<?php echo $containerClass ?>">
-                    <!-- grid-bottom5 -->
-                    <div class="grid-bottom5">
-                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom5" chrome="wrightflexgrid" />
+        <?php if ($this->countModules('grid-bottom5') || $this->countModules('grid-bottom6')) : ?>
+
+            <div class="<?php echo $bgColorGridBottom5_6; ?>">
+                <?php if ($this->countModules('grid-bottom5')) : ?>
+                    <div id="grid-bottom5">
+                        <div class="<?php echo $containerClass ?>">
+                            <!-- grid-bottom5 -->
+                            <div class="grid-bottom5">
+                                <w:module type="<?php echo $gridMode; ?>" name="grid-bottom5" chrome="wrightflexgrid" />
+                            </div>
+    
+                        </div>
                     </div>
-
-                </div>
-            </div>
-        <?php endif; ?>
-
-        <?php if ($this->countModules('grid-bottom6')) : ?>
-            <div id="grid-bottom6" class="<?php echo $bgColorGridBottom6; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom6Bg ?>">
-                <div class="<?php echo $containerClass ?>">
-                    <!-- grid-bottom6 -->
-                    <div class="grid-bottom6">
-                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom6" chrome="wrightflexgrid" />
+                <?php endif; ?>
+            
+                <?php if ($this->countModules('grid-bottom6')) : ?>
+                    <div id="grid-bottom6">
+                        <div class="<?php echo $containerClass ?>">
+                            <!-- grid-bottom6 -->
+                            <div class="grid-bottom6">
+                                <w:module type="<?php echo $gridMode; ?>" name="grid-bottom6" chrome="wrightflexgrid" />
+                            </div>
+    
+                        </div>
                     </div>
-
-                </div>
+                <?php endif; ?>
             </div>
+
         <?php endif; ?>
 
     </div>
