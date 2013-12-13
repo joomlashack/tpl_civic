@@ -52,8 +52,20 @@ function checkImage($img, $default) {
 
 $enableFluidContainerGridBottom = $this->params->get('enableFluidContainerGridBottom','0');
 $enableFluidContainerGridBottom2 = $this->params->get('enableFluidContainerGridBottom2','0');
+
+$separateGridBottom = $this->params->get('separateGridBottom','1');
 $separateGridBottom2 = $this->params->get('separateGridBottom2','1');
-$classSeparatorGridBottom2 = ($separateGridBottom2 == '0') ? ' noSeparateGridBottom2' : '' ;
+$separateGridBottom3 = $this->params->get('separateGridBottom3','1');
+$separateGridBottom4 = $this->params->get('separateGridBottom4','1');
+$separateGridBottom5 = $this->params->get('separateGridBottom5','1');
+$separateGridBottom6 = $this->params->get('separateGridBottom6','1');
+
+$classSeparatorGridBottom = ($separateGridBottom == '0') ? ' noSeparateGridBottom' : '' ;
+$classSeparatorGridBottom2 = ($separateGridBottom2 == '0') ? ' noSeparateGridBottom' : '' ;
+$classSeparatorGridBottom3 = ($separateGridBottom3 == '0') ? ' noSeparateGridBottom' : '' ;
+$classSeparatorGridBottom4 = ($separateGridBottom4 == '0') ? ' noSeparateGridBottom' : '' ;
+$classSeparatorGridBottom5 = ($separateGridBottom5 == '0') ? ' noSeparateGridBottom' : '' ;
+$classSeparatorGridBottom6 = ($separateGridBottom6 == '0') ? ' noSeparateGridBottom' : '' ;
 
 $bgColorGridTop = $this->params->get('bgColorGridTop','tone_color');
 $bgColorGridTop2 = $this->params->get('bgColorGridTop2','tone_color');

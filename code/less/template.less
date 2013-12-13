@@ -459,20 +459,6 @@ div.bs-docs-example blockquote{
 	padding-right: 0;
 }
 
-.noSeparateGridBottom2{
-	#grid-bottom{
-		margin-bottom: 0 !important;
-		+ .color_one,
-		+ .color_two,
-		+ .color_three,
-		+ .color_four,
-		+ .color_five,
-		+ .tone_inverse_color,
-		+ .white{
-			margin-top: 0;
-		}
-	}
-}
 [class*="newsflash"]{
 	list-style: none;
 
@@ -2222,8 +2208,12 @@ input.btn{
 	&.color_three,
 	&.color_four,
 	&.color_five,
+	&.white,
 	&.tone_inverse_color{
 		margin-bottom: 80px;
+	}
+	&.noSeparateGridBottom{
+		margin-bottom: 0;
 	}
 }
 

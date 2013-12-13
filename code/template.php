@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Cousine:400,700" rel="stylesheet" type="text/css">
 </head>
-<body class="<?php echo $responsive . $classSeparatorGridBottom2 . ' Tone' . $Tone?>">
+<body class="<?php echo $responsive . ' Tone' . $Tone?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
@@ -169,7 +169,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom')) : ?>
             <!-- grid-bottom -->
-            <div id="grid-bottom" class="<?php echo $bgColorGridBottom; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottomBg ?>">
+            <div id="grid-bottom" class="<?php echo $bgColorGridBottom . $classSeparatorGridBottom; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottomBg ?>">
                 <div class="grid-bottom">
                     <?php if ($enableFluidContainerGridBottom == '0') : ?>
                         <div class="<?php echo $containerClass ; ?>">
@@ -188,7 +188,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
            <!-- grid-bottom2 -->
-            <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom2Bg ?>">
+            <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2 . $classSeparatorGridBottom2; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom2Bg ?>">
                 <div class="grid-bottom2">
                     <?php if ($enableFluidContainerGridBottom2 == '0') : ?>
                         <div class="<?php echo $containerClass ; ?>">
@@ -206,7 +206,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom3')) : ?>
-            <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>">
+            <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3 . $classSeparatorGridBottom3; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>">
                 <div class="<?php echo $containerClass ?>">
                     <!-- grid-bottom3 -->
                     <div class="grid-bottom3">
@@ -218,7 +218,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom4')) : ?>
-            <div id="grid-bottom4" class="<?php echo $bgColorGridBottom4; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom4Bg ?>">
+            <div id="grid-bottom4" class="<?php echo $bgColorGridBottom4 . $classSeparatorGridBottom4; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom4Bg ?>">
                 <div class="<?php echo $containerClass ?>">
                     <!-- grid-bottom4 -->
                     <div class="grid-bottom4">
@@ -233,7 +233,7 @@ defined('_JEXEC') or die('Restricted access');
 
             <div class="<?php echo $bgColorGridBottom5_6; ?>">
                 <?php if ($this->countModules('grid-bottom5')) : ?>
-                    <div id="grid-bottom5">
+                    <div id="grid-bottom5" class="<?php echo $classSeparatorGridBottom5 ?>">
                         <div class="<?php echo $containerClass ?>">
                             <!-- grid-bottom5 -->
                             <div class="grid-bottom5">
@@ -245,7 +245,7 @@ defined('_JEXEC') or die('Restricted access');
                 <?php endif; ?>
             
                 <?php if ($this->countModules('grid-bottom6')) : ?>
-                    <div id="grid-bottom6">
+                    <div id="grid-bottom6" class="<?php echo $classSeparatorGridBottom6 ?>">
                         <div class="<?php echo $containerClass ?>">
                             <!-- grid-bottom6 -->
                             <div class="grid-bottom6">
