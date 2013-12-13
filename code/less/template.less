@@ -458,6 +458,7 @@ div.bs-docs-example blockquote{
 	padding-left: 0;
 	padding-right: 0;
 }
+
 .noSeparateGridBottom2{
 	#grid-bottom{
 		margin-bottom: 0 !important;
@@ -2193,7 +2194,6 @@ input.btn{
 }
 
 .bg-color-grid-bottom-modules(){
-	margin-bottom: 80px !important;
 	padding-bottom: 1em;
 	padding-top: 1em;
 
@@ -2207,6 +2207,26 @@ input.btn{
 		text-decoration: underline;
 	}
 }
+
+#grid-top,
+#grid-top2,
+#grid-top3,
+#grid-bottom,
+#grid-bottom2,
+#grid-bottom3,
+#grid-bottom4,
+#grid-bottom5,
+#grid-bottom6{
+	&.color_one,
+	&.color_two,
+	&.color_three,
+	&.color_four,
+	&.color_five,
+	&.tone_inverse_color{
+		margin-bottom: 80px;
+	}
+}
+
 .color_one{
 	background-color: @color_one;
 	color: @white;
