@@ -52,6 +52,10 @@ function checkImage($img, $default = "-1") {
 
 $enableFluidContainerGridBottom = $this->params->get('enableFluidContainerGridBottom','0');
 $enableFluidContainerGridBottom2 = $this->params->get('enableFluidContainerGridBottom2','0');
+$enableFluidContainerGridBottom3 = $this->params->get('enableFluidContainerGridBottom3','0');
+$enableFluidContainerGridBottom4 = $this->params->get('enableFluidContainerGridBottom4','0');
+$enableFluidContainerGridBottom5 = $this->params->get('enableFluidContainerGridBottom5','0');
+$enableFluidContainerGridBottom6 = $this->params->get('enableFluidContainerGridBottom6','0');
 
 $separateGridBottom = $this->params->get('separateGridBottom','1');
 $separateGridBottom2 = $this->params->get('separateGridBottom2','1');
