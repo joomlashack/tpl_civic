@@ -154,7 +154,7 @@ jQuery(function() {
     CivciBgRezise(jQuery('#grid-bottom2'));
     CivciBgRezise(jQuery('#grid-bottom3'));
     CivciBgRezise(jQuery('#grid-bottom4'));
-    CivciBgRezise(jQuery('#grid-bottom5'));
+    CivciBgRezise(jQuery('#grid-bottom5_6'));
 
     var featured = jQuery('#featured');
     var header = jQuery('#header');
