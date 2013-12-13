@@ -184,4 +184,12 @@ jQuery(function() {
         FeaturedHeight();
     });
 
+    var htoolbar = jQuery('div.wrapper-toolbar').height();
+    jQuery('.civic-scroll').click(function () {
+        if (jQuery(this).attr('rel') != '')
+            jQuery('html, body').animate({
+                scrollTop: (jQuery(this).attr('rel') == 'top' ? 0 : jQuery('#' + jQuery(this).attr('rel')).offset().top) - htoolbar
+            }, 2000);
+        return false;
+    });
 });
