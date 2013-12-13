@@ -2209,6 +2209,7 @@ input.btn{
 	&.color_four,
 	&.color_five,
 	&.white,
+	&.black,
 	&.tone_inverse_color{
 		margin-bottom: 80px;
 	}
@@ -2328,13 +2329,18 @@ input.btn{
 .white{
 	background-color: @white;
 }
+.black{
+	background-color: @black;
+	color: @white;
+}
 .color_one,
 .color_two,
 .color_three,
 .color_four,
 .color_five,
 .tone_inverse_color,
-.white{
+.white,
+.black{
 	.bg-color-grid-bottom-modules();
 
 	.module_ms3, .moduletext_ms3, .moduletable_ms3{
@@ -2426,7 +2432,8 @@ input.btn{
 	&.color_four,
 	&.color_five,
 	&.tone_inverse_color,
-	&.white{
+	&.white,
+	&.black{
 		margin-bottom: 0 !important;
 	}
 }
