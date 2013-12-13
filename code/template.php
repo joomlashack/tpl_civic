@@ -80,7 +80,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top')) : ?>
             <!-- grid-top -->
-            <div id="grid-top" class="<?php echo $bgColorGridTop; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTopBg ?>">
+            <div id="grid-top" class="<?php echo $bgColorGridTop; ?>" data-bg-grid-top="<?php echo $imgGridTopBg ?>">
                 <div class="grid-top <?php echo $containerClass; ?>">
                     <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
                 </div>
@@ -89,7 +89,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top2')) : ?>
             <!-- grid-top2 -->
-            <div id="grid-top2" class="<?php echo $bgColorGridTop2; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop2Bg ?>">
+            <div id="grid-top2" class="<?php echo $bgColorGridTop2; ?>" data-bg-grid-top="<?php echo $imgGridTop2Bg ?>">
                 <div class="grid-top2 <?php echo $containerClass; ?>">
                     <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
                 </div>
@@ -98,7 +98,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top3')) : ?>
             <!-- grid-top3 -->
-            <div id="grid-top3" class="<?php echo $bgColorGridTop3; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridTop3Bg ?>">
+            <div id="grid-top3" class="<?php echo $bgColorGridTop3; ?>" data-bg-grid-top="<?php echo $imgGridTop3Bg ?>">
                 <div class="grid-top3 <?php echo $containerClass; ?>">
                     <w:module type="<?php echo $gridMode; ?>" name="grid-top3" chrome="wrightflexgrid" />
                 </div>
@@ -169,7 +169,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom')) : ?>
             <!-- grid-bottom -->
-            <div id="grid-bottom" class="<?php echo $bgColorGridBottom; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottomBg ?>">
+            <div id="grid-bottom" class="<?php echo $bgColorGridBottom; ?>" data-bg-grid-top="<?php echo $imgGridBottomBg ?>">
                 <div class="grid-bottom">
                     <?php if ($enableFluidContainerGridBottom == '0') : ?>
                         <div class="<?php echo $containerClass ; ?>">
@@ -188,7 +188,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
            <!-- grid-bottom2 -->
-            <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom2Bg ?>">
+            <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2; ?>" data-bg-grid-top="<?php echo $imgGridBottom2Bg ?>">
                 <div class="grid-bottom2">
                     <?php if ($enableFluidContainerGridBottom2 == '0') : ?>
                         <div class="<?php echo $containerClass ; ?>">
@@ -206,7 +206,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom3')) : ?>
-            <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom3Bg ?>">
+            <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3; ?>" data-bg-grid-top="<?php echo $imgGridBottom3Bg ?>">
                 <div class="<?php echo $containerClass ?>">
                     <!-- grid-bottom3 -->
                     <div class="grid-bottom3">
@@ -218,7 +218,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom4')) : ?>
-            <div id="grid-bottom4" class="<?php echo $bgColorGridBottom4; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom4Bg ?>">
+            <div id="grid-bottom4" class="<?php echo $bgColorGridBottom4; ?>" data-bg-grid-top="<?php echo $imgGridBottom4Bg ?>">
                 <div class="<?php echo $containerClass ?>">
                     <!-- grid-bottom4 -->
                     <div class="grid-bottom4">
