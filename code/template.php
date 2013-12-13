@@ -241,6 +241,18 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         <?php endif; ?>
 
+        <?php if ($this->countModules('grid-bottom6')) : ?>
+            <div id="grid-bottom6" class="<?php echo $bgColorGridBottom6; ?>" data-bg-grid-top="<?php echo JURI::root(true) . $imgGridBottom6Bg ?>">
+                <div class="<?php echo $containerClass ?>">
+                    <!-- grid-bottom6 -->
+                    <div class="grid-bottom6">
+                        <w:module type="<?php echo $gridMode; ?>" name="grid-bottom6" chrome="wrightflexgrid" />
+                    </div>
+
+                </div>
+            </div>
+        <?php endif; ?>
+
     </div>
 
     <!-- footer -->
