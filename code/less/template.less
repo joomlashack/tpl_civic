@@ -1355,6 +1355,7 @@ dl.article-info{
 		   -moz-box-sizing: border-box;
 				box-sizing: border-box;
 		.clearfix();
+
 	}
 	&.nav-stacked{
 		>li{
@@ -2380,6 +2381,7 @@ input.btn{
 			>td,
 			>th{
 				background-color: @grayDark;
+				color: @white;
 			}
 		}
 		&.table-hover tbody tr:hover{
@@ -2415,6 +2417,23 @@ input.btn{
 	.counter{
 		color: @grayLighter;
 	}
+
+	.nav.nav-tabs + .current{
+		.table {
+			td{
+				color: @textColor;
+			}
+
+			&.table-striped tbody>tr:nth-child(odd){
+				>td,
+				>th{
+					background-color: @grayDark;
+					color: @white;
+				}
+			}
+		}
+	}
+
 }
 
 #grid-bottom5{
