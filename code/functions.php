@@ -30,24 +30,24 @@ if ($this->countModules('grid-top') || $this->countModules('grid-top2')){
 	$fullBreadcrumb = true;
 }
 
-// Parameters Civic
 
-function checkImage($img, $default) {
-        if ($img == "") {
-                $img = $default;
-        }
-        elseif ($img != "-1") {
-                $img = "images/" . $img;
-        }
+function checkImage($img, $default = "-1") {
+    if ($img == "") {
+        $img = $default;
+    }
+    elseif ($img != "-1") {
+        $img = "images/" . $img;
+    }
 
-        if ($img != "-1") {
-                $img = JPATH_BASE . '/' . $img;
-                if (!file_exists($img)) {
-                        $img = "-1";
-                }
+    if ($img != "-1") {
+        if (!file_exists(JPATH_BASE . '/' . $img)) {
+            $img = "-1";
         }
-
-        return $img;
+    }
+    if ($img == "-1")
+        return "";
+    else
+        return JURI::root(true) . "/" . $img;
 }
 
 $enableFluidContainerGridBottom = $this->params->get('enableFluidContainerGridBottom','0');
@@ -76,23 +76,14 @@ $bgColorGridBottom3 = $this->params->get('bgColorGridBottom3','tone_color');
 $bgColorGridBottom4 = $this->params->get('bgColorGridBottom4','white');
 $bgColorGridBottom5_6 = $this->params->get('bgColorGridBottom5_6','tone_inverse_color');
 
-$imgGridTopBg = checkImage($this->params->get("imgGridTopBg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
-$imgGridTop2Bg = checkImage($this->params->get("imgGridTop2Bg", ""), "templates/js_civic/images/default-bg-grid-top-3.jpg");
-$imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", "templates/js_civic/images/default-bg-grid-top-3.jpg"), "templates/js_civic/images/default-bg-grid-top-3.jpg");
-$imgGridBottomBg = checkImage($this->params->get("imgGridBottomBg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridBottom2Bg = checkImage($this->params->get("imgGridBottom2Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridBottom4Bg = checkImage($this->params->get("imgGridBottom4Bg", ""), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-$imgGridBottom5_6Bg = checkImage($this->params->get("imgGridBottom5_6Bg", "templates/js_civic/images/default-bg-grid-bottom-3.jpg"), "templates/js_civic/images/default-bg-grid-bottom-3.jpg");
-
-if ($imgGridTopBg != "-1") $imgGridTopBg = str_replace(JPATH_BASE, '', $imgGridTopBg);
-if ($imgGridTop2Bg != "-1") $imgGridTop2Bg = str_replace(JPATH_BASE, '', $imgGridTop2Bg);
-if ($imgGridTop3Bg != "-1") $imgGridTop3Bg = str_replace(JPATH_BASE, '', $imgGridTop3Bg);
-if ($imgGridBottomBg != "-1") $imgGridBottomBg = str_replace(JPATH_BASE, '', $imgGridBottomBg);
-if ($imgGridBottom2Bg != "-1") $imgGridBottom2Bg = str_replace(JPATH_BASE, '', $imgGridBottom2Bg);
-if ($imgGridBottom3Bg != "-1") $imgGridBottom3Bg = str_replace(JPATH_BASE, '', $imgGridBottom3Bg);
-if ($imgGridBottom4Bg != "-1") $imgGridBottom4Bg = str_replace(JPATH_BASE, '', $imgGridBottom4Bg);
-if ($imgGridBottom5_6Bg != "-1") $imgGridBottom5_6Bg = str_replace(JPATH_BASE, '', $imgGridBottom5_6Bg);
+$imgGridTopBg = checkImage($this->params->get("imgGridTopBg", ""));
+$imgGridTop2Bg = checkImage($this->params->get("imgGridTop2Bg", ""));
+$imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", ""));
+$imgGridBottomBg = checkImage($this->params->get("imgGridBottomBg", ""));
+$imgGridBottom2Bg = checkImage($this->params->get("imgGridBottom2Bg", ""));
+$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""));
+$imgGridBottom4Bg = checkImage($this->params->get("imgGridBottom4Bg", ""));
+$imgGridBottom5_6Bg = checkImage($this->params->get("imgGridBottom5_6Bg"));
 
 // templateTone parameter (Light = '-Light' - Dark = '-Dark')
     $user = JFactory::getUser();
