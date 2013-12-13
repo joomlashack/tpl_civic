@@ -231,7 +231,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom5') || $this->countModules('grid-bottom6')) : ?>
 
-            <div class="<?php echo $bgColorGridBottom5_6; ?>">
+            <div id="grid-bottom5_6" class="<?php echo $bgColorGridBottom5_6; ?>" data-bg-grid-top="<?php echo $imgGridBottom5_6Bg ?>">
                 <?php if ($this->countModules('grid-bottom5')) : ?>
                     <div id="grid-bottom5" class="<?php echo $classSeparatorGridBottom5 ?>">
                         <div class="<?php echo $containerClass ?>">
