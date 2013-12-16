@@ -53,7 +53,7 @@ defined('_JEXEC') or die('Restricted access');
                     <?php $v++; endforeach; ?>
                 </div>
 
-                <div class="big-loader">
+                <div class="big-loader visible-desktop">
                     <i class="icon-spinner icon-spin icon-4x"></i>
                     <h4>loading...</h4>
                 </div>
