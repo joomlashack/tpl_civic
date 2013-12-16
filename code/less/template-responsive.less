@@ -48,6 +48,19 @@
 	}
 }
 
+@media (max-width: 1199px) {
+	.onhover {
+		.wrightmodule-content {
+			display: none; // temporary, to avoid current problem with tablets, it must be changed to "block".  Also next line must be removed, and the display styles in max-width 767px
+		}
+		&:hover {
+			.wrightmodule-content {
+				display: none;
+			}
+		}
+	}
+}
+
 @media (max-width: 979px){
 	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner , .navbar-inner{
 		padding: 0;
@@ -320,16 +333,6 @@
 		}
 		.nav-collapse .nav>li>a{
 			margin-bottom: 0;
-		}
-	}
-	.onhover {
-		.wrightmodule-content {
-			display: none; // temporary, to avoid current problem with tablets, it must be changed to "block".  Also next line must be removed, and the display styles in max-width 767px
-		}
-		&:hover {
-			.wrightmodule-content {
-				display: none;
-			}
 		}
 	}
 }
