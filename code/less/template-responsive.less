@@ -10,7 +10,7 @@
 }
 
 @media (min-width:1080px) {
-	.relative{
+	.onhover{
 		.wrightmodule-content{
 			left: 10%;
 			width: 80%;
@@ -19,7 +19,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-	.relative{
+	.onhover{
 		.wrightmodule-content{
 			left: -50%;
 			width: 200%;
@@ -322,6 +322,16 @@
 			margin-bottom: 0;
 		}
 	}
+	.onhover {
+		.wrightmodule-content {
+			display: none; // temporary, to avoid current problem with tablets, it must be changed to "block".  Also next line must be removed, and the display styles in max-width 767px
+		}
+		&:hover {
+			.wrightmodule-content {
+				display: none;
+			}
+		}
+	}
 }
 @media (max-width:767px) {
 	.nav-tabs>li{
@@ -351,10 +361,16 @@
 		}
 	}
 
-	.relative{
+	.onhover{
 		.wrightmodule-content{
 			left: 5%;
 			width: 90%;
+			display: block;
+		}
+		&:hover {
+			.wrightmodule-content {
+				display: block;
+			}
 		}
 	}
 	.header{
