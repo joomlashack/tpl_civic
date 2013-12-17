@@ -163,6 +163,18 @@ function civicVideos($) {
     }
 }
 
+
+function FeaturedHeight() {
+    var featured = jQuery('#featured');
+    var header = jQuery('#header');
+
+    featured.css({
+        'height': jQuery(window).height() - (header.height() + jQuery('.wrapper-toolbar').height()) + 'px',
+        'width': jQuery(window).width() + 'px'
+    });
+}
+
+
 jQuery(function() {
     if (civicSlider)
         civicVideos(jQuery);
@@ -181,19 +193,13 @@ jQuery(function() {
     CivciBgRezise(jQuery('#grid-bottom4'));
     CivciBgRezise(jQuery('#grid-bottom5_6'));
 
-    var featured = jQuery('#featured');
-    var header = jQuery('#header');
-
-    function FeaturedHeight() {
-        featured.css({
-            'height': jQuery(window).height() - (header.height() + jQuery('.wrapper-toolbar').height()) + 'px',
-            'width': jQuery(window).width() + 'px'
-        });
-    }
-
     FeaturedHeight();
 
     jQuery(window).resize(function() {
+        FeaturedHeight();
+    });
+
+    jQuery(window).load(function() {
         FeaturedHeight();
     });
 
