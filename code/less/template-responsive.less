@@ -11,10 +11,11 @@
 @media (min-width:1080px) {
 	.onhover{
 		.wrightmodule-content{
-			left: 10%;
-			width: 80%;
+			left: 5%;
+			width: 90%;
 		}
 	}
+
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -50,13 +51,36 @@
 @media (max-width: 1199px) {
 	.onhover {
 		.wrightmodule-content {
-			display: none; // temporary, to avoid current problem with tablets, it must be changed to "block".  Also next line must be removed, and the display styles in max-width 767px
+			display: block;
+			height: 100%;
+			left: 0;
+			width: 100%;
 		}
 		&:hover {
 			.wrightmodule-content {
-				display: none;
+				display: block;
 			}
 		}
+	}
+	.module_ms3.onhover .wrightmodule-content>h3,
+	.moduletext_ms3.onhover .wrightmodule-content>h3,
+	.moduletable_ms3.onhover .wrightmodule-content>h3{
+		font-size: @baseFontSize + 21;
+	}
+}
+
+
+@media (max-width: 1023px){
+	.module_ms3.onhover .wrightmodule-content>h3,
+	.moduletext_ms3.onhover .wrightmodule-content>h3,
+	.moduletable_ms3.onhover .wrightmodule-content>h3{
+		font-size: @baseFontSize + 11;
+	}
+	.onhover {
+		font-size: @baseFontSize - 1;
+	}
+	.wrightmodule-subtitle{
+		display: none;
 	}
 }
 
@@ -334,6 +358,18 @@
 			margin-bottom: 0;
 		}
 	}
+	.module_ms3.onhover .wrightmodule-content,
+	.moduletext_ms3.onhover .wrightmodule-content,
+	.moduletable_ms3.onhover .wrightmodule-content{
+		padding: 10px 20px;
+	}
+}
+@media (max-width: 811px){
+	.module_ms3.onhover .wrightmodule-content>h3,
+	.moduletext_ms3.onhover .wrightmodule-content>h3,
+	.moduletable_ms3.onhover .wrightmodule-content>h3{
+		font-size: @baseFontSize + 9;
+	}
 }
 @media (max-width:767px) {
 	.nav-tabs>li{
@@ -484,4 +520,28 @@
 			margin-bottom: 20px;
 		}
 	}
+
+	.onhover {
+		.wrightmodule-content {
+			display: block;
+			height: auto;
+			left: 5%;
+			width: 90%;
+		}
+	}
+
+	.module_ms3.onhover .wrightmodule-content>h3,
+	.moduletext_ms3.onhover .wrightmodule-content>h3,
+	.moduletable_ms3.onhover .wrightmodule-content>h3{
+		font-size: @baseFontSize + 8;
+	}
+
+	.module_ms3.onhover .wrightmodule-content h4.wrightmodule-subtitle, .moduletext_ms3.onhover .wrightmodule-content h4.wrightmodule-subtitle, .moduletable_ms3.onhover .wrightmodule-content h4.wrightmodule-subtitle{
+		font-size: @baseFontSize + 1;
+	}
+
+	.wrightmodule-subtitle{
+		display: block;
+	}
+
 }
