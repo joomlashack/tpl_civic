@@ -1834,12 +1834,12 @@ body{
 			background-image: none;
 			border-radius: 0;
 			border: 0;
+			color: #202020;
 			li{
 				background-color: transparent;
 				background-image: none;
 				border-radius: 0;
 				border: 0;
-				color: #202020;
 				font-size: @baseFontSize + 6;
 			}
 			.list_twitter{
@@ -2179,6 +2179,18 @@ input.btn{
 	.module_ms2, .moduletext_ms2, .moduletable_ms2{
 		color: @white;
 	}
+	div.lifestream {
+		ul.stream {
+			color: @white;
+			.list_twitter{
+				.icon{
+					&:before{
+						color: @color_two;
+					}
+				}
+			}
+		}
+	}
 }
 
 .bg-color-grid-bottom-modules(){
@@ -2264,6 +2276,19 @@ input.btn{
 			}
 		}
 	}
+
+	div.lifestream {
+		ul.stream {
+			color: @white;
+			.list_twitter{
+				.icon{
+					&:before{
+						color: @color_two;
+					}
+				}
+			}
+		}
+	}
 }
 .color_two{
 	background-color: @color_two;
@@ -2272,6 +2297,20 @@ input.btn{
 	.module_ms6>h3, .moduletext_ms6>h3, .moduletable_ms6>h3{
 		color: #888;
 		border-bottom-color: @color_one;
+	}
+
+
+	div.lifestream {
+		ul.stream {
+			color: @textColor;
+			.list_twitter{
+				.icon{
+					&:before{
+						color: @color_three;
+					}
+				}
+			}
+		}
 	}
 
 }
@@ -2313,6 +2352,19 @@ input.btn{
 	[class*="newsflash"]{
 		color: @white;
 	}
+
+	div.lifestream {
+		ul.stream {
+			color: @white;
+			.list_twitter{
+				.icon{
+					&:before{
+						color: @color_two;
+					}
+				}
+			}
+		}
+	}
 }
 .color_four{
 	background-color: @color_four;
@@ -2335,7 +2387,21 @@ input.btn{
 .black{
 	background-color: @black;
 	color: @white;
+
+	div.lifestream {
+		ul.stream {
+			color: @white;
+			.list_twitter{
+				.icon{
+					&:before{
+						color: @color_two;
+					}
+				}
+			}
+		}
+	}
 }
+
 .color_one,
 .color_two,
 .color_three,
@@ -2439,6 +2505,81 @@ input.btn{
 				>th{
 					background-color: @grayDark;
 					color: @white;
+				}
+			}
+		}
+	}
+
+	// Lifestream Dark
+
+	div.lifestream {
+		ul.stream {
+			color: @grayLighter;
+			.list_twitter{
+				.icon{
+					&:before{
+						color: #8ED1F6;
+					}
+				}
+			}
+		}
+	}
+
+	.color_one{
+		div.lifestream {
+			ul.stream {
+				color: @white;
+				.list_twitter{
+					.icon{
+						&:before{
+							color: @color_two;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.color_two{
+		div.lifestream {
+			ul.stream {
+				color: @textColor;
+				.list_twitter{
+					.icon{
+						&:before{
+							color: @color_three;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.color_four,.color_five, .white{
+		div.lifestream {
+			ul.stream {
+				color: @textColor;
+				.list_twitter{
+					.icon{
+						&:before{
+							color: @color_three;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.tone_inverse_color {
+		div.lifestream {
+			ul.stream {
+				color: @textColor;
+				.list_twitter{
+					.icon{
+						&:before{
+							color: @color_two;
+						}
+					}
 				}
 			}
 		}
