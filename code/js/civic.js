@@ -33,7 +33,20 @@ function civicVideos($) {
         // adjust image positioning so it lines up with video
         $bigImage.css('position', 'relative').imagesLoaded(adjustImagePositioning);
         // and on window resize
-        $window.on('resize', adjustImagePositioning);
+    }
+    else {
+        setTimeout(function () {
+            touchNext();
+        }, 5000);
+    }
+
+    function touchNext() {
+        if (!isTransitioning) {
+            next();
+        }
+        setTimeout(function () {
+            touchNext();
+        }, 5000);
     }
 
     // Next button click goes to next div
