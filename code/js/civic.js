@@ -179,19 +179,22 @@ jQuery(function() {
     if (civicSlider)
         civicVideos(jQuery);
 
-    function CivciBgRezise(el) {
-        el.css({
-            'background-image': 'url(' + el.attr('data-bg-grid-top') + ')'
-        });
-    } /* Resize background in each position */
-    CivciBgRezise(jQuery('#grid-top'));
-    CivciBgRezise(jQuery('#grid-top2'));
-    CivciBgRezise(jQuery('#grid-top3'));
-    CivciBgRezise(jQuery('#grid-bottom'));
-    CivciBgRezise(jQuery('#grid-bottom2'));
-    CivciBgRezise(jQuery('#grid-bottom3'));
-    CivciBgRezise(jQuery('#grid-bottom4'));
-    CivciBgRezise(jQuery('#grid-bottom5_6'));
+    function CivicSetBackground(el) {
+        if (el.attr('data-bg-grid')) {
+            el.css({
+                'background-image': 'url(' + el.attr('data-bg-grid') + ')'
+            });            
+        }
+    }
+
+    CivicSetBackground(jQuery('#grid-top'));
+    CivicSetBackground(jQuery('#grid-top2'));
+    CivicSetBackground(jQuery('#grid-top3'));
+    CivicSetBackground(jQuery('#grid-bottom'));
+    CivicSetBackground(jQuery('#grid-bottom2'));
+    CivicSetBackground(jQuery('#grid-bottom3'));
+    CivicSetBackground(jQuery('#grid-bottom4'));
+    CivicSetBackground(jQuery('#grid-bottom5_6'));
 
     FeaturedHeight();
 

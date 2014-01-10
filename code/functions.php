@@ -87,7 +87,7 @@ $imgGridBottomBg = checkImage($this->params->get("imgGridBottomBg", ""));
 $imgGridBottom2Bg = checkImage($this->params->get("imgGridBottom2Bg", ""));
 $imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""));
 $imgGridBottom4Bg = checkImage($this->params->get("imgGridBottom4Bg", ""));
-$imgGridBottom5_6Bg = checkImage($this->params->get("imgGridBottom5_6Bg"));
+$imgGridBottom5_6Bg = checkImage($this->params->get("imgGridBottom5_6Bg", ""));
 
 // templateTone parameter (Light = '-Light' - Dark = '-Dark')
     $user = JFactory::getUser();

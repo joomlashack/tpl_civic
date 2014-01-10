@@ -93,7 +93,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top')) : ?>
             <!-- grid-top -->
-            <div id="grid-top" class="<?php echo $bgColorGridTop; ?>" data-bg-grid-top="<?php echo $imgGridTopBg ?>">
+            <div id="grid-top" class="<?php echo $bgColorGridTop; ?>"<?php if ($imgGridTopBg != '') : ?> data-bg-grid="<?php echo $imgGridTopBg ?>"<?php endif; ?>>
                 <div class="grid-top <?php echo $containerClass; ?>">
                     <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
                 </div>
@@ -102,7 +102,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top2')) : ?>
             <!-- grid-top2 -->
-            <div id="grid-top2" class="<?php echo $bgColorGridTop2; ?>" data-bg-grid-top="<?php echo $imgGridTop2Bg ?>">
+            <div id="grid-top2" class="<?php echo $bgColorGridTop2; ?>"<?php if ($imgGridTop2Bg != '') : ?> data-bg-grid="<?php echo $imgGridTop2Bg ?>"<?php endif; ?>>
                 <div class="grid-top2 <?php echo $containerClass; ?>">
                     <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
                 </div>
@@ -111,7 +111,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top3')) : ?>
             <!-- grid-top3 -->
-            <div id="grid-top3" class="<?php echo $bgColorGridTop3; ?>" data-bg-grid-top="<?php echo $imgGridTop3Bg ?>">
+            <div id="grid-top3" class="<?php echo $bgColorGridTop3; ?>"<?php if ($imgGridTop3Bg != '') : ?> data-bg-grid="<?php echo $imgGridTop3Bg ?>"<?php endif; ?>>
                 <div class="grid-top3 <?php echo $containerClass; ?>">
                     <w:module type="<?php echo $gridMode; ?>" name="grid-top3" chrome="wrightflexgrid" />
                 </div>
@@ -182,7 +182,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom')) : ?>
             <!-- grid-bottom -->
-            <div id="grid-bottom" class="<?php echo $bgColorGridBottom . $classSeparatorGridBottom; ?>" data-bg-grid-top="<?php $imgGridBottomBg ?>">
+            <div id="grid-bottom" class="<?php echo $bgColorGridBottom . $classSeparatorGridBottom; ?>"<?php if ($imgGridBottomBg != '') : ?> data-bg-grid="<?php $imgGridBottomBg ?>"<?php endif; ?>>
                 <div class="grid-bottom">
                     <?php if ($enableFluidContainerGridBottom == '0') : ?>
                         <div class="<?php echo $containerClass ; ?>">
@@ -199,7 +199,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
            <!-- grid-bottom2 -->
-            <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2 . $classSeparatorGridBottom2; ?>" data-bg-grid-top="<?php echo $imgGridBottom2Bg ?>">
+            <div id="grid-bottom2" class="<?php echo $bgColorGridBottom2 . $classSeparatorGridBottom2; ?>"<?php if ($imgGridBottom2Bg != '') : ?> data-bg-grid="<?php echo $imgGridBottom2Bg ?>"<?php endif; ?>>
                 <div class="grid-bottom2">
                     <?php if ($enableFluidContainerGridBottom2 == '0') : ?>
                         <div class="<?php echo $containerClass ; ?>">
@@ -215,7 +215,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom3')) : ?>
-            <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3 . $classSeparatorGridBottom3; ?>" data-bg-grid-top="<?php echo $imgGridBottom3Bg ?>">
+            <div id="grid-bottom3" class="<?php echo $bgColorGridBottom3 . $classSeparatorGridBottom3; ?>"<?php if ($imgGridBottom3Bg != '') : ?> data-bg-grid="<?php echo $imgGridBottom3Bg ?>"<?php endif; ?>>
                 <?php if ($enableFluidContainerGridBottom3 == '0') : ?>
                     <div class="<?php echo $containerClass ?>">
                         <w:module type="<?php echo $gridMode; ?>" name="grid-bottom3" chrome="wrightflexgrid" />
@@ -229,7 +229,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom4')) : ?>
-            <div id="grid-bottom4" class="<?php echo $bgColorGridBottom4 . $classSeparatorGridBottom4; ?>" data-bg-grid-top="<?php echo $imgGridBottom4Bg ?>">
+            <div id="grid-bottom4" class="<?php echo $bgColorGridBottom4 . $classSeparatorGridBottom4; ?>"<?php if ($imgGridBottom4Bg != '') : ?> data-bg-grid="<?php echo $imgGridBottom4Bg ?>"<?php endif; ?>>
                 <?php if ($enableFluidContainerGridBottom4 == '0') : ?>
                     <div class="<?php echo $containerClass ?>">
                         <w:module type="<?php echo $gridMode; ?>" name="grid-bottom4" chrome="wrightflexgrid" />
@@ -244,7 +244,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom5') || $this->countModules('grid-bottom6')) : ?>
 
-            <div id="grid-bottom5_6" class="<?php echo $bgColorGridBottom5_6; ?>" data-bg-grid-top="<?php echo $imgGridBottom5_6Bg ?>">
+            <div id="grid-bottom5_6" class="<?php echo $bgColorGridBottom5_6; ?>"<?php if ($imgGridBottom5_6Bg != '') : ?> data-bg-grid="<?php echo $imgGridBottom5_6Bg ?>"<?php endif; ?>>
 
                 <?php if ($this->countModules('grid-bottom5')) : ?>
                     <div id="grid-bottom5" class="<?php echo $classSeparatorGridBottom5 ?>">
