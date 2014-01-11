@@ -1151,6 +1151,18 @@ dl.article-info{
 	color : @white;
 }
 
+.module{
+	.nav.nav-pills.nav-stacked{
+		> li.active{
+			> a{
+				.caret{
+					border-top-color: @white;
+				}
+			}
+		}
+	}
+}
+
 .is_internet.v_9,
 .is_internet.v_10{
 	.nav,
@@ -1213,7 +1225,6 @@ dl.article-info{
 		.dropdown-menu {
 			li {
 				> a {
-					background-color: transparent;
 					.caret {
 						border-top-color: transparent;
 						border-left-color: @dropdownLinkColor;
@@ -1243,7 +1254,9 @@ dl.article-info{
 	}
 }
 
-
+.nav.nav-pills li.dropdown .dropdown-menu .sub-menu li > a{
+	background-color: @grayDarker;
+}
 .nav.nav-tabs {
 	border-bottom-color: @white;
 	margin-bottom: 0;
@@ -1262,7 +1275,7 @@ dl.article-info{
 			}
 		}
 	}
-	li {
+	> li {
 		> a {
 			background-color: @color_two;
 			border-color: transparent @white transparent transparent;
@@ -1451,6 +1464,62 @@ dl.article-info{
 	margin-bottom: 0;
 }
 
+.tabs-left,
+.tabs-right{
+	.nav-tabs.nav{
+		border: 0;
+		> li.active.dropdown{
+			background-color: @color_three;
+		}
+		> li.dropdown {
+			> a{
+				color: @grayDark;
+				.caret{
+					border-top-color: @grayDark;
+				}
+
+				[class^="icon-"],
+				[class*=" icon-"]{
+					color: @grayDark;
+				}
+			}
+			&.active{
+				> a{
+					color: @grayLighter;
+					.caret{
+						border-top-color: @grayLighter;
+					}
+
+					[class^="icon-"],
+					[class*=" icon-"]{
+						color: @grayLighter;
+					}
+				}
+			}
+
+			ul.dropdown-menu{
+				li {
+					a {
+						color: @white;
+					}
+					.caret{
+						border-top-color: @white;
+					}
+
+					[class^="icon-"],
+					[class*=" icon-"]{
+						color: @white;
+					}
+				}
+
+				.sub-menu{
+					background-color: @grayDark;
+				}
+			}
+		}
+	}
+}
+
 .module .nav.nav-tabs li > a [class^="icon-"], .module .nav.nav-tabs li > a [class*=" icon-"]{
 	color : @textColor;
 }
@@ -1463,6 +1532,11 @@ dl.article-info{
 }
 .module .nav.nav-tabs.nav-stacked li.active > a:hover, .module .nav.nav-tabs.nav-stacked li.active > a:focus{
 	color : @grayLighter;
+}
+
+.module .tabs-right .nav.nav-tabs li.dropdown .dropdown-menu li.active>a,
+.module .tabs-left .nav.nav-tabs li.dropdown .dropdown-menu li.active>a{
+	color: #ccc;
 }
 
 // Menus in non-nav modules
@@ -2218,7 +2292,7 @@ input.btn{
 }
 
 #grid-top,
-#grid-bottom,{
+#grid-bottom,
 #grid-bottom2{
 	margin-bottom: 0;
 }
