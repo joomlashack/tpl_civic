@@ -110,6 +110,15 @@
     },
     {
       "table_name": "y7fiv_viewlevels"
+    },
+    {
+      "table_name": "y7fiv_postinstall_messages"
+    },
+    {
+      "table_name": "y7fiv_ucm_history"
+    },
+    {
+      "table_name": "y7fiv_user_keys"
     }
   ],
   "included": [
