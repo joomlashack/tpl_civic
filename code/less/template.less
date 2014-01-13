@@ -970,10 +970,11 @@ dl.article-info{
 					background-color: @dropdownBackground;
 					.caret {
 						margin-top: 3px;
+						border-left: 4px solid @dropdownBackground;
 					}
 					[class^="icon-"],
 					[class*=" icon-"] {
-						color: @textColor;
+						color: @dropdownBackground;
 					}
 					&:hover,
 					&:focus {
@@ -983,12 +984,12 @@ dl.article-info{
 						filter:none;
 						.caret {
 							border-bottom: 4px solid transparent;
-							border-left: 4px solid @altBlack;
+							border-left: 4px solid @dropdownLinkColorHover;
 							border-top: 4px solid transparent;
 						}
 						[class^="icon-"],
 						[class*=" icon-"] {
-							color: @textColor;
+							color: @dropdownLinkColorHover;
 						}
 					}
 				}
@@ -1016,31 +1017,44 @@ dl.article-info{
 					> a{
 						color: @white;
 						background-color: @grayDarker;
-
 						[class^="icon-"],
 						[class*=" icon-"] {
 							color: @white;
 						}
-
+						.caret{ 
+							border-left-color: @white;
+						}
 						&:hover,
 						&:focus {
 							background-color: @gray - #111;
 							color: @grayLighter;
-							.caret{
+							.caret {
 								border-left-color: @grayLighter;
 							}
-						}
-						.caret{
-							border-left-color: @grayLighter;
+							[class^="icon-"],
+							[class*=" icon-"] {
+								color: @grayLighter;
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-	&.nav-stacket.nav-tabs{
-		> li {
-			margin-bottom: 0;
+}
+
+.module {
+	.tabbable {
+  		li {
+  			&.dropdown {
+  				.dropdown-menu {
+	    			li {
+	    				> a {
+	    					background-color: @grayDarker;
+	    				}
+	    			}
+	    		}
+	    	}
 		}
 	}
 }
