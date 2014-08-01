@@ -1,2 +1,2 @@
-www.dir=/var/www/civic
-node.skip=false
+www.dir=/var/www/civic/
+node.build=all
