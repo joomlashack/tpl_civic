@@ -955,6 +955,10 @@ dl.article-info{
 			.caret{
 				margin-top: 5px;
 			}
+			[class^="icon-"],
+			[class*=" icon-"] {
+				margin-left: 0;
+			}
 		}
 
 		.dropdown-menu,
@@ -1183,22 +1187,6 @@ dl.article-info{
 // Special styles in menus (tabs, pills)
 
 .nav {
-	&.nav-pills {
-		li {
-			&.dropdown {
-				.dropdown-menu {
-					.sub-menu {
-						li {
-							> a{
-								background-color: @grayDarker;
-							}
-						}
-					}
-				}
-
-			}
-		}
-	}
 
 	&.nav-tabs,
 	&.nav-pills{
@@ -1480,9 +1468,7 @@ dl.article-info{
 .tabs-right{
 	.nav-tabs.nav{
 		border: 0;
-		> li.active.dropdown{
-			background-color: @color_three;
-		}
+
 		> li.dropdown {
 			> a{
 				color: @grayDark;
@@ -1496,6 +1482,8 @@ dl.article-info{
 				}
 			}
 			&.active{
+				background-color: @color_three;
+
 				> a{
 					color: @grayLighter;
 					.caret{
@@ -1509,9 +1497,32 @@ dl.article-info{
 				}
 			}
 
-			ul.dropdown-menu{
-				.sub-menu{
-					background-color: @grayDark;
+			.dropdown-menu{
+				li{
+					> a{
+						color: @white;
+						.caret{
+							border-top-color: @white;
+						}
+
+						[class^="icon-"],
+						[class*=" icon-"]{
+							color: @white;
+						}
+
+						&:hover,
+						&:focus{
+							color: @textColor;
+							.caret{
+								border-top-color: @textColor;
+							}
+
+							[class^="icon-"],
+							[class*=" icon-"]{
+								color: @textColor;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -1605,6 +1616,19 @@ dl.article-info{
 						&:before,
 						&:after {
 							display: none;
+						}
+
+						li>a{
+							color: @linkColor;
+							font-size: 12px;
+
+							[class^="icon-"],
+							[class*=" icon-"] {
+								color: @linkColor;
+							}
+							.caret {
+								border-top: 4px solid @linkColor;
+							}
 						}
 					}
 				}
