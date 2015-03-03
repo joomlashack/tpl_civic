@@ -2724,6 +2724,47 @@ input.btn{
 		}
 	}
 
+	.thumbnail {
+		border-color: @gray;
+	}
+
+	.nav.nav-tabs {
+		border-bottom-color: @grayDark;
+
+		+ .current {
+			background-color: @grayDark;
+			color: @grayLighter;
+		}
+
+		> li > a,
+		> li.active > a {
+			border-color: transparent @grayDark transparent transparent;
+		}
+	}
+
+	.tabs-below > .nav-tabs {
+		border-top-color: @grayDark;
+	}
+
+	.bs-docs-example {
+		background-color: @grayDark;
+		border-color: @gray;
+	}
+
+	// contact form dark
+	.tab-content {
+		background-color: @grayDark;
+	}
+
+	.accordion-group {
+		background-color: @grayDark;
+		border-color: @grayDark;
+	}
+
+	.accordion-inner {
+		border-top-color: @gray;
+	}
+
 }
 
 #grid-bottom5{
