@@ -42,7 +42,7 @@
 @btnColor: #212121;
 @btnPrimaryBackgroundHover: #62c1f4;
 
-@toneColor : @grayLighter;
+@toneColor : @grayLighter + #111;
 @toneInverseColor : @grayDarker;
 
 // Global values
@@ -56,7 +56,7 @@
 @grayDark:              #333;
 @gray:                  #555;
 @grayLight:             #999;
-@grayLighter:           #eee;
+@grayLighter:           #ddd;
 @white:                 #fff;
 
 
@@ -167,8 +167,8 @@
 @dropdownDividerBottom:         @bodyBackground;
 
 @dropdownLinkColor:             @color_one;
-@dropdownLinkColorHover:        @color_one;
-@dropdownLinkColorActive:       @color_one;
+@dropdownLinkColorHover:        darken(@color_one, 10%);
+@dropdownLinkColorActive:       darken(@color_one, 10%);
 
 @dropdownLinkBackgroundActive:  @color_four;
 @dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
