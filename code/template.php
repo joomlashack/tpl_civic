@@ -3,7 +3,7 @@
  * @package     Civic
  * @subpackage  Template File
  *
- * @copyright   Copyright (C) 2005 - 2015 Joomlashack. Meritage Assets.
+ * @copyright   Copyright (C) 2005 - 2016 Joomlashack. Meritage Assets.
  *              All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  *
@@ -152,13 +152,13 @@ defined('_JEXEC') or die('Restricted access');
 
                 <?php if ($this->countModules('featured')) : ?>
                 <div class="featured-inner">
-                    <w:module type="none" name="featured" chrome="xhtml" />
+                    <w:module type="none" name="featured" />
                 </div>
                 <?php endif; ?>
 
                 <?php if ($this->countModules('slider') && $useSlider) : ?>
                 <div class="slider <?php echo $containerClass; ?>">
-                    <w:module type="none" name="slider" chrome="xhtml" />
+                    <w:module type="none" name="slider" />
                 </div>
                 <?php endif; ?>
 
@@ -226,14 +226,14 @@ defined('_JEXEC') or die('Restricted access');
                 <div id="main-content" class="<?php echo $gridMode; ?>">
                     <!-- sidebar1 -->
                     <aside id="sidebar1">
-                        <w:module name="sidebar1" chrome="xhtml" />
+                        <w:module name="sidebar1" />
                     </aside>
                     <!-- main -->
                     <section id="main">
                         <?php if ($this->countModules('above-content')) : ?>
                         <!-- above-content -->
                         <div id="above-content">
-                            <w:module type="none" name="above-content" chrome="xhtml" />
+                            <w:module type="none" name="above-content" />
                         </div>
                         <?php endif; ?>
 
@@ -250,13 +250,13 @@ defined('_JEXEC') or die('Restricted access');
                         <?php if ($this->countModules('below-content')) : ?>
                         <!-- below-content -->
                         <div id="below-content">
-                            <w:module type="none" name="below-content" chrome="xhtml" />
+                            <w:module type="none" name="below-content" />
                         </div>
                         <?php endif; ?>
                     </section>
                     <!-- sidebar2 -->
                     <aside id="sidebar2">
-                        <w:module name="sidebar2" chrome="xhtml" />
+                        <w:module name="sidebar2" />
                     </aside>
                 </div>
 
@@ -372,6 +372,8 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
             </footer>
         </div>
+
+        <w:module name="debug" chrome="none" />
 
         <?php if ($useSlider) : ?>
             <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/modernizr-2.7.1.min.js"></script>
