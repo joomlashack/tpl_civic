@@ -373,7 +373,7 @@ defined('_JEXEC') or die('Restricted access');
             </footer>
         </div>
 
-        <w:module name="debug" chrome="none" />
+        <w:module type="none" name="debug" chrome="none" />
 
         <?php if ($useSlider) : ?>
             <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_civic/js/modernizr-2.7.1.min.js"></script>
