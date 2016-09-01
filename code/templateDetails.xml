@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_civic</name>
-	<creationDate>March 2015</creationDate>
+	<creationDate>September 2016</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
-	<authorUrl>http://www.joomlashack.com</authorUrl>
-	<copyright>Copyright Joomlashack 2013-2014. All rights reserved</copyright>
+	<authorUrl>https://www.joomlashack.com</authorUrl>
+	<copyright>Copyright Joomlashack 2005-2016. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.1</version>
+	<version>1.1.0</version>
     <description>TPL_JS_CIVIC_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -39,27 +39,28 @@
 	</files>
 
 	<positions>
-		<position>toolbar</position>
-		<position>logo</position>
-		<position>menu</position>
-		<position>featured</position>
-		<position>grid-top</position>
-		<position>grid-top2</position>
-		<position>grid-top3</position>
 		<position>above-content</position>
-		<position>breadcrumbs</position>
-		<position>slider</position>
-		<position>sidebar1</position>
-		<position>sidebar2</position>
 		<position>below-content</position>
-		<position>grid-bottom</position>
+		<position>bottom-menu</position>
+		<position>breadcrumbs</position>
+		<position>debug</position>
+		<position>featured</position>
+		<position>footer</position>
 		<position>grid-bottom2</position>
 		<position>grid-bottom3</position>
 		<position>grid-bottom4</position>
 		<position>grid-bottom5</position>
 		<position>grid-bottom6</position>
-		<position>bottom-menu</position>
-		<position>footer</position>
+		<position>grid-bottom</position>
+		<position>grid-top2</position>
+		<position>grid-top3</position>
+		<position>grid-top</position>
+		<position>logo</position>
+		<position>menu</position>
+		<position>sidebar1</position>
+		<position>sidebar2</position>
+		<position>slider</position>
+		<position>toolbar</position>
 	</positions>
 
 	<config>
