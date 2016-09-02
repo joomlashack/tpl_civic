@@ -24,10 +24,10 @@
 @navbarInverseDropdownBorderFallback : #ccc;
 @navbarInverseDropdownBorder : @dropdownBorder;
 @navbarInverseDropdownLinkColor : @dropdownLinkColor;
-@navbarInverseDropdownLinkColorHover : @dropdownLinkColorHover;
-@navbarInverseDropdownLinkColorActive : @dropdownLinkColorActive;
-@navbarInverseDropdownLinkBackgroundHover : @dropdownLinkBackgroundHover;
-@navbarInverseDropdownLinkBackgroundActive : @dropdownLinkBackgroundActive;
+@navbarInverseDropdownLinkColorHover : darken(@navbarInverseDropdownLinkColor, 10%);
+@navbarInverseDropdownLinkColorActive : @navbarInverseDropdownLinkColorHover;
+@navbarInverseDropdownLinkBackgroundHover : @dropdownBackground;
+@navbarInverseDropdownLinkBackgroundActive : @dropdownBackground;
 
 @color_one: #59B200;
 @color_two: #87FF0F;
@@ -42,7 +42,7 @@
 @btnColor: #212121;
 @btnPrimaryBackgroundHover: #7EE600;
 
-@toneColor : @grayLighter;
+@toneColor : @grayLighter + #111;
 @toneInverseColor : @grayDarker;
 
 // Global values
@@ -56,7 +56,7 @@
 @grayDark:              #333;
 @gray:                  #555;
 @grayLight:             #999;
-@grayLighter:           #eee;
+@grayLighter:           #ddd;
 @white:                 #fff;
 
 
@@ -167,8 +167,8 @@
 @dropdownDividerBottom:         @bodyBackground;
 
 @dropdownLinkColor:             @color_one;
-@dropdownLinkColorHover:        @color_one;
-@dropdownLinkColorActive:       @color_one;
+@dropdownLinkColorHover:        darken(@color_one, 10%);
+@dropdownLinkColorActive:       darken(@color_one, 10%);
 
 @dropdownLinkBackgroundActive:  @color_four;
 @dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
