@@ -180,7 +180,9 @@ jQuery(function() {
         civicVideos(jQuery);
 
     jQuery(window).resize(function() {
-        FeaturedHeight();
+        if (jQuery(window).width() > 768) {
+            FeaturedHeight();
+        }
     });
 
     jQuery(window).load(function() {
