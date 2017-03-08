@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
-<extension version="2.5" type="template" method="upgrade" client="site">
+<extension version="3.0" type="template" method="upgrade" client="site">
 	<name>js_civic</name>
 	<creationDate>September 2016</creationDate>
 	<author>Joomlashack</author>
@@ -64,7 +64,7 @@
 	</positions>
 
 	<config>
-		<fields name="params" addfieldpath="/templates/js_civic/wright/parameters/joomla_2.5">
+		<fields name="params" addfieldpath="/templates/js_civic/wright/parameters/joomla_3.0">
 			<fieldset name="basic">
                 <!-- Start of default Wright params -->
 				<field name="wright" type="wright"/>
@@ -118,13 +118,9 @@
 					<option value="img-circle">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_CIRCLE</option>
 					<option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
 				</field>
-
-				<field name="browserspacer" label="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_TITLE" description="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_TITLE_DESC" type="spacer" />
-				<field name="browsercompatibilityswitch" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_SWITCH" description="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_SWITCH_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-        <!-- End of default Wright params -->
+                <field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
+                <field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
+                <!-- End of default Wright params -->
 				<field name="Tone" type="radio" class="btn-group" default="" label="TPL_JS_CIVIC_TONE_TEMPLATE" description="TPL_JS_CIVIC_TONE_TEMPLATE_DESC">
 					<option value="">TPL_JS_CIVIC_TONE_LIGHT</option>
 					<option value="-Dark">TPL_JS_CIVIC_TONE_DARK</option>
