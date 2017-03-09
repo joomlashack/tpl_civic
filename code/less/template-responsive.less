@@ -88,6 +88,13 @@
 	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner , .navbar-inner{
 		padding: 0;
 	}
+	.navbar {
+
+		.pull-right > li > .dropdown-menu .dropdown-menu,
+		.nav > li > .dropdown-menu.pull-right .dropdown-menu {
+			right: unset;
+		}
+	}
 	.header{
 		padding-top: 0;
 		background-color: fade(@altBlack, 90%);
@@ -106,6 +113,11 @@
 			display: block;
 			max-width: 75%;
 			padding-top: 6px;
+		}
+
+		img {
+			max-height: 65px;
+			margin: 0 0 0 20px;
 		}
 	}
 	.nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a{
