@@ -60,7 +60,8 @@
 		<position>sidebar1</position>
 		<position>sidebar2</position>
 		<position>slider</position>
-		<position>toolbar</position>
+        <position>toolbar</position>
+        <position>video</position>
 	</positions>
 
 	<config>
