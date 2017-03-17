@@ -174,14 +174,30 @@ function FeaturedHeight() {
     });
 }
 
+// Move menu and logo over the video embed when there is a module in video position
+function relocateMenu() {
+
+    if(jQuery('#video').length) {
+        jQuery('#header').css('margin-top', -jQuery('#header').height());
+    }
+
+}
 
 jQuery(function() {
+
+    relocateMenu();
+
+    jQuery(window).resize(function() {
+        relocateMenu();
+    });
+
     if (civicSlider)
         civicVideos(jQuery);
 
     jQuery(window).resize(function() {
         if (jQuery(window).width() > 768) {
             FeaturedHeight();
+            relocateMenu();
         }
     });
 
