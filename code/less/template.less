@@ -9,7 +9,7 @@
 	text-transform: uppercase;
 }
 
-blockquote{
+blockquote {
 	background-image: url(../images/blockquote-bubble-speech.png);
 	background-color: @color_one;
 	background-position: 20px 20px;
@@ -19,7 +19,9 @@ blockquote{
 	margin-bottom: 53px;
 	padding: 58px 20px 20px;
 	position: relative;
-	p{
+	background-size: 44px auto;
+
+	p {
 		font-size: 28px;
 		font-weight: 700;
 		line-height: 1.55;
@@ -2530,5 +2532,22 @@ button[name="Search"]{
 
 	+ #header {
 		position: relative;
+	}
+}
+
+/* Easy social icons
+ ========================================================================== */
+
+.text-center ul.jssocialicons-horizontal > li {
+	display: inline-block;
+	float: unset !important;
+}
+
+.is_iphone,
+.is_ipad {
+
+	.text-center #easy-social-icons ul.jssocialicons-horizontal > li {
+		float: none;
+		display: inline-block;
 	}
 }
