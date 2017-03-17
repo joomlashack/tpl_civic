@@ -178,7 +178,7 @@ defined('_JEXEC') or die('Restricted access');
 
             <header id="header" class="navbar-inverse">
                 <div class="<?php echo $containerClass; ?>">
-                    <div class="<?php echo $gridMode; if ($featuredSpace) { echo ' dropup';} ?>">
+                    <div class="<?php echo $gridMode; if ($featuredSpace || $videoPosition) { echo ' dropup';} ?>">
                         <w:logo name="menu" />
                     </div>
                 </div>

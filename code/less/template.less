@@ -850,6 +850,14 @@ dl.article-info{
 	margin-bottom: 0;
 }
 
+.navbar-inverse {
+
+	.brand,
+	.nav > li > a {
+		text-shadow: none;
+	}
+}
+
 .navbar-inner , .navbar-inverse .navbar-inner{
 	background-image: none;
 	border: 0;
@@ -870,53 +878,41 @@ dl.article-info{
 	> li {
 		margin: 20px 15px;
 
-		> a{
+		> a {
 			font-size: 1.1em;
 			padding: 2px 0;
 		}
 
-		&:hover{
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+
 			> a {
+				box-shadow: none;
 				position: relative;
 
-				&:before, &:after{
+				&:before, &:after {
 					content: '';
 					height: 0;
 					left: 0;
 					position: absolute;
 					width: 100%;
 				}
-				&:before{
-					border-top: 1px solid @navbarLinkColor;
-					top: 0;
-				}
-				&:after{
-					border-bottom: 1px solid @navbarLinkColor;
-					bottom: 0;
-				}
-			}
-		}
 
-		&.active{
-			> a{
- 				box-shadow: none;
-				position: relative;
-				&:before, &:after{
-					content: '';
-					height: 0;
-					left: 0;
-					position: absolute;
-					width: 100%;
-				}
-				&:before{
-					border-top: 1px solid @navbarLinkColor;
+				&:before {
+					border-top: 1px solid @white;
 					top: 0;
 				}
-				&:after{
-					border-bottom: 1px solid @navbarLinkColor;
-					bottom: 0;
+
+				&:after {
+					border-bottom: 1px solid @white;
+					bottom: 3px;
 				}
-				&:hover, &:focus{
+
+				&:hover,
+				&:focus,
+				&:active {
 					box-shadow: none;
 				}
 			}
