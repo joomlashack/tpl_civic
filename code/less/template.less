@@ -958,15 +958,24 @@ dl.article-info{
 			}
 
 			> li {
+
 				> a {
 					background-color: @dropdownBackground;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: @dropdownBackground !important;
+					}
 				}
 
 				li a {
 					background-color: @grayDarker;
 					color: @navbarInverseLinkColor;
 
-					&:hover, &:focus {
+					&:hover,
+					&:focus,
+					&:active {
 						background-color: @btnInverseBackground;
 						color: @navbarInverseLinkColor;
 					}
