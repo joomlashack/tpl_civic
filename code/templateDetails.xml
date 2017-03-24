@@ -192,21 +192,14 @@
 			</fieldset>
 
 			<fieldset name="TPL_CIVIC_BACKGROUND_IMAGE_GRIDS_POSITIONS">
-				<field name="imgGridTopBg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_TOP_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP_IMAGE_BG_DESC" />
-
-				<field name="imgGridTop2Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_TOP2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP2_IMAGE_BG_DESC" />
-
-				<field name="imgGridTop3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_TOP3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP3_IMAGE_BG_DESC" />
-
-				<field name="imgGridBottomBg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM_IMAGE_BG_DESC" />
-
-				<field name="imgGridBottom2Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM2_IMAGE_BG_DESC" />
-
-				<field name="imgGridBottom3Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM3_IMAGE_BG_DESC" />
-
-				<field name="imgGridBottom4Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM4_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM4_IMAGE_BG_DESC" />
-
-				<field name="imgGridBottom5_6Bg" type="imagelist" default="" directory="images" label="TPL_JS_CIVIC_GRID_BOTTOM5_6_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM5_6_IMAGE_BG_DESC" />
+				<field name="imgGridTopBg" type="media" default="" label="TPL_JS_CIVIC_GRID_TOP_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP_IMAGE_BG_DESC" />
+				<field name="imgGridTop2Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_TOP2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP2_IMAGE_BG_DESC" />
+				<field name="imgGridTop3Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_TOP3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP3_IMAGE_BG_DESC" />
+				<field name="imgGridBottomBg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM_IMAGE_BG_DESC" />
+				<field name="imgGridBottom2Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM2_IMAGE_BG_DESC" />
+				<field name="imgGridBottom3Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM3_IMAGE_BG_DESC" />
+				<field name="imgGridBottom4Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM4_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM4_IMAGE_BG_DESC" />
+				<field name="imgGridBottom5_6Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM5_6_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM5_6_IMAGE_BG_DESC" />
 			</fieldset>
 
 			<fieldset name="TPL_CIVIC_BACKGROUND_COLOR_GRIDS_POSITIONS">
