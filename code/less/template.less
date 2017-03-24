@@ -961,12 +961,6 @@ dl.article-info{
 
 				> a {
 					background-color: @dropdownBackground;
-
-					&:hover,
-					&:focus,
-					&:active {
-						color: @dropdownBackground !important;
-					}
 				}
 
 				li a {
@@ -2561,6 +2555,7 @@ button[name="Search"]{
 #video {
 	position: relative;
 	min-height: 400px;
+	overflow: hidden;
 
 	+ #header {
 		position: relative;

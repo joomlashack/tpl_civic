@@ -85,6 +85,28 @@
 }
 
 @media (max-width: 979px){
+
+	.navbar .nav {
+
+		> li {
+
+			.dropdown-menu {
+
+				> li {
+
+					> a {
+
+						&:hover,
+						&:focus,
+						&:active {
+							color: @dropdownBackground !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner , .navbar-inner{
 		padding: 0;
 	}
