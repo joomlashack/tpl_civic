@@ -3,7 +3,6 @@
 
 .title-border(){
 	border-bottom: 1px solid @color_two;
-	color : #A5A0A4;
 	font-size: 20px;
 	padding-bottom: 5px;
 	text-transform: uppercase;
@@ -502,17 +501,19 @@ div.bs-docs-example blockquote{
 	padding-right: 0;
 }
 
-[class*="newsflash"]{
+[class*="newsflash"] {
 	list-style: none;
 
-	[class*="newsflash-title"]{
-		color: #888;
-		.page-header{
+	[class*="newsflash-title"] {
+		color: #666;
+
+		.page-header {
 			border-bottom: 0;
-			color: #888;
+			color: #666;
 			font-family: @altFontFamily;
 			margin: 0;
-			[class^="icon-"]{
+
+			[class^="icon-"] {
 				display: none;
 			}
 		}
