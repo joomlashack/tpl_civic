@@ -14,21 +14,21 @@ $app = JFactory::getApplication();
 
 $template = $app->getTemplate(true);
 
-	$this->wrightElementsStructure = Array(
-		'image',
-		'icons',
-		'div.title-article',
-			'title',
-		'/div',
-		'article-info',
-		'legendtop',
-		'content',
+    $this->wrightElementsStructure = Array(
+        'image',
+        'icons',
+        'div.title-article',
+            'title',
+        '/div',
+        'article-info',
+        'legendtop',
+        'content',
         'legendbottom',
         'article-info-below',
         'article-info-split',
         'bottom'
 
-	);
+    );
 
 $this->wrightExtraClass = "overlapped";
 

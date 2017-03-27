@@ -26,12 +26,12 @@ $this->wrightComplementInnerClass = ''; // Class added to each complement (links
 // Optional structures to alter regular order or Joomla structure for leading and/or intro articles.  Possible items: title, icons, article-info, image, content.  Optional divs with IDs (#) and classes (.) can be added.  Divs can be closed with /div.  Every structure must be part of the array.
 $this->wrightLeadingItemElementsStructure = Array();
 $this->wrightIntroItemElementsStructure = Array(
-	'image',
-	'title',
-	'article-info',
-	'icons',
-	'legendtop',
-	'content',
+    'image',
+    'title',
+    'article-info',
+    'icons',
+    'legendtop',
+    'content',
     'legendbottom',
     'article-info-below',
     'article-info-split'
