@@ -174,8 +174,38 @@ function FeaturedHeight() {
     });
 }
 
+// Move menu and logo over the video embed when there is a module in video position
+function relocateMenu() {
+
+    var container   = jQuery('#video');
+    var module      = jQuery('#video .moduletable');
+    var menu        = jQuery('#header');
+
+    if(container.length) {
+
+        // Move main menu over the video embed
+        menu.css('margin-top', -menu.height());
+
+        // Set a height to the #video container
+        container.css('height', jQuery(window).height());
+
+        // Set a height to the .moduletable container
+        module.css('height', module.outerHeight);
+
+        if(module.height() < container.height()) {
+            container.css({
+                'height': 'auto'
+            });
+        }
+    }
+}
 
 jQuery(function() {
+
+    jQuery(window).on('resize', function () {
+        relocateMenu();
+    }).resize();
+
     if (civicSlider)
         civicVideos(jQuery);
 

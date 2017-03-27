@@ -153,3 +153,8 @@ if ($this->countModules('featured') || $useSlider)
     $featuredSpace = true;
 else
     $featuredSpace = false;
+
+if ($this->countModules('video'))
+    $videoPosition = true;
+else
+    $videoPosition = false;

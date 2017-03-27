@@ -19,8 +19,6 @@ defined('_JEXEC') or die('Restricted access');
 <html>
     <head>
         <w:head />
-        <link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
-        <link href="//fonts.googleapis.com/css?family=Cousine:400,700" rel="stylesheet" type="text/css">
         <style type="text/css">
             <?php if ($sliderVideos) : ?>
             #featured .wrapper {
@@ -127,6 +125,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php if ($featuredSpace) : ?>
             <!-- featured -->
             <div id="featured">
+
                 <?php if ($useSlider) : ?>
                 <nav id="prev-btn">
                     <a href="#" class="nav-icon prev-icon"> Previous </a>
@@ -142,7 +141,7 @@ defined('_JEXEC') or die('Restricted access');
 
                 <div class="big-loader visible-desktop">
                     <i class="icon-spinner icon-spin icon-4x"></i>
-                    <h4>loading...</h4>
+                    <h4><?php echo JText::_('TPL_JS_CIVIC_LOADING'); ?></h4>
                 </div>
 
                 <nav id="next-btn">
@@ -153,7 +152,7 @@ defined('_JEXEC') or die('Restricted access');
                 <?php if ($this->countModules('featured')) : ?>
                 <div class="featured-inner">
                     <w:module type="none" name="featured" />
-                </div>
+                </div>s
                 <?php endif; ?>
 
                 <?php if ($this->countModules('slider') && $useSlider) : ?>
@@ -169,9 +168,17 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <div id="container-civic">
+
+            <?php if ($this->countModules('video')) : ?>
+                <div id="video">
+                    <!-- video -->
+                    <w:module type="none" name="video" />
+                </div>
+            <?php endif; ?>
+
             <header id="header" class="navbar-inverse">
                 <div class="<?php echo $containerClass; ?>">
-                    <div class="<?php echo $gridMode; if ($featuredSpace) { echo ' dropup';} ?>">
+                    <div class="<?php echo $gridMode; if ($featuredSpace || $videoPosition) { echo ' dropup';} ?>">
                         <w:logo name="menu" />
                     </div>
                 </div>
