@@ -30,7 +30,11 @@ $this->wrightIntroItemElementsStructure = Array(
 	'title',
 	'article-info',
 	'icons',
-	'content'
+	'legendtop',
+	'content',
+    'legendbottom',
+    'article-info-below',
+    'article-info-split'
 );
 
 $this->wrightIntroHasImageClass = "";  // optional extra class when image is present

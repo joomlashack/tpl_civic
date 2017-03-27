@@ -21,7 +21,12 @@ $template = $app->getTemplate(true);
 			'title',
 		'/div',
 		'article-info',
-		'content'
+		'legendtop',
+		'content',
+        'legendbottom',
+        'article-info-below',
+        'article-info-split',
+        'bottom'
 
 	);
 
