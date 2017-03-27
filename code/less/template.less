@@ -448,11 +448,14 @@ div.bs-docs-example blockquote{
 		}
 	}
 }
-.module_ms4, .moduletext_ms4, .moduletable_ms4{
+.module_ms4,
+.moduletext_ms4,
+.moduletable_ms4 {
 	font-size: @baseFontSize + 2;
 	line-height: @baseLineHeight + 2;
-	> h3{
-		color : @color_three;
+
+	> h3 {
+		color : darken(@color_three, 15%);
 		font-size: 20px;
 	}
 }
@@ -482,10 +485,12 @@ div.bs-docs-example blockquote{
 	}
 }
 
-.module_ms6, .moduletext_ms6, .moduletable_ms6{
-	> h3{
+.module_ms6,
+.moduletext_ms6,
+.moduletable_ms6 {
+
+	> h3 {
 		border-bottom: 1px solid @color_two;
-		color : #A6A2A4;
 		font-size: @baseFontSize + 6;
 		padding-bottom: 5px;
 		text-transform: uppercase;

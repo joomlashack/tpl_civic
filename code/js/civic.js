@@ -212,7 +212,6 @@ jQuery(function() {
     jQuery(window).resize(function() {
         if (jQuery(window).width() > 768) {
             FeaturedHeight();
-            relocateMenu();
         }
     });
 
