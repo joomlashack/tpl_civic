@@ -30,26 +30,6 @@ if ($this->countModules('grid-top') || $this->countModules('grid-top2')){
 	$fullBreadcrumb = true;
 }
 
-
-function checkImage($img, $default = "-1") {
-    if ($img == "") {
-        $img = $default;
-    }
-    elseif ($img != "-1") {
-        $img = "images/" . $img;
-    }
-
-    if ($img != "-1") {
-        if (!file_exists(JPATH_BASE . '/' . $img)) {
-            $img = "-1";
-        }
-    }
-    if ($img == "-1")
-        return "";
-    else
-        return JURI::root(true) . "/" . $img;
-}
-
 $enableFluidContainerGridBottom = $this->params->get('enableFluidContainerGridBottom','0');
 $enableFluidContainerGridBottom2 = $this->params->get('enableFluidContainerGridBottom2','0');
 $enableFluidContainerGridBottom3 = $this->params->get('enableFluidContainerGridBottom3','0');
@@ -80,14 +60,14 @@ $bgColorGridBottom3 = $this->params->get('bgColorGridBottom3','tone_color');
 $bgColorGridBottom4 = $this->params->get('bgColorGridBottom4','white');
 $bgColorGridBottom5_6 = $this->params->get('bgColorGridBottom5_6','tone_inverse_color');
 
-$imgGridTopBg = checkImage($this->params->get("imgGridTopBg", ""));
-$imgGridTop2Bg = checkImage($this->params->get("imgGridTop2Bg", ""));
-$imgGridTop3Bg = checkImage($this->params->get("imgGridTop3Bg", ""));
-$imgGridBottomBg = checkImage($this->params->get("imgGridBottomBg", ""));
-$imgGridBottom2Bg = checkImage($this->params->get("imgGridBottom2Bg", ""));
-$imgGridBottom3Bg = checkImage($this->params->get("imgGridBottom3Bg", ""));
-$imgGridBottom4Bg = checkImage($this->params->get("imgGridBottom4Bg", ""));
-$imgGridBottom5_6Bg = checkImage($this->params->get("imgGridBottom5_6Bg", ""));
+$imgGridTopBg       = $this->params->get("imgGridTopBg", "");
+$imgGridTop2Bg      = $this->params->get("imgGridTop2Bg", "");
+$imgGridTop3Bg      = $this->params->get("imgGridTop3Bg", "");
+$imgGridBottomBg    = $this->params->get("imgGridBottomBg", "");
+$imgGridBottom2Bg   = $this->params->get("imgGridBottom2Bg", "");
+$imgGridBottom3Bg   = $this->params->get("imgGridBottom3Bg", "");
+$imgGridBottom4Bg   = $this->params->get("imgGridBottom4Bg", "");
+$imgGridBottom5_6Bg = $this->params->get("imgGridBottom5_6Bg", "");
 
 // templateTone parameter (Light = '-Light' - Dark = '-Dark')
     $user = JFactory::getUser();
