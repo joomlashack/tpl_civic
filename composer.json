@@ -1,12 +1,12 @@
 {
-    "name"             : "joomlashack/tpl_civic",
-    "description"      : "Civic",
+    "name"             : "joomlashack/tpl_js_civic",
+    "description"      : "JS Civic",
     "minimum-stability": "stable",
     "license"          : "GPL-2+",
     "type"             : "joomla.template",
     "extra"            : {
-        "element"        : "tpl_civic",
-        "element-short"  : "civic",
+        "element"        : "tpl_js_civic",
+        "element-short"  : "js_civic",
         "name"           : "Civic",
         "client"         : "site",
         "package-license": "pro",

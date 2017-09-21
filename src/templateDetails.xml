@@ -36,6 +36,9 @@
 		<folder>js</folder>
 		<folder>wright</folder>
 		<folder>parameters</folder>
+		<folder>library</folder>
+		<folder>views</folder>
+		<folder>form</folder>
 	</files>
 
 	<positions>
@@ -63,6 +66,12 @@
         <position>toolbar</position>
         <position>video</position>
 	</positions>
+
+	<media destination="tpl_js_civic" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+    </media>
 
 	<config>
 		<fields name="params" addfieldpath="/templates/js_civic/wright/parameters/joomla_3.0">
@@ -290,6 +299,49 @@
                 <field name="civicColorReference" type="templatecustom" default="" label="TPL_JS_CIVIC_COLOR_REFERENCE" description="TPL_JS_CIVIC_COLOR_REFERENCE_DESC"/>
 			</fieldset>
 
+            <fieldset name="basic" addfieldpath="/plugins/system/ossystem/form/fields">
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="plg_system_ossystem" />
+            </fieldset>
 		</fields>
 	</config>
+
+	<scriptfile>script.installer.php</scriptfile>
+
+	<updateservers>
+        <server type="extension" priority="1" name="Civic"><![CDATA[https://deploy.ostraining.com/client/update/pro/stable/tpl_js_civic]]></server>
+    </updateservers>
+
+    <variant>PRO</variant>
+
+    <alledia>
+        <element>tpl_js_civic</element>
+        <namespace>JS_Civic</namespace>
+        <license>pro</license>
+        <targetplatform>3.*</targetplatform>
+
+        <relatedExtensions>
+            <extension
+                type="library"
+                element="allediaframework">AllediaFramework</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="ossystem"
+                publish="true"
+                ordering="first">OSSystem</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="osmylicensesmanager"
+                publish="true"
+                ordering="last">OSMyLicensesManager</extension>
+        </relatedExtensions>
+
+        <include>AllediaFreeDefaultFiles</include>
+    </alledia>
 </extension>
