@@ -8,7 +8,7 @@
 	<authorUrl>https://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2005-2017. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>2.0.2</version>
+	<version>2.0.5</version>
     <description>TPL_JS_CIVIC_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -36,6 +36,9 @@
 		<folder>js</folder>
 		<folder>wright</folder>
 		<folder>parameters</folder>
+		<folder>library</folder>
+		<folder>views</folder>
+		<folder>form</folder>
 	</files>
 
 	<positions>
@@ -63,6 +66,12 @@
         <position>toolbar</position>
         <position>video</position>
 	</positions>
+
+	<media destination="tpl_js_civic" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+    </media>
 
 	<config>
 		<fields name="params" addfieldpath="/templates/js_civic/wright/parameters/joomla_3.0">
@@ -122,6 +131,11 @@
 					<option value="">TPL_JS_CIVIC_TONE_LIGHT</option>
 					<option value="-Dark">TPL_JS_CIVIC_TONE_DARK</option>
 				</field>
+
+				<field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_civic" />
 			</fieldset>
 			<fieldset name="TPL_CIVIC_SLIDER">
 				<field name="useSlider" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_USE_SLIDER" description="TPL_JS_CIVIC_USE_SLIDER_DESC">
@@ -289,7 +303,43 @@
 				</field>
                 <field name="civicColorReference" type="templatecustom" default="" label="TPL_JS_CIVIC_COLOR_REFERENCE" description="TPL_JS_CIVIC_COLOR_REFERENCE_DESC"/>
 			</fieldset>
-
 		</fields>
 	</config>
+
+	<scriptfile>script.installer.php</scriptfile>
+
+	<updateservers>
+        <server type="extension" priority="1" name="Civic"><![CDATA[https://deploy.ostraining.com/client/update/pro/stable/tpl_js_civic]]></server>
+    </updateservers>
+
+    <variant>PRO</variant>
+
+    <alledia>
+        <element>tpl_js_civic</element>
+        <namespace>JS_Civic</namespace>
+        <license>pro</license>
+        <targetplatform>3.*</targetplatform>
+
+        <relatedExtensions>
+            <extension
+                type="library"
+                element="allediaframework">AllediaFramework</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="ossystem"
+                publish="true"
+                ordering="first">OSSystem</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="osmylicensesmanager"
+                publish="true"
+                ordering="last">OSMyLicensesManager</extension>
+        </relatedExtensions>
+
+        <include>AllediaFreeDefaultFiles</include>
+    </alledia>
 </extension>
