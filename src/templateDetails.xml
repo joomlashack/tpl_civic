@@ -1,314 +1,314 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="3.0" type="template" method="upgrade" client="site">
-	<name>js_civic</name>
-	<creationDate>September 21 2017</creationDate>
-	<author>Joomlashack</author>
-	<authorEmail>support@joomlashack.com</authorEmail>
-	<authorUrl>https://www.joomlashack.com</authorUrl>
-	<copyright>Copyright Joomlashack 2005-2017. All rights reserved</copyright>
-	<license>GNU GPLv2</license>
-	<version>2.0.7</version>
+    <name>js_civic</name>
+    <creationDate>September 21 2017</creationDate>
+    <author>Joomlashack</author>
+    <authorEmail>support@joomlashack.com</authorEmail>
+    <authorUrl>https://www.joomlashack.com</authorUrl>
+    <copyright>Copyright Joomlashack 2005-2017. All rights reserved</copyright>
+    <license>GNU GPLv2</license>
+    <version>2.0.7</version>
     <description>TPL_JS_CIVIC_XML_DESCRIPTION</description>
 
-	<languages folder="language">
-		<!-- en-GB -->
-		<language tag="en-GB">en-GB/en-GB.tpl_js_civic.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_js_civic.sys.ini</language>
-		<!-- es-ES -->
-		<language tag="es-ES">es-ES/es-ES.tpl_js_civic.ini</language>
-		<language tag="es-ES">es-ES/es-ES.tpl_js_civic.sys.ini</language>
-	</languages>
+    <languages folder="language">
+        <!-- en-GB -->
+        <language tag="en-GB">en-GB/en-GB.tpl_js_civic.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_js_civic.sys.ini</language>
+        <!-- es-ES -->
+        <language tag="es-ES">es-ES/es-ES.tpl_js_civic.ini</language>
+        <language tag="es-ES">es-ES/es-ES.tpl_js_civic.sys.ini</language>
+    </languages>
 
-	<files>
-		<filename>component.php</filename>
-		<filename>favicon.ico</filename>
-		<filename>functions.php</filename>
-		<filename>wrighttemplate.php</filename>
-		<filename>index.php</filename>
-		<filename>template.php</filename>
-		<filename>templateDetails.xml</filename>
-		<filename>template_thumbnail.png</filename>
-		<filename>preg_find.php</filename>
-		<folder>css</folder>
-		<folder>html</folder>
-		<folder>images</folder>
-		<folder>js</folder>
-		<folder>wright</folder>
-		<folder>parameters</folder>
-		<folder>library</folder>
-		<folder>views</folder>
-		<folder>form</folder>
-	</files>
+    <files>
+        <filename>component.php</filename>
+        <filename>favicon.ico</filename>
+        <filename>functions.php</filename>
+        <filename>wrighttemplate.php</filename>
+        <filename>index.php</filename>
+        <filename>template.php</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>preg_find.php</filename>
+        <folder>css</folder>
+        <folder>html</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>wright</folder>
+        <folder>parameters</folder>
+        <folder>library</folder>
+        <folder>views</folder>
+        <folder>form</folder>
+    </files>
 
-	<positions>
-		<position>above-content</position>
-		<position>below-content</position>
-		<position>bottom-menu</position>
-		<position>breadcrumbs</position>
-		<position>debug</position>
-		<position>featured</position>
-		<position>footer</position>
-		<position>grid-bottom2</position>
-		<position>grid-bottom3</position>
-		<position>grid-bottom4</position>
-		<position>grid-bottom5</position>
-		<position>grid-bottom6</position>
-		<position>grid-bottom</position>
-		<position>grid-top2</position>
-		<position>grid-top3</position>
-		<position>grid-top</position>
-		<position>logo</position>
-		<position>menu</position>
-		<position>sidebar1</position>
-		<position>sidebar2</position>
-		<position>slider</position>
+    <positions>
+        <position>above-content</position>
+        <position>below-content</position>
+        <position>bottom-menu</position>
+        <position>breadcrumbs</position>
+        <position>debug</position>
+        <position>featured</position>
+        <position>footer</position>
+        <position>grid-bottom2</position>
+        <position>grid-bottom3</position>
+        <position>grid-bottom4</position>
+        <position>grid-bottom5</position>
+        <position>grid-bottom6</position>
+        <position>grid-bottom</position>
+        <position>grid-top2</position>
+        <position>grid-top3</position>
+        <position>grid-top</position>
+        <position>logo</position>
+        <position>menu</position>
+        <position>sidebar1</position>
+        <position>sidebar2</position>
+        <position>slider</position>
         <position>toolbar</position>
         <position>video</position>
-	</positions>
+    </positions>
 
-	<media destination="tpl_js_civic" folder="media">
+    <media destination="tpl_js_civic" folder="media">
         <folder>css</folder>
         <folder>js</folder>
         <folder>images</folder>
     </media>
 
-	<config>
-		<fields name="params" addfieldpath="/templates/js_civic/wright/parameters/joomla_3.0">
-			<fieldset name="basic">
+    <config>
+        <fields name="params" addfieldpath="/templates/js_civic/wright/parameters/joomla_3.0">
+            <fieldset name="basic">
                 <!-- Start of default Wright params -->
-				<field name="wright" type="wright"/>
-				<field name="rebrand" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC">
-				    <option value="1">JYES</option>
-				    <option value="0">JNO</option>
- 				</field>
-				<field name="style" type="styles" default="generic" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
-				<field name="modal" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="jquery" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_LABEL" description="TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_DESC">
-					<option value="0">JNO</option>
-					<option value="1">TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_YES_LOCALLY</option>
-					<option value="2">TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_YES_GOOGLE</option>
-				</field>
-				<field name="javascriptBottom" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_JAVASCRIPT_BOTTOM" description="TPL_JS_WRIGHT_FIELD_JAVASCRIPT_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="logo" type="logo" default="template" label="TPL_JS_WRIGHT_FIELD_LOGO_IMAGE_LABEL" description="TPL_JS_WRIGHT_FIELD_LOGO_IMAGE_DESC" />
-				<field name="logowidth" type="grid" default="4" label="TPL_JS_WRIGHT_FIELD_LOGO_WIDTH_LABEL" description="TPL_JS_WRIGHT_FIELD_LOGO_WIDTH_DESC" />
-				<field name="body_font" type="typography" default="default" label="TPL_JS_WRIGHT_FIELD_BODY_FONT_LABEL" description="TPL_JS_WRIGHT_FIELD_BODY_FONT_DESC" />
-				<field name="header_font" type="typography" default="default" label="TPL_JS_WRIGHT_FIELD_HEADING_FONT_LABEL" description="TPL_JS_WRIGHT_FIELD_HEADING_FONT_DESC" />
-				<field name="columns" type="columns" default="sidebar1:3;main:6;sidebar2:3" sidebars="2" label="TPL_JS_WRIGHT_FIELD_COLUMNS_LABEL" description="TPL_JS_WRIGHT_FIELD_COLUMNS_DESC" />
-				<field name="documentationMode" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_DOCUMENTATION_MODE" description="TPL_JS_WRIGHT_DOCUMENTATION_MODE_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="bootstrapspacer" label="TPL_JS_WRIGHT_BOOTSTRAP_TITLE_LABEL" description="TPL_JS_WRIGHT_BOOTSTRAP_TITLE_DESC" type="spacer" />
-				<field name="bs_rowmode" type="radio" class="btn-group btn-group-yesno" default="row" label="TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_LABEL" description="TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_DESC">
-					<option value="row-fluid">TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_FLUID</option>
-					<option value="row">TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_DEFAULT</option>
-				</field>
-				<field name="responsive" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_RESPONSIVE" description="TPL_JS_WRIGHT_FIELD_ENABLE_RESPONSIVE_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="stickyFooter" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_STICKY_FOOTER" description="TPL_JS_WRIGHT_FIELD_STICKY_FOOTER_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="wright_bootstrap_images" type="radio" class="btn-group btn-group-yesno" default="" label="TPL_JS_WRIGHT_BOOTSTRAP_IMAGES" description="TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_DESC">
-					<option value="">TPL_JS_WRIGHT_NONE</option>
-					<option value="img-rounded">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_ROUNDED</option>
-					<option value="img-circle">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_CIRCLE</option>
-					<option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
-				</field>
+                <field name="wright" type="wright"/>
+                <field name="rebrand" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="style" type="styles" default="generic" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+                <field name="modal" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="jquery" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_LABEL" description="TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_YES_LOCALLY</option>
+                    <option value="2">TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_YES_GOOGLE</option>
+                </field>
+                <field name="javascriptBottom" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_JAVASCRIPT_BOTTOM" description="TPL_JS_WRIGHT_FIELD_JAVASCRIPT_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="logo" type="logo" default="template" label="TPL_JS_WRIGHT_FIELD_LOGO_IMAGE_LABEL" description="TPL_JS_WRIGHT_FIELD_LOGO_IMAGE_DESC" />
+                <field name="logowidth" type="grid" default="4" label="TPL_JS_WRIGHT_FIELD_LOGO_WIDTH_LABEL" description="TPL_JS_WRIGHT_FIELD_LOGO_WIDTH_DESC" />
+                <field name="body_font" type="typography" default="default" label="TPL_JS_WRIGHT_FIELD_BODY_FONT_LABEL" description="TPL_JS_WRIGHT_FIELD_BODY_FONT_DESC" />
+                <field name="header_font" type="typography" default="default" label="TPL_JS_WRIGHT_FIELD_HEADING_FONT_LABEL" description="TPL_JS_WRIGHT_FIELD_HEADING_FONT_DESC" />
+                <field name="columns" type="columns" default="sidebar1:3;main:6;sidebar2:3" sidebars="2" label="TPL_JS_WRIGHT_FIELD_COLUMNS_LABEL" description="TPL_JS_WRIGHT_FIELD_COLUMNS_DESC" />
+                <field name="documentationMode" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_DOCUMENTATION_MODE" description="TPL_JS_WRIGHT_DOCUMENTATION_MODE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="bootstrapspacer" label="TPL_JS_WRIGHT_BOOTSTRAP_TITLE_LABEL" description="TPL_JS_WRIGHT_BOOTSTRAP_TITLE_DESC" type="spacer" />
+                <field name="bs_rowmode" type="radio" class="btn-group btn-group-yesno" default="row" label="TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_LABEL" description="TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_DESC">
+                    <option value="row-fluid">TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_FLUID</option>
+                    <option value="row">TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_DEFAULT</option>
+                </field>
+                <field name="responsive" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_RESPONSIVE" description="TPL_JS_WRIGHT_FIELD_ENABLE_RESPONSIVE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="stickyFooter" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_STICKY_FOOTER" description="TPL_JS_WRIGHT_FIELD_STICKY_FOOTER_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="wright_bootstrap_images" type="radio" class="btn-group btn-group-yesno" default="" label="TPL_JS_WRIGHT_BOOTSTRAP_IMAGES" description="TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_DESC">
+                    <option value="">TPL_JS_WRIGHT_NONE</option>
+                    <option value="img-rounded">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_ROUNDED</option>
+                    <option value="img-circle">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_CIRCLE</option>
+                    <option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
+                </field>
                 <field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
                 <field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
-				<field name="Tone" type="radio" class="btn-group" default="" label="TPL_JS_CIVIC_TONE_TEMPLATE" description="TPL_JS_CIVIC_TONE_TEMPLATE_DESC">
-					<option value="">TPL_JS_CIVIC_TONE_LIGHT</option>
-					<option value="-Dark">TPL_JS_CIVIC_TONE_DARK</option>
-				</field>
+                <field name="Tone" type="radio" class="btn-group" default="" label="TPL_JS_CIVIC_TONE_TEMPLATE" description="TPL_JS_CIVIC_TONE_TEMPLATE_DESC">
+                    <option value="">TPL_JS_CIVIC_TONE_LIGHT</option>
+                    <option value="-Dark">TPL_JS_CIVIC_TONE_DARK</option>
+                </field>
 
-				<field
+                <field
                     type="customfooter"
                     name="customfooter"
                     media="tpl_js_civic" />
-			</fieldset>
-			<fieldset name="TPL_CIVIC_SLIDER">
-				<field name="useSlider" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_USE_SLIDER" description="TPL_JS_CIVIC_USE_SLIDER_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
+            </fieldset>
+            <fieldset name="TPL_CIVIC_SLIDER">
+                <field name="useSlider" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_USE_SLIDER" description="TPL_JS_CIVIC_USE_SLIDER_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
 
-				<field name="videosFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_VIDEOS_FOLDER" description="TPL_JS_CIVIC_VIDEOS_FOLDER_DESC" />
+                <field name="videosFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_VIDEOS_FOLDER" description="TPL_JS_CIVIC_VIDEOS_FOLDER_DESC" />
 
-				<field name="imagesFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_IMAGES_FOLDER" description="TPL_JS_CIVIC_IMAGES_FOLDER_DESC" />
-			</fieldset>
+                <field name="imagesFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_IMAGES_FOLDER" description="TPL_JS_CIVIC_IMAGES_FOLDER_DESC" />
+            </fieldset>
 
-			<fieldset name="TPL_CIVIC_GRID_BOTTOM_POSITIONS">
-				<field name="enableFluidContainerGridBottom" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="enableFluidContainerGridBottom2" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM2" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="enableFluidContainerGridBottom3" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM3" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="enableFluidContainerGridBottom4" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM4" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="enableFluidContainerGridBottom5" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM5" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="enableFluidContainerGridBottom6" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM6" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
+            <fieldset name="TPL_CIVIC_GRID_BOTTOM_POSITIONS">
+                <field name="enableFluidContainerGridBottom" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="enableFluidContainerGridBottom2" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM2" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="enableFluidContainerGridBottom3" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM3" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="enableFluidContainerGridBottom4" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM4" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="enableFluidContainerGridBottom5" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM5" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="enableFluidContainerGridBottom6" type="radio" class="btn-group" default="0" label="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM6" description="TPL_JS_CIVIC_ENABLE_FLUID_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
 
-				<field name="separateGridBottom" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="separateGridBottom2" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM2" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="separateGridBottom3" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM3" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="separateGridBottom4" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM4" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="separateGridBottom5" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM5" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="separateGridBottom6" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM6" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
+                <field name="separateGridBottom" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="separateGridBottom2" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM2" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="separateGridBottom3" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM3" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="separateGridBottom4" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM4" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="separateGridBottom5" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM5" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="separateGridBottom6" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM6" description="TPL_JS_CIVIC_SEPARATE_GRID_BOTTOM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
 
-			</fieldset>
+            </fieldset>
 
-			<fieldset name="TPL_CIVIC_BACKGROUND_IMAGE_GRIDS_POSITIONS">
-				<field name="imgGridTopBg" type="media" default="" label="TPL_JS_CIVIC_GRID_TOP_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP_IMAGE_BG_DESC" />
-				<field name="imgGridTop2Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_TOP2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP2_IMAGE_BG_DESC" />
-				<field name="imgGridTop3Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_TOP3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP3_IMAGE_BG_DESC" />
-				<field name="imgGridBottomBg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM_IMAGE_BG_DESC" />
-				<field name="imgGridBottom2Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM2_IMAGE_BG_DESC" />
-				<field name="imgGridBottom3Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM3_IMAGE_BG_DESC" />
-				<field name="imgGridBottom4Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM4_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM4_IMAGE_BG_DESC" />
-				<field name="imgGridBottom5_6Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM5_6_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM5_6_IMAGE_BG_DESC" />
-			</fieldset>
+            <fieldset name="TPL_CIVIC_BACKGROUND_IMAGE_GRIDS_POSITIONS">
+                <field name="imgGridTopBg" type="media" default="" label="TPL_JS_CIVIC_GRID_TOP_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP_IMAGE_BG_DESC" />
+                <field name="imgGridTop2Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_TOP2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP2_IMAGE_BG_DESC" />
+                <field name="imgGridTop3Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_TOP3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_TOP3_IMAGE_BG_DESC" />
+                <field name="imgGridBottomBg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM_IMAGE_BG_DESC" />
+                <field name="imgGridBottom2Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM2_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM2_IMAGE_BG_DESC" />
+                <field name="imgGridBottom3Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM3_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM3_IMAGE_BG_DESC" />
+                <field name="imgGridBottom4Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM4_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM4_IMAGE_BG_DESC" />
+                <field name="imgGridBottom5_6Bg" type="media" default="" label="TPL_JS_CIVIC_GRID_BOTTOM5_6_IMAGE_BG" description="TPL_JS_CIVIC_GRID_BOTTOM5_6_IMAGE_BG_DESC" />
+            </fieldset>
 
-			<fieldset name="TPL_CIVIC_BACKGROUND_COLOR_GRIDS_POSITIONS">
-				<field name="bgColorGridTop" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_TOP_BG_COLOR" description="TPL_JS_CIVIC_GRID_TOP_BG_COLOR_DESC">
-					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
-					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
-					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
-					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
-					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
-					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
-					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
-					<option value="white">TPL_JS_CIVIC_WHITE</option>
-					<option value="black">TPL_JS_CIVIC_BLACK</option>
-				</field>
-				<field name="bgColorGridTop2" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_TOP2_BG_COLOR" description="TPL_JS_CIVIC_GRID_TOP2_BG_COLOR_DESC">
-					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
-					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
-					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
-					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
-					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
-					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
-					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
-					<option value="white">TPL_JS_CIVIC_WHITE</option>
-					<option value="black">TPL_JS_CIVIC_BLACK</option>
-				</field>
-				<field name="bgColorGridTop3" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_TOP3_BG_COLOR" description="TPL_JS_CIVIC_GRID_TOP3_BG_COLOR_DESC">
-					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
-					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
-					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
-					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
-					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
-					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
-					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
-					<option value="white">TPL_JS_CIVIC_WHITE</option>
-					<option value="black">TPL_JS_CIVIC_BLACK</option>
-				</field>
-				<field name="bgColorGridBottom" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM_BG_COLOR_DESC">
-					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
-					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
-					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
-					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
-					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
-					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
-					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
-					<option value="white">TPL_JS_CIVIC_WHITE</option>
-					<option value="black">TPL_JS_CIVIC_BLACK</option>
-				</field>
-				<field name="bgColorGridBottom2" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM2_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM2_BG_COLOR_DESC">
-					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
-					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
-					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
-					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
-					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
-					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
-					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
-					<option value="white">TPL_JS_CIVIC_WHITE</option>
-					<option value="black">TPL_JS_CIVIC_BLACK</option>
-				</field>
-				<field name="bgColorGridBottom3" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM3_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM3_BG_COLOR_DESC">
-					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
-					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
-					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
-					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
-					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
-					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
-					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
-					<option value="white">TPL_JS_CIVIC_WHITE</option>
-					<option value="black">TPL_JS_CIVIC_BLACK</option>
-				</field>
-				<field name="bgColorGridBottom4" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM4_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM4_BG_COLOR_DESC">
-					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
-					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
-					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
-					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
-					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
-					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
-					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
-					<option value="white">TPL_JS_CIVIC_WHITE</option>
-					<option value="black">TPL_JS_CIVIC_BLACK</option>
-				</field>
-				<field name="bgColorGridBottom5_6" type="list" default="tone_inverse_color" label="TPL_JS_CIVIC_GRID_BOTTOM5_6_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM5_6_BG_COLOR_DESC">
-					<option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
-					<option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
-					<option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
-					<option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
-					<option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
-					<option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
-					<option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
-					<option value="white">TPL_JS_CIVIC_WHITE</option>
-					<option value="black">TPL_JS_CIVIC_BLACK</option>
-				</field>
+            <fieldset name="TPL_CIVIC_BACKGROUND_COLOR_GRIDS_POSITIONS">
+                <field name="bgColorGridTop" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_TOP_BG_COLOR" description="TPL_JS_CIVIC_GRID_TOP_BG_COLOR_DESC">
+                    <option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
+                    <option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
+                    <option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+                    <option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+                    <option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+                    <option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+                    <option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+                    <option value="white">TPL_JS_CIVIC_WHITE</option>
+                    <option value="black">TPL_JS_CIVIC_BLACK</option>
+                </field>
+                <field name="bgColorGridTop2" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_TOP2_BG_COLOR" description="TPL_JS_CIVIC_GRID_TOP2_BG_COLOR_DESC">
+                    <option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
+                    <option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
+                    <option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+                    <option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+                    <option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+                    <option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+                    <option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+                    <option value="white">TPL_JS_CIVIC_WHITE</option>
+                    <option value="black">TPL_JS_CIVIC_BLACK</option>
+                </field>
+                <field name="bgColorGridTop3" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_TOP3_BG_COLOR" description="TPL_JS_CIVIC_GRID_TOP3_BG_COLOR_DESC">
+                    <option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
+                    <option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
+                    <option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+                    <option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+                    <option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+                    <option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+                    <option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+                    <option value="white">TPL_JS_CIVIC_WHITE</option>
+                    <option value="black">TPL_JS_CIVIC_BLACK</option>
+                </field>
+                <field name="bgColorGridBottom" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM_BG_COLOR_DESC">
+                    <option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
+                    <option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
+                    <option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+                    <option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+                    <option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+                    <option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+                    <option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+                    <option value="white">TPL_JS_CIVIC_WHITE</option>
+                    <option value="black">TPL_JS_CIVIC_BLACK</option>
+                </field>
+                <field name="bgColorGridBottom2" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM2_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM2_BG_COLOR_DESC">
+                    <option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
+                    <option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
+                    <option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+                    <option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+                    <option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+                    <option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+                    <option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+                    <option value="white">TPL_JS_CIVIC_WHITE</option>
+                    <option value="black">TPL_JS_CIVIC_BLACK</option>
+                </field>
+                <field name="bgColorGridBottom3" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM3_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM3_BG_COLOR_DESC">
+                    <option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
+                    <option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
+                    <option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+                    <option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+                    <option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+                    <option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+                    <option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+                    <option value="white">TPL_JS_CIVIC_WHITE</option>
+                    <option value="black">TPL_JS_CIVIC_BLACK</option>
+                </field>
+                <field name="bgColorGridBottom4" type="list" default="tone_color" label="TPL_JS_CIVIC_GRID_BOTTOM4_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM4_BG_COLOR_DESC">
+                    <option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
+                    <option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
+                    <option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+                    <option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+                    <option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+                    <option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+                    <option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+                    <option value="white">TPL_JS_CIVIC_WHITE</option>
+                    <option value="black">TPL_JS_CIVIC_BLACK</option>
+                </field>
+                <field name="bgColorGridBottom5_6" type="list" default="tone_inverse_color" label="TPL_JS_CIVIC_GRID_BOTTOM5_6_BG_COLOR" description="TPL_JS_CIVIC_GRID_BOTTOM5_6_BG_COLOR_DESC">
+                    <option value="tone_color">TPL_JS_CIVIC_TONE_COLOR</option>
+                    <option value="tone_inverse_color">TPL_JS_CIVIC_TONE_INVERSE_COLOR</option>
+                    <option value="color_one">TPL_JS_CIVIC_COLOR_1</option>
+                    <option value="color_two">TPL_JS_CIVIC_COLOR_2</option>
+                    <option value="color_three">TPL_JS_CIVIC_COLOR_3</option>
+                    <option value="color_four">TPL_JS_CIVIC_COLOR_4</option>
+                    <option value="color_five">TPL_JS_CIVIC_COLOR_5</option>
+                    <option value="white">TPL_JS_CIVIC_WHITE</option>
+                    <option value="black">TPL_JS_CIVIC_BLACK</option>
+                </field>
                 <field name="civicColorReference" type="templatecustom" default="" label="TPL_JS_CIVIC_COLOR_REFERENCE" description="TPL_JS_CIVIC_COLOR_REFERENCE_DESC"/>
-			</fieldset>
-		</fields>
-	</config>
+            </fieldset>
+        </fields>
+    </config>
 
-	<scriptfile>script.installer.php</scriptfile>
+    <scriptfile>script.installer.php</scriptfile>
 
-	<updateservers>
+    <updateservers>
         <server type="extension" priority="1" name="Civic"><![CDATA[https://deploy.ostraining.com/client/update/pro/stable/tpl_js_civic]]></server>
     </updateservers>
 
@@ -317,6 +317,7 @@
     <alledia>
         <element>tpl_js_civic</element>
         <namespace>JS_Civic</namespace>
+        <name>JS Civic</name>
         <license>pro</license>
         <targetplatform>3.*</targetplatform>
 
