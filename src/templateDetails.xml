@@ -82,7 +82,7 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="style" type="styles" default="generic" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+                <field name="style" type="styles" default="athens" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
                 <field name="modal" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
@@ -131,11 +131,6 @@
                     <option value="">TPL_JS_CIVIC_TONE_LIGHT</option>
                     <option value="-Dark">TPL_JS_CIVIC_TONE_DARK</option>
                 </field>
-
-                <field
-                    type="customfooter"
-                    name="customfooter"
-                    media="tpl_js_civic" />
             </fieldset>
             <fieldset name="TPL_CIVIC_SLIDER">
                 <field name="useSlider" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_USE_SLIDER" description="TPL_JS_CIVIC_USE_SLIDER_DESC">
@@ -302,6 +297,13 @@
                     <option value="black">TPL_JS_CIVIC_BLACK</option>
                 </field>
                 <field name="civicColorReference" type="templatecustom" default="" label="TPL_JS_CIVIC_COLOR_REFERENCE" description="TPL_JS_CIVIC_COLOR_REFERENCE_DESC"/>
+            </fieldset>
+
+            <fieldset name="footer" addfieldpath="/templates/js_civic/form/fields">     
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_civic" />
             </fieldset>
         </fields>
     </config>
