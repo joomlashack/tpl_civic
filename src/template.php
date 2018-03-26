@@ -116,7 +116,7 @@ defined('_JEXEC') or die('Restricted access');
         </style>
         <![endif]-->
     </head>
-    <body class="<?php echo $responsive . ' Tone' . $Tone?>">
+    <body class="<?php echo $responsive . ' Tone' . $Tone . ' ' . $FeauredAlwaysVisible; ?>">
         <?php if ($this->countModules('toolbar')) : ?>
             <!-- toolbar -->
             <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
@@ -152,7 +152,7 @@ defined('_JEXEC') or die('Restricted access');
                 <?php if ($this->countModules('featured')) : ?>
                 <div class="featured-inner">
                     <w:module type="none" name="featured" />
-                </div>s
+                </div>
                 <?php endif; ?>
 
                 <?php if ($this->countModules('slider') && $useSlider) : ?>
