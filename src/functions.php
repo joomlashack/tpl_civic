@@ -12,6 +12,9 @@ defined('_JEXEC') or die('Restricted access');
 
 require_once('preg_find.php');
 
+// Featured and Header containers always visible on mobile
+$FeauredAlwaysVisible = $this->params->get('FeauredAlwaysVisible','featured-visible-auto');
+
 // get the bootstrap row mode ( row / row-fluid )
 $gridMode = $this->params->get('bs_rowmode','row-fluid');
 $containerClass = 'container';

@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="3.0" type="template" method="upgrade" client="site">
     <name>js_civic</name>
-    <creationDate>October 03 2017</creationDate>
+    <creationDate>March 26 2018</creationDate>
     <author>Joomlashack</author>
     <authorEmail>support@joomlashack.com</authorEmail>
     <authorUrl>https://www.joomlashack.com</authorUrl>
-    <copyright>Copyright Joomlashack 2005-2017. All rights reserved</copyright>
+    <copyright>Copyright Joomlashack 2005-2018. All rights reserved</copyright>
     <license>GNU GPLv2</license>
-    <version>2.1.4</version>
+    <version>2.1.5</version>
     <description>TPL_JS_CIVIC_XML_DESCRIPTION</description>
 
     <languages folder="language">
@@ -292,6 +292,13 @@
                     <option value="black">TPL_JS_CIVIC_BLACK</option>
                 </field>
                 <field name="civicColorReference" type="templatecustom" default="" label="TPL_JS_CIVIC_COLOR_REFERENCE" description="TPL_JS_CIVIC_COLOR_REFERENCE_DESC"/>
+            </fieldset>
+
+            <fieldset name="TPL_CIVIC_FEATURED_HEADER">
+                <field name="FeauredAlwaysVisible" type="radio" class="btn-group" default="featured-visible-auto" label="TPL_JS_CIVIC_FEATURED_VISIBLE" description="TPL_JS_CIVIC_FEATURED_VISIBLE_DESC">
+                    <option value="featured-visible-always">TPL_JS_CIVIC_FEATURED_HEADER_ALWAYS</option>
+                    <option value="featured-visible-auto">TPL_JS_CIVIC_FEATURED_HEADER_AUTO</option>
+                </field>
             </fieldset>
 
             <fieldset name="footer" addfieldpath="/templates/js_civic/form/fields">     
