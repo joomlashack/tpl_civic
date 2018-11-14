@@ -31,42 +31,42 @@ defined('_JEXEC') or die('Restricted access');
 
             <?php if ($imgGridTopBg != '') : ?>
             #grid-top {
-                background-image: url('<?php echo $imgGridTopBg ?>');
+                background-image: url('<?php echo JURI::base() . $imgGridTopBg ?>');
             }
             <?php endif; ?>
             <?php if ($imgGridTop2Bg != '') : ?>
             #grid-top2 {
-                background-image: url('<?php echo $imgGridTop2Bg ?>');
+                background-image: url('<?php echo JURI::base() . $imgGridTop2Bg ?>');
             }
             <?php endif; ?>
             <?php if ($imgGridTop3Bg != '') : ?>
             #grid-top3 {
-                background-image: url('<?php echo $imgGridTop3Bg ?>');
+                background-image: url('<?php echo JURI::base() . $imgGridTop3Bg ?>');
             }
             <?php endif; ?>
             <?php if ($imgGridBottomBg != '') : ?>
             #grid-bottom {
-                background-image: url('<?php echo $imgGridBottomBg ?>');
+                background-image: url('<?php echo JURI::base() . $imgGridBottomBg ?>');
             }
             <?php endif; ?>
             <?php if ($imgGridBottom2Bg != '') : ?>
             #grid-bottom2 {
-                background-image: url('<?php echo $imgGridBottom2Bg ?>');
+                background-image: url('<?php echo JURI::base() . $imgGridBottom2Bg ?>');
             }
             <?php endif; ?>
             <?php if ($imgGridBottom3Bg != '') : ?>
             #grid-bottom3 {
-                background-image: url('<?php echo $imgGridBottom3Bg ?>');
+                background-image: url('<?php echo JURI::base() . $imgGridBottom3Bg ?>');
             }
             <?php endif; ?>
             <?php if ($imgGridBottom4Bg != '') : ?>
             #grid-bottom4 {
-                background-image: url('<?php echo $imgGridBottom4Bg ?>');
+                background-image: url('<?php echo JURI::base() . $imgGridBottom4Bg ?>');
             }
             <?php endif; ?>
             <?php if ($imgGridBottom5_6Bg != '') : ?>
             #grid-bottom5_6 {
-                background-image: url('<?php echo $imgGridBottom5_6Bg ?>');
+                background-image: url('<?php echo JURI::base() . $imgGridBottom5_6Bg ?>');
             }
             <?php endif; ?>
 
