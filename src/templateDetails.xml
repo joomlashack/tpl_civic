@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="3.0" type="template" method="upgrade" client="site">
     <name>js_civic</name>
-    <creationDate>November 14 2018</creationDate>
+    <creationDate>February 27 2019</creationDate>
     <author>Joomlashack</author>
     <authorEmail>support@joomlashack.com</authorEmail>
     <authorUrl>https://www.joomlashack.com</authorUrl>
-    <copyright>Copyright Joomlashack 2005-2018. All rights reserved</copyright>
+    <copyright>Copyright Joomlashack 2005-2019. All rights reserved</copyright>
     <license>GNU GPLv2</license>
-    <version>2.1.21</version>
+    <version>2.2.0</version>
     <description>TPL_JS_CIVIC_XML_DESCRIPTION</description>
 
     <languages folder="language">
@@ -22,6 +21,7 @@
 
     <files>
         <filename>component.php</filename>
+        <filename>render.php</filename>
         <filename>favicon.ico</filename>
         <filename>functions.php</filename>
         <filename>wrighttemplate.php</filename>
@@ -31,6 +31,7 @@
         <filename>template_thumbnail.png</filename>
         <filename>preg_find.php</filename>
         <folder>css</folder>
+        <folder>less</folder>
         <folder>html</folder>
         <folder>images</folder>
         <folder>js</folder>
@@ -83,6 +84,12 @@
                     <option value="0">JNO</option>
                 </field>
                 <field name="style" type="styles" default="athens" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+                <field name="color_one" type="color" default="#278BCE" class="wCustomColor" label="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_ONE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_ONE_DESC" showon="style:custom" />
+                <field name="color_two" type="color" default="#8ED1F6" class="wCustomColor" label="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_TWO_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_TWO_DESC" showon="style:custom" />
+                <field name="color_three" type="color" default="#5D8CAC" class="wCustomColor" label="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_THREE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_THREE_DESC" showon="style:custom" />
+                <field name="color_four" type="color" default="#D3D1D4" class="wCustomColor" label="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_FOUR_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_FOUR_DESC" showon="style:custom" />
+                <field name="color_five" type="color" default="#E4EBF0" class="wCustomColor" label="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_FIVE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_FIVE_DESC" showon="style:custom" />
+                <field name="compileCss" type="compilecss" showon="style:custom"/>
                 <field name="modal" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
