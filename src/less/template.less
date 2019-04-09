@@ -2758,8 +2758,11 @@ select {
 
 #featured,
 #container-civic{
-	position: relative;
-	z-index: 3;
+
+	@media (min-width: 768px) {
+		position: relative;
+		z-index: 3;
+	}
 }
 
 #container-civic{
@@ -2789,27 +2792,31 @@ select {
 	z-index: 1;
 	.opacity(70);
 }
-.featured-inner{
-	position: absolute;
-	text-align: center;
-	z-index: 2;
-	height: 100%;
-	width: 100%;
+.featured-inner {
 
-	> div{
+	@media (min-width: 768px) {
+
 		position: absolute;
 		text-align: center;
 		z-index: 2;
 		height: 100%;
 		width: 100%;
-		-webkit-box-sizing: border-box;
-		   -moz-box-sizing: border-box;
-				box-sizing: border-box;
 
-		> *:not(.custom) {
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 90%;
+		> div {
+			position: absolute;
+			text-align: center;
+			z-index: 2;
+			height: 100%;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+
+			> *:not(.custom) {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 90%;
+			}
 		}
 	}
 }

@@ -116,7 +116,7 @@ defined('_JEXEC') or die('Restricted access');
         </style>
         <![endif]-->
     </head>
-    <body class="<?php echo $responsive . ' Tone' . $Tone . ' ' . $FeauredAlwaysVisible; ?>">
+    <body class="<?php echo $responsive . ' Tone' . $Tone; ?>">
         <?php if ($this->countModules('toolbar')) : ?>
             <!-- toolbar -->
             <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
