@@ -301,13 +301,6 @@
                 <field name="civicColorReference" type="templatecustom" default="" label="TPL_JS_CIVIC_COLOR_REFERENCE" description="TPL_JS_CIVIC_COLOR_REFERENCE_DESC"/>
             </fieldset>
 
-            <fieldset name="TPL_CIVIC_FEATURED_HEADER">
-                <field name="FeauredAlwaysVisible" type="radio" class="btn-group" default="featured-visible-auto" label="TPL_JS_CIVIC_FEATURED_VISIBLE" description="TPL_JS_CIVIC_FEATURED_VISIBLE_DESC">
-                    <option value="featured-visible-always">TPL_JS_CIVIC_FEATURED_HEADER_ALWAYS</option>
-                    <option value="featured-visible-auto">TPL_JS_CIVIC_FEATURED_HEADER_AUTO</option>
-                </field>
-            </fieldset>
-
             <fieldset name="footer" addfieldpath="/templates/js_civic/form/fields">     
                 <field
                     type="customfooter"
