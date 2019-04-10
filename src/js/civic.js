@@ -165,18 +165,24 @@ function civicVideos($) {
 
 
 function FeaturedHeight() {
-    var featured = jQuery('#featured');
-    var header = jQuery('#header');
 
-    if (window.outerWidth > 767) {
-        // In desktop
-        featured.css({
-            'height': jQuery(window).height() - (header.height() + jQuery('.wrapper-toolbar').height()) + 'px',
-            'width': jQuery(window).width() + 'px'
-        });
+    if(jQuery('.featured-visible-auto').length){
+        var featured = jQuery('#featured');
+        var header = jQuery('#header');
+
+        if (window.outerWidth > 767) {
+            // In desktop
+            featured.css({
+                'height': jQuery(window).height() - (header.height() + jQuery('.wrapper-toolbar').height()) + 'px',
+                'width': jQuery(window).width() + 'px'
+            });
+        } else {
+            // In mobile
+            featured.removeAttr('style');
+        }
+        console.log('absolute');
     } else {
-        // In mobile
-        featured.removeAttr('style');
+        console.log('relative');
     }
 }
 
