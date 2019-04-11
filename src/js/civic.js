@@ -180,9 +180,6 @@ function FeaturedHeight() {
             // In mobile
             featured.removeAttr('style');
         }
-        console.log('absolute');
-    } else {
-        console.log('relative');
     }
 }
 
