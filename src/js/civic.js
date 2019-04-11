@@ -165,13 +165,22 @@ function civicVideos($) {
 
 
 function FeaturedHeight() {
-    var featured = jQuery('#featured');
-    var header = jQuery('#header');
 
-    featured.css({
-        'height': jQuery(window).height() - (header.height() + jQuery('.wrapper-toolbar').height()) + 'px',
-        'width': jQuery(window).width() + 'px'
-    });
+    if(jQuery('.featured-visible-auto').length){
+        var featured = jQuery('#featured');
+        var header = jQuery('#header');
+
+        if (window.outerWidth > 767) {
+            // In desktop
+            featured.css({
+                'height': jQuery(window).height() - (header.height() + jQuery('.wrapper-toolbar').height()) + 'px',
+                'width': jQuery(window).width() + 'px'
+            });
+        } else {
+            // In mobile
+            featured.removeAttr('style');
+        }
+    }
 }
 
 // Move menu and logo over the video embed when there is a module in video position
@@ -210,9 +219,7 @@ jQuery(function() {
         civicVideos(jQuery);
 
     jQuery(window).resize(function() {
-        if (jQuery(window).width() > 768) {
-            FeaturedHeight();
-        }
+        FeaturedHeight();
     });
 
     jQuery(window).load(function() {
