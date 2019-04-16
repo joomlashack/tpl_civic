@@ -352,6 +352,12 @@
                 ordering="last">OSMyLicensesManager</extension>
         </relatedExtensions>
 
+        <minify>
+            <script>js/civic.js</script>
+            <script>js/bigvideo.js</script>
+            <script>js/video.js</script>
+        </minify>
+
         <include>AllediaFreeDefaultFiles</include>
     </alledia>
 </extension>
