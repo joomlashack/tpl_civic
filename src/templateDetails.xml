@@ -140,9 +140,9 @@
                     <option value="0">JNO</option>
                 </field>
 
-                <field name="videosFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_VIDEOS_FOLDER" description="TPL_JS_CIVIC_VIDEOS_FOLDER_DESC" />
+                <field name="videosFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_VIDEOS_FOLDER" description="TPL_JS_CIVIC_VIDEOS_FOLDER_DESC" showon="useSlider:1" />
 
-                <field name="imagesFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_IMAGES_FOLDER" description="TPL_JS_CIVIC_IMAGES_FOLDER_DESC" />
+                <field name="imagesFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_IMAGES_FOLDER" description="TPL_JS_CIVIC_IMAGES_FOLDER_DESC" showon="useSlider:1" />
             </fieldset>
 
             <fieldset name="TPL_CIVIC_GRID_BOTTOM_POSITIONS">
