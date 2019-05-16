@@ -109,6 +109,10 @@ $sliderImages = Array();
 
 if ($useSlider) {
 
+    // Add CSS class to body tag in order to add
+    // important CSS to not overlay the menu/content with the slider
+    $sliderStatus = 'slider-status-enabled';
+
     // looks out for mp4 files in the videos folder, and equivalent file names (.jpg or .png) in the images folder
     $rvideos = preg_find('/\.mp4$/D', $videosFolder, PREG_FIND_SORTKEYS);
     if ($rvideos) {
@@ -127,6 +131,8 @@ if ($useSlider) {
             }
         }
     }
+} else {
+    $sliderStatus = 'slider-status-disabled';
 }
 
 if (empty($sliderVideos))
