@@ -116,7 +116,7 @@ defined('_JEXEC') or die('Restricted access');
         </style>
         <![endif]-->
     </head>
-    <body class="<?php echo $responsive . ' Tone' . $Tone . ' ' . $FeauredAlwaysVisible; ?>">
+    <body class="<?php echo $responsive . ' Tone' . $Tone . ' ' . $FeauredAlwaysVisible . ' ' . $sliderStatus; ?>">
         <?php if ($this->countModules('toolbar')) : ?>
             <!-- toolbar -->
             <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
@@ -127,9 +127,12 @@ defined('_JEXEC') or die('Restricted access');
             <div id="featured">
 
                 <?php if ($useSlider) : ?>
-                <nav id="prev-btn">
-                    <a href="#" class="nav-icon prev-icon"> Previous </a>
-                </nav>
+
+                    <?php if ($navSlider) : ?>
+                    <nav id="prev-btn">
+                        <a href="#" class="nav-icon prev-icon"><?php echo JText::_('TPL_JS_CIVIC_PREVIOUS'); ?></a>
+                    </nav>
+                    <?php endif; ?>
 
                 <div class="wrapper">
                     <?php $v = 1; foreach ($sliderVideos as $video) : ?>
@@ -144,9 +147,12 @@ defined('_JEXEC') or die('Restricted access');
                     <h4><?php echo JText::_('TPL_JS_CIVIC_LOADING'); ?></h4>
                 </div>
 
-                <nav id="next-btn">
-                    <a href="#" class="nav-icon next-icon"> Next </a>
-                </nav>
+                    <?php if ($navSlider) : ?>
+                    <nav id="next-btn">
+                        <a href="#" class="nav-icon next-icon"><?php echo JText::_('TPL_JS_CIVIC_NEXT'); ?></a>
+                    </nav>
+                    <?php endif; ?>
+
                 <?php endif; ?>
 
                 <?php if ($this->countModules('featured')) : ?>
@@ -161,7 +167,7 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
                 <?php endif; ?>
 
-                <?php if ($useSlider) : ?>
+                <?php if ($useSlider and $filterSlider) : ?>
                 <div class="slider-filter"></div>
                 <?php endif ?>
             </div>

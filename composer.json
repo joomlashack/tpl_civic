@@ -10,7 +10,8 @@
         "name"           : "Civic",
         "client"         : "site",
         "package-license": "pro",
-        "target-platform": "3.*"
+        "target-platform": "3.*",
+        "infourl"        : "/changelog/civic/"
     },
     "authors"          : [
         {

@@ -92,9 +92,11 @@ $imgGridBottom5_6Bg = $this->params->get("imgGridBottom5_6Bg", "");
     }
 
 // Videos folder
-$useSlider = ($this->params->get('useSlider','1') == '1');
-$videosFolder = $this->params->get('videosFolder','');
-$imagesFolder = $this->params->get('imagesFolder','');
+$useSlider    = ($this->params->get('useSlider', '1') == '1');
+$videosFolder = $this->params->get('videosFolder', '');
+$imagesFolder = $this->params->get('imagesFolder', '');
+$navSlider    = $this->params->get('navSlider', '1');
+$filterSlider = $this->params->get('filterSlider', '1');
 
 if (($videosFolder == '' || $videosFolder == '-1' || $imagesFolder == '' || $imagesFolder == '-1')) {
     $useSlider = false;
@@ -108,6 +110,10 @@ $sliderVideos = Array();
 $sliderImages = Array();
 
 if ($useSlider) {
+
+    // Add CSS class to body tag in order to add
+    // important CSS to not overlay the menu/content with the slider
+    $sliderStatus = 'slider-status-enabled';
 
     // looks out for mp4 files in the videos folder, and equivalent file names (.jpg or .png) in the images folder
     $rvideos = preg_find('/\.mp4$/D', $videosFolder, PREG_FIND_SORTKEYS);
@@ -127,6 +133,8 @@ if ($useSlider) {
             }
         }
     }
+} else {
+    $sliderStatus = 'slider-status-disabled';
 }
 
 if (empty($sliderVideos))
