@@ -145,6 +145,10 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
+                <field name="filterSlider" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_FILTER_SLIDER" description="TPL_JS_CIVIC_FILTER_SLIDER_DESC" showon="useSlider:1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
             </fieldset>
 
             <fieldset name="TPL_CIVIC_GRID_BOTTOM_POSITIONS">

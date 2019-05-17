@@ -96,6 +96,7 @@ $useSlider    = ($this->params->get('useSlider', '1') == '1');
 $videosFolder = $this->params->get('videosFolder', '');
 $imagesFolder = $this->params->get('imagesFolder', '');
 $navSlider    = $this->params->get('navSlider', '1');
+$filterSlider = $this->params->get('filterSlider', '1');
 
 if (($videosFolder == '' || $videosFolder == '-1' || $imagesFolder == '' || $imagesFolder == '-1')) {
     $useSlider = false;

@@ -167,7 +167,7 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
                 <?php endif; ?>
 
-                <?php if ($useSlider) : ?>
+                <?php if ($useSlider and $filterSlider) : ?>
                 <div class="slider-filter"></div>
                 <?php endif ?>
             </div>
