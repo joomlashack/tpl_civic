@@ -127,9 +127,12 @@ defined('_JEXEC') or die('Restricted access');
             <div id="featured">
 
                 <?php if ($useSlider) : ?>
-                <nav id="prev-btn">
-                    <a href="#" class="nav-icon prev-icon"> Previous </a>
-                </nav>
+
+                    <?php if ($navSlider) : ?>
+                    <nav id="prev-btn">
+                        <a href="#" class="nav-icon prev-icon"><?php echo JText::_('TPL_JS_CIVIC_PREVIOUS'); ?></a>
+                    </nav>
+                    <?php endif; ?>
 
                 <div class="wrapper">
                     <?php $v = 1; foreach ($sliderVideos as $video) : ?>
@@ -144,9 +147,12 @@ defined('_JEXEC') or die('Restricted access');
                     <h4><?php echo JText::_('TPL_JS_CIVIC_LOADING'); ?></h4>
                 </div>
 
-                <nav id="next-btn">
-                    <a href="#" class="nav-icon next-icon"> Next </a>
-                </nav>
+                    <?php if ($navSlider) : ?>
+                    <nav id="next-btn">
+                        <a href="#" class="nav-icon next-icon"><?php echo JText::_('TPL_JS_CIVIC_NEXT'); ?></a>
+                    </nav>
+                    <?php endif; ?>
+
                 <?php endif; ?>
 
                 <?php if ($this->countModules('featured')) : ?>

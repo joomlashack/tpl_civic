@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.9" type="template" method="upgrade" client="site">
     <name>js_civic</name>
-    <creationDate>April 17 2019</creationDate>
+    <creationDate>May 16 2019</creationDate>
     <author>Joomlashack</author>
     <authorEmail>support@joomlashack.com</authorEmail>
     <authorUrl>https://www.joomlashack.com</authorUrl>
     <copyright>Copyright Joomlashack 2005-2019. All rights reserved</copyright>
     <license>GNU GPLv2</license>
-    <version>2.3.2</version>
+    <version>2.3.3b1</version>
     <description>TPL_JS_CIVIC_XML_DESCRIPTION</description>
 
     <languages folder="language">
@@ -139,10 +139,12 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-
                 <field name="videosFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_VIDEOS_FOLDER" description="TPL_JS_CIVIC_VIDEOS_FOLDER_DESC" showon="useSlider:1" />
-
                 <field name="imagesFolder" type="folderlist" directory="images" label="TPL_JS_CIVIC_IMAGES_FOLDER" description="TPL_JS_CIVIC_IMAGES_FOLDER_DESC" showon="useSlider:1" />
+                <field name="navSlider" type="radio" class="btn-group" default="1" label="TPL_JS_CIVIC_NAVIGATION_SLIDER" description="TPL_JS_CIVIC_NAVIGATION_SLIDER_DESC" showon="useSlider:1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
             </fieldset>
 
             <fieldset name="TPL_CIVIC_GRID_BOTTOM_POSITIONS">

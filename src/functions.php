@@ -92,9 +92,10 @@ $imgGridBottom5_6Bg = $this->params->get("imgGridBottom5_6Bg", "");
     }
 
 // Videos folder
-$useSlider = ($this->params->get('useSlider','1') == '1');
-$videosFolder = $this->params->get('videosFolder','');
-$imagesFolder = $this->params->get('imagesFolder','');
+$useSlider    = ($this->params->get('useSlider', '1') == '1');
+$videosFolder = $this->params->get('videosFolder', '');
+$imagesFolder = $this->params->get('imagesFolder', '');
+$navSlider    = $this->params->get('navSlider', '1');
 
 if (($videosFolder == '' || $videosFolder == '-1' || $imagesFolder == '' || $imagesFolder == '-1')) {
     $useSlider = false;
