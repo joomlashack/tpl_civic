@@ -1,4 +1,4 @@
 [submodule "wright"]
 	path = wright
-	url = https://github.com/joomlashack/wright.git
+url=git@github.com:joomlashack/tpl_wright.git
 	branch = master
